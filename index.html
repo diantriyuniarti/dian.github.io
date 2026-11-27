@@ -531,7 +531,7 @@
   <!-- ==================== PROJECTS SHOWCASE SECTION ==================== -->
   <section id="proyek" class="py-20 sm:py-24 bg-[#0e0609] border-b border-rose-950/60 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
+
       <!-- Section Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 reveal">
         <div>
@@ -578,10 +578,10 @@
         </button>
       </div>
 
-      <!-- PROJECT GRID: 10 CARDS (ARYA ZIDDAN INSPIRED CRAFT BOXES IN WINE PALETTE) -->
-      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <!-- PRIMARY SHOWCASE: 3 BIG FEATURED PAPER CARDS WITH SCREENSHOTS -->
+      <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10">
 
-        <!-- PROJECT 1: ANXIETYCHECK (Arya Ziddan Paper Card Style) -->
+        <!-- BIG FEATURED CARD 1: ANXIETYCHECK -->
         <div class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-[0_12px_32px_rgba(0,0,0,0.55)] p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.65)] reveal cursor-default"
              style="transform: rotate(-1.2deg);"
              data-category="ml web"
@@ -611,10 +611,10 @@
 
             <!-- Prominent Media Container -->
             <div onclick="openModal('modal-anxiety')" class="h-48 sm:h-52 w-full rounded-sm overflow-hidden bg-stone-950 border border-stone-400/80 my-3.5 relative group/img cursor-pointer shadow-inner">
-  <img src="assets/images/anxiety_beranda.png" alt="AnxietyCheck" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition duration-500" />
-  <div class="absolute inset-0 bg-stone-950/20 group-hover/img:bg-transparent transition"></div>
-  <div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-stone-900/90 text-white font-mono text-[10px] opacity-0 group-hover/img:opacity-100 transition shadow">View Gallery ↗</div>
-</div>
+              <img src="assets/images/anxiety_beranda.png" alt="ANXIETYCHECK" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition duration-500" />
+              <div class="absolute inset-0 bg-stone-950/20 group-hover/img:bg-transparent transition"></div>
+              <div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-stone-900/90 text-white font-mono text-[10px] opacity-0 group-hover/img:opacity-100 transition shadow">View Details ↗</div>
+            </div>
 
             <!-- Concise Description -->
             <p class="text-xs sm:text-[13px] text-stone-700 leading-relaxed font-sans line-clamp-3">
@@ -637,7 +637,7 @@
               <span class="font-hand text-base sm:text-lg font-bold text-[#be123c] leading-none select-none tracking-wide">
                 tested on 554 samples · 100% accuracy
               </span>
-              <button onclick="openModal('modal-sales')" class="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-stone-800 hover:text-rose-900 transition underline underline-offset-2">
+              <button onclick="openModal('modal-anxiety')" class="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-stone-800 hover:text-rose-900 transition underline underline-offset-2">
                 <span>inspect</span>
                 <i data-lucide="arrow-up-right" class="w-3 h-3 text-rose-800"></i>
               </button>
@@ -647,7 +647,7 @@
         </div>
     
 
-        <!-- PROJECT 2: KOPILUVIUM (Arya Ziddan Paper Card Style) -->
+        <!-- BIG FEATURED CARD 2: KOPILUVIUM -->
         <div class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-[0_12px_32px_rgba(0,0,0,0.55)] p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.65)] reveal cursor-default"
              style="transform: rotate(0.8deg);"
              data-category="web"
@@ -677,10 +677,10 @@
 
             <!-- Prominent Media Container -->
             <div onclick="openModal('modal-kopiluvium')" class="h-48 sm:h-52 w-full rounded-sm overflow-hidden bg-stone-950 border border-stone-400/80 my-3.5 relative group/img cursor-pointer shadow-inner">
-  <img src="assets/images/kopiluvium.jpg" alt="Kopiluvium" class="w-full h-full object-cover group-hover/img:scale-105 transition duration-500" />
-  <div class="absolute inset-0 bg-stone-950/20 group-hover/img:bg-transparent transition"></div>
-  <div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-stone-900/90 text-white font-mono text-[10px] opacity-0 group-hover/img:opacity-100 transition shadow">View Details ↗</div>
-</div>
+              <img src="assets/images/kopiluvium.jpg" alt="KOPILUVIUM" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition duration-500" />
+              <div class="absolute inset-0 bg-stone-950/20 group-hover/img:bg-transparent transition"></div>
+              <div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-stone-900/90 text-white font-mono text-[10px] opacity-0 group-hover/img:opacity-100 transition shadow">View Details ↗</div>
+            </div>
 
             <!-- Concise Description -->
             <p class="text-xs sm:text-[13px] text-stone-700 leading-relaxed font-sans line-clamp-3">
@@ -713,83 +713,7 @@
         </div>
     
 
-        <!-- PROJECT 3: E-APOTEK MODERN (Arya Ziddan Paper Card Style) -->
-        <div class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-[0_12px_32px_rgba(0,0,0,0.55)] p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.65)] reveal cursor-default"
-             style="transform: rotate(1.5deg);"
-             data-category="uiux"
-             data-title="Pharmacy Web UI UX Design System Figma UNSRAT Sam Ratulangi Prototyping">
-          
-          <!-- Masking Tape at Top -->
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-24 h-5 z-20 pointer-events-none select-none shadow-sm"
-               style="background: rgba(136, 19, 55, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(-1deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
-          </div>
-
-          <!-- Top Eyebrow Metadata (Monospace) -->
-          <div>
-            <div class="flex items-center justify-between text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/80 pb-2">
-              <span class="truncate pr-2">E-APOTEK · 2024 · UNSRAT PMM 4</span>
-              <span class="shrink-0 font-bold text-rose-800">FIGMA SYSTEM ↗</span>
-            </div>
-
-            <!-- Big Heavy Title -->
-            <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2.5 leading-none group-hover:text-rose-900 transition-colors">
-              E-APOTEK MODERN
-            </h3>
-
-            <!-- Role / Tagline -->
-            <div class="text-[10px] sm:text-xs font-mono font-semibold tracking-wider text-rose-800 uppercase mt-1">
-              UI/UX DESIGN SYSTEM & PROTOTYPE
-            </div>
-
-            <!-- Prominent Media Container -->
-            <div onclick="openModal('modal-apotek')" class="h-48 sm:h-52 w-full rounded-sm overflow-hidden bg-[#1c1815] border border-stone-400/80 my-3.5 p-4 flex flex-col justify-between group/img cursor-pointer shadow-inner">
-  <div class="flex items-center justify-between border-b border-stone-700/80 pb-2">
-    <div class="flex items-center gap-2">
-      <div class="w-2.5 h-2.5 rounded-full bg-rose-500"></div>
-      <span class="text-xs font-bold text-white font-mono">E-Apotek Modern</span>
-    </div>
-    <span class="text-[10px] text-rose-300 bg-rose-950/80 px-1.5 py-0.5 rounded font-mono">Figma UI</span>
-  </div>
-  <div class="grid grid-cols-3 gap-2 my-2">
-    <div class="h-14 rounded bg-stone-800/80 border border-stone-700/60 p-1.5"><div class="h-2 w-3/4 bg-stone-600 rounded mb-1"></div><div class="h-2 w-1/2 bg-rose-500/40 rounded"></div></div>
-    <div class="h-14 rounded bg-stone-800/80 border border-stone-700/60 p-1.5"><div class="h-2 w-3/4 bg-stone-600 rounded mb-1"></div><div class="h-2 w-1/2 bg-rose-500/40 rounded"></div></div>
-    <div class="h-14 rounded bg-stone-800/80 border border-stone-700/60 p-1.5"><div class="h-2 w-3/4 bg-stone-600 rounded mb-1"></div><div class="h-2 w-1/2 bg-rose-500/40 rounded"></div></div>
-  </div>
-  <div class="h-3 w-2/3 rounded bg-rose-500/30"></div>
-</div>
-
-            <!-- Concise Description -->
-            <p class="text-xs sm:text-[13px] text-stone-700 leading-relaxed font-sans line-clamp-3">
-              User-centered design system and responsive web interface in Figma for online medication catalogs, digital prescription submissions, and streamlined checkout flows.
-            </p>
-          </div>
-
-          <!-- Bottom Section: Tech Stack + Dashed Line + Handwritten Note -->
-          <div class="mt-4 pt-2">
-            <!-- Boxed Tech Stack Pills -->
-            <div class="flex flex-wrap gap-1.5 mb-3">
-              <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">FIGMA</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">WIREFRAMING</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">DESIGN SYSTEM</span>
-            </div>
-
-            <!-- Dashed Separator Line -->
-            <div class="border-b border-dashed border-stone-400/80 my-2.5"></div>
-
-            <!-- Handwritten Annotation & Modal Action -->
-            <div class="flex items-center justify-between pt-0.5">
-              <span class="font-hand text-base sm:text-lg font-bold text-[#be123c] leading-none select-none tracking-wide">
-                designed from zero in figma
-              </span>
-              <button onclick="openModal('modal-apotek')" class="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-stone-800 hover:text-rose-900 transition underline underline-offset-2">
-                <span>inspect</span>
-                <i data-lucide="arrow-up-right" class="w-3 h-3 text-rose-800"></i>
-              </button>
-            </div>
-          </div>
-
-        </div>
-    
-
-        <!-- PROJECT 4: FSPI NUSANTARA (Arya Ziddan Paper Card Style) -->
+        <!-- BIG FEATURED CARD 3: FSPI NUSANTARA -->
         <div class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-[0_12px_32px_rgba(0,0,0,0.55)] p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.65)] reveal cursor-default"
              style="transform: rotate(-0.8deg);"
              data-category="uiux"
@@ -819,10 +743,10 @@
 
             <!-- Prominent Media Container -->
             <div onclick="openModal('modal-poster')" class="h-48 sm:h-52 w-full rounded-sm overflow-hidden bg-stone-950 border border-stone-400/80 my-3.5 relative group/img cursor-pointer shadow-inner">
-  <img src="assets/images/poster_nusantara.jpg" alt="Poster Nusantara" class="w-full h-full object-cover object-center group-hover/img:scale-105 transition duration-500" />
-  <div class="absolute inset-0 bg-stone-950/20 group-hover/img:bg-transparent transition"></div>
-  <div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-stone-900/90 text-white font-mono text-[10px] opacity-0 group-hover/img:opacity-100 transition shadow">View Poster ↗</div>
-</div>
+              <img src="assets/images/poster_nusantara.jpg" alt="FSPI NUSANTARA" class="w-full h-full object-cover object-top group-hover/img:scale-105 transition duration-500" />
+              <div class="absolute inset-0 bg-stone-950/20 group-hover/img:bg-transparent transition"></div>
+              <div class="absolute bottom-2 right-2 px-2 py-0.5 rounded bg-stone-900/90 text-white font-mono text-[10px] opacity-0 group-hover/img:opacity-100 transition shadow">View Details ↗</div>
+            </div>
 
             <!-- Concise Description -->
             <p class="text-xs sm:text-[13px] text-stone-700 leading-relaxed font-sans line-clamp-3">
@@ -854,414 +778,372 @@
 
         </div>
     
+      </div>
 
-        <!-- PROJECT 5: FSA VALIDATOR (Arya Ziddan Paper Card Style) -->
-        <div class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-[0_12px_32px_rgba(0,0,0,0.55)] p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.65)] reveal cursor-default"
+      <!-- ==================== ARCHIVE INDEX (+ 7 MORE. QUICK STORIES.) ==================== -->
+      <!-- EXACT REPLICA OF ARYA ZIDDAN ARCHIVE SECTION IN USER SCREENSHOT -->
+      <div class="border-t border-rose-950/70 mt-20 pt-14">
+        
+        <!-- Archive Header -->
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+          <div>
+            <div class="text-xs font-mono font-bold tracking-widest text-amber-400 uppercase mb-1">
+              // ARCHIVE.INDEX
+            </div>
+            <h3 class="text-3xl sm:text-5xl font-black tracking-tight text-white uppercase font-sans leading-none">
+              + 7 MORE.
+            </h3>
+            <div class="text-xl sm:text-2xl font-extrabold uppercase font-sans tracking-tight mt-1">
+              <span class="line-through text-stone-500 mr-2">QUICK</span><span class="text-white">STORIES.</span>
+            </div>
+          </div>
+
+          <!-- Ask on WhatsApp CTA -->
+          <div class="text-left sm:text-right">
+            <a href="https://wa.me/6289660164156" target="_blank" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono text-emerald-400 hover:text-emerald-300 transition">
+              <span>↑ ask about any of these on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Horizontal Rail of Compact Paper Cards (Matches media_1795806574179_c1575f15.png) -->
+        <div class="flex gap-5 sm:gap-6 overflow-x-auto pt-6 pb-8 px-2 scrollbar-none snap-x snap-mandatory">
+
+        <!-- COMPACT ARCHIVE CARD: E-APOTEK -->
+        <div onclick="openModal('modal-apotek')"
+             class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-md p-5 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-xl cursor-pointer w-[280px] sm:w-[320px] shrink-0 snap-center"
+             style="transform: rotate(-0.8deg);"
+             data-category="uiux"
+             data-title="Pharmacy Web UI UX Design System Figma UNSRAT Sam Ratulangi Prototyping">
+          
+          <!-- Masking Tape at Top -->
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-4 z-20 pointer-events-none select-none shadow-sm"
+               style="background: rgba(136, 19, 55, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(-1.5deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
+          </div>
+
+          <!-- Top Metadata Line -->
+          <div>
+            <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/70 pb-1.5">
+              <span class="truncate pr-1">UNSRAT · PMM 4 · 2024</span>
+              <span class="shrink-0 font-bold text-rose-800">FIGMA UI ↗</span>
+            </div>
+
+            <!-- Title -->
+            <h4 class="text-xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2 leading-none group-hover:text-rose-900 transition-colors">
+              E-APOTEK
+            </h4>
+
+            <!-- Role -->
+            <div class="text-[10px] font-mono font-bold tracking-wider text-rose-800 uppercase mt-1">
+              UI/UX DESIGN SYSTEM
+            </div>
+
+            <!-- Description -->
+            <p class="text-xs text-stone-700 leading-relaxed font-sans line-clamp-3 my-3">
+              Online pharmacy catalog, prescription upload workflow, and streamlined checkout design system created in Figma.
+            </p>
+          </div>
+
+          <!-- Stack Tags -->
+          <div class="pt-2 border-t border-dashed border-stone-300/80 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">FIGMA</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">DESIGN SYSTEM</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">PROTOTYPE</span>
+          </div>
+
+        </div>
+    
+
+        <!-- COMPACT ARCHIVE CARD: FSA VALIDATOR -->
+        <div onclick="openModal('modal-automata')"
+             class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-md p-5 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-xl cursor-pointer w-[280px] sm:w-[320px] shrink-0 snap-center"
              style="transform: rotate(1.2deg);"
              data-category="web"
              data-title="Scientific Notation Input Validator Finite State Automata FSA UNSRAT JavaScript RegEx Parser">
           
           <!-- Masking Tape at Top -->
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-24 h-5 z-20 pointer-events-none select-none shadow-sm"
-               style="background: rgba(190, 24, 93, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(-1.5deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-4 z-20 pointer-events-none select-none shadow-sm"
+               style="background: rgba(190, 24, 93, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(1.2deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
           </div>
 
-          <!-- Top Eyebrow Metadata (Monospace) -->
+          <!-- Top Metadata Line -->
           <div>
-            <div class="flex items-center justify-between text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/80 pb-2">
-              <span class="truncate pr-2">AUTOMATA · 2024 · UNSRAT</span>
+            <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/70 pb-1.5">
+              <span class="truncate pr-1">UNSRAT · PMM 4 · 2024</span>
               <span class="shrink-0 font-bold text-rose-800">STATE MACHINE ↗</span>
             </div>
 
-            <!-- Big Heavy Title -->
-            <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2.5 leading-none group-hover:text-rose-900 transition-colors">
+            <!-- Title -->
+            <h4 class="text-xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2 leading-none group-hover:text-rose-900 transition-colors">
               FSA VALIDATOR
-            </h3>
+            </h4>
 
-            <!-- Role / Tagline -->
-            <div class="text-[10px] sm:text-xs font-mono font-semibold tracking-wider text-rose-800 uppercase mt-1">
+            <!-- Role -->
+            <div class="text-[10px] font-mono font-bold tracking-wider text-rose-800 uppercase mt-1">
               AUTOMATA THEORY & PARSING
             </div>
 
-            <!-- Prominent Media Container -->
-            <div onclick="openModal('modal-automata')" class="h-48 sm:h-52 w-full rounded-sm overflow-hidden bg-[#1c1815] border border-stone-400/80 my-3.5 p-4 flex flex-col justify-center font-mono cursor-pointer shadow-inner">
-  <div class="p-3 rounded bg-stone-900 border border-stone-700 text-xs space-y-1">
-    <p class="text-stone-500">// Regex & State Machine</p>
-    <p class="text-rose-400 font-bold">^[+-]?\d+(\.\d+)?[eE][+-]?\d+$</p>
-    <p class="text-stone-300">Input: <span class="text-amber-400 font-bold">6.022e23</span> -&gt; <span class="text-emerald-400 font-bold">VALID (Accepted)</span></p>
-  </div>
-</div>
-
-            <!-- Concise Description -->
-            <p class="text-xs sm:text-[13px] text-stone-700 leading-relaxed font-sans line-clamp-3">
-              Interactive web utility validating real-number scientific notation syntax using Finite State Automata (FSA) state transitions and real-time regex parsing.
+            <!-- Description -->
+            <p class="text-xs text-stone-700 leading-relaxed font-sans line-clamp-3 my-3">
+              Interactive web utility validating real-number scientific notation syntax using Finite State Automata state transitions.
             </p>
           </div>
 
-          <!-- Bottom Section: Tech Stack + Dashed Line + Handwritten Note -->
-          <div class="mt-4 pt-2">
-            <!-- Boxed Tech Stack Pills -->
-            <div class="flex flex-wrap gap-1.5 mb-3">
-              <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">JAVASCRIPT</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">FSA MACHINE</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">HTML5 / CSS3</span>
-            </div>
-
-            <!-- Dashed Separator Line -->
-            <div class="border-b border-dashed border-stone-400/80 my-2.5"></div>
-
-            <!-- Handwritten Annotation & Modal Action -->
-            <div class="flex items-center justify-between pt-0.5">
-              <span class="font-hand text-base sm:text-lg font-bold text-[#be123c] leading-none select-none tracking-wide">
-                pure formal state machine in JS
-              </span>
-              <button onclick="openModal('modal-automata')" class="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-stone-800 hover:text-rose-900 transition underline underline-offset-2">
-                <span>inspect</span>
-                <i data-lucide="arrow-up-right" class="w-3 h-3 text-rose-800"></i>
-              </button>
-            </div>
+          <!-- Stack Tags -->
+          <div class="pt-2 border-t border-dashed border-stone-300/80 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">JAVASCRIPT</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">AUTOMATA</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">REGEX</span>
           </div>
 
         </div>
     
 
-        <!-- PROJECT 6: SPMB PORTAL (Arya Ziddan Paper Card Style) -->
-        <div class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-[0_12px_32px_rgba(0,0,0,0.55)] p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.65)] reveal cursor-default"
-             style="transform: rotate(-1.4deg);"
+        <!-- COMPACT ARCHIVE CARD: SPMB PORTAL -->
+        <div onclick="openModal('modal-ppdb')"
+             class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-md p-5 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-xl cursor-pointer w-[280px] sm:w-[320px] shrink-0 snap-center"
+             style="transform: rotate(-1deg);"
              data-category="web"
              data-title="High School Student Admissions Portal SPMB PPDB PHP Laravel MySQL Bootstrap">
           
           <!-- Masking Tape at Top -->
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-24 h-5 z-20 pointer-events-none select-none shadow-sm"
-               style="background: rgba(202, 138, 4, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(1deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-4 z-20 pointer-events-none select-none shadow-sm"
+               style="background: rgba(202, 138, 4, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(-1deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
           </div>
 
-          <!-- Top Eyebrow Metadata (Monospace) -->
+          <!-- Top Metadata Line -->
           <div>
-            <div class="flex items-center justify-between text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/80 pb-2">
-              <span class="truncate pr-2">SPMB PORTAL · 2024 · ACADEMIC</span>
+            <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/70 pb-1.5">
+              <span class="truncate pr-1">ACADEMIC PROJECT · 2024</span>
               <span class="shrink-0 font-bold text-rose-800">ADMISSIONS ↗</span>
             </div>
 
-            <!-- Big Heavy Title -->
-            <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2.5 leading-none group-hover:text-rose-900 transition-colors">
+            <!-- Title -->
+            <h4 class="text-xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2 leading-none group-hover:text-rose-900 transition-colors">
               SPMB PORTAL
-            </h3>
+            </h4>
 
-            <!-- Role / Tagline -->
-            <div class="text-[10px] sm:text-xs font-mono font-semibold tracking-wider text-rose-800 uppercase mt-1">
-              FULL-STACK WEB · ADMISSIONS
+            <!-- Role -->
+            <div class="text-[10px] font-mono font-bold tracking-wider text-rose-800 uppercase mt-1">
+              FULL-STACK WEB PORTAL
             </div>
 
-            <!-- Prominent Media Container -->
-            <div onclick="openModal('modal-ppdb')" class="h-48 sm:h-52 w-full rounded-sm overflow-hidden bg-[#1c1815] border border-stone-400/80 my-3.5 p-5 flex items-center justify-center cursor-pointer shadow-inner text-center">
-  <div>
-    <i data-lucide="graduation-cap" class="w-10 h-10 mx-auto text-rose-500 mb-2"></i>
-    <div class="font-bold text-white text-sm">Online Student Admissions Portal</div>
-    <div class="text-[11px] text-stone-400 mt-1 font-mono">Self-Service Registration & Document Review</div>
-  </div>
-</div>
-
-            <!-- Concise Description -->
-            <p class="text-xs sm:text-[13px] text-stone-700 leading-relaxed font-sans line-clamp-3">
-              Web-based student admission platform managing applicant registrations, academic certificate validation, committee review workflows, and automated result notices.
+            <!-- Description -->
+            <p class="text-xs text-stone-700 leading-relaxed font-sans line-clamp-3 my-3">
+              Integrated high school admissions portal managing applicant registration, document verification, and selection reviews.
             </p>
           </div>
 
-          <!-- Bottom Section: Tech Stack + Dashed Line + Handwritten Note -->
-          <div class="mt-4 pt-2">
-            <!-- Boxed Tech Stack Pills -->
-            <div class="flex flex-wrap gap-1.5 mb-3">
-              <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">PHP NATIVE</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">MYSQL DATABASE</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">BOOTSTRAP UI</span>
-            </div>
-
-            <!-- Dashed Separator Line -->
-            <div class="border-b border-dashed border-stone-400/80 my-2.5"></div>
-
-            <!-- Handwritten Annotation & Modal Action -->
-            <div class="flex items-center justify-between pt-0.5">
-              <span class="font-hand text-base sm:text-lg font-bold text-[#be123c] leading-none select-none tracking-wide">
-                registration to committee review
-              </span>
-              <button onclick="openModal('modal-ppdb')" class="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-stone-800 hover:text-rose-900 transition underline underline-offset-2">
-                <span>inspect</span>
-                <i data-lucide="arrow-up-right" class="w-3 h-3 text-rose-800"></i>
-              </button>
-            </div>
+          <!-- Stack Tags -->
+          <div class="pt-2 border-t border-dashed border-stone-300/80 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">PHP</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">MYSQL</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">BOOTSTRAP</span>
           </div>
 
         </div>
     
 
-        <!-- PROJECT 7: SALES INVOICING (Arya Ziddan Paper Card Style) -->
-        <div class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-[0_12px_32px_rgba(0,0,0,0.55)] p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.65)] reveal cursor-default"
+        <!-- COMPACT ARCHIVE CARD: SALES INVOICING -->
+        <div onclick="openModal('modal-sales')"
+             class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-md p-5 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-xl cursor-pointer w-[280px] sm:w-[320px] shrink-0 snap-center"
              style="transform: rotate(0.6deg);"
              data-category="web"
              data-title="Sales Invoicing & Transaction System LSP Informatika BNSP PHP Native OOP Transaksi ACID MySQL Bootstrap">
           
           <!-- Masking Tape at Top -->
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-24 h-5 z-20 pointer-events-none select-none shadow-sm"
-               style="background: rgba(159, 18, 57, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(-2deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-4 z-20 pointer-events-none select-none shadow-sm"
+               style="background: rgba(159, 18, 57, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(1.8deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
           </div>
 
-          <!-- Top Eyebrow Metadata (Monospace) -->
+          <!-- Top Metadata Line -->
           <div>
-            <div class="flex items-center justify-between text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/80 pb-2">
-              <span class="truncate pr-2">SALES INVOICING · 2024 · BNSP</span>
+            <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/70 pb-1.5">
+              <span class="truncate pr-1">BNSP BENCHMARK · 2024</span>
               <span class="shrink-0 font-bold text-rose-800">ACID SAFE ↗</span>
             </div>
 
-            <!-- Big Heavy Title -->
-            <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2.5 leading-none group-hover:text-rose-900 transition-colors">
+            <!-- Title -->
+            <h4 class="text-xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2 leading-none group-hover:text-rose-900 transition-colors">
               SALES INVOICING
-            </h3>
+            </h4>
 
-            <!-- Role / Tagline -->
-            <div class="text-[10px] sm:text-xs font-mono font-semibold tracking-wider text-rose-800 uppercase mt-1">
-              ENTERPRISE WEB & FINANCE
+            <!-- Role -->
+            <div class="text-[10px] font-mono font-bold tracking-wider text-rose-800 uppercase mt-1">
+              ENTERPRISE FINANCE
             </div>
 
-            <!-- Prominent Media Container -->
-            <div onclick="openModal('modal-sales')" class="h-48 sm:h-52 w-full rounded-sm overflow-hidden bg-[#1c1815] border border-stone-400/80 my-3.5 p-5 flex items-center justify-center shadow-inner text-center cursor-pointer">
-  <div>
-    <i data-lucide="receipt" class="w-10 h-10 mx-auto text-rose-500 mb-2"></i>
-    <div class="font-bold text-white text-sm">Sales Invoicing & Transaction Engine</div>
-    <div class="text-[11px] text-stone-400 mt-1 font-mono">ACID Safe · Prepared Statements · PDF</div>
-  </div>
-</div>
-
-            <!-- Concise Description -->
-            <p class="text-xs sm:text-[13px] text-stone-700 leading-relaxed font-sans line-clamp-3">
-              Sales transaction management application built on Object-Oriented PHP. Features automatic tax calculations, PDF invoice printing, prepared statement security, and ACID transactions.
+            <!-- Description -->
+            <p class="text-xs text-stone-700 leading-relaxed font-sans line-clamp-3 my-3">
+              Sales transaction application built with OOP PHP, automatic tax calculations, PDF invoice printing, and ACID transactions.
             </p>
           </div>
 
-          <!-- Bottom Section: Tech Stack + Dashed Line + Handwritten Note -->
-          <div class="mt-4 pt-2">
-            <!-- Boxed Tech Stack Pills -->
-            <div class="flex flex-wrap gap-1.5 mb-3">
-              <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">PHP OOP</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">MYSQL ACID</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">PREPARED STMT</span>
-            </div>
-
-            <!-- Dashed Separator Line -->
-            <div class="border-b border-dashed border-stone-400/80 my-2.5"></div>
-
-            <!-- Handwritten Annotation & Modal Action -->
-            <div class="flex items-center justify-between pt-0.5">
-              <span class="font-hand text-base sm:text-lg font-bold text-[#be123c] leading-none select-none tracking-wide">
-                engineered for BNSP competency benchmark
-              </span>
-              <button onclick="openModal('modal-sales')" class="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-stone-800 hover:text-rose-900 transition underline underline-offset-2">
-                <span>inspect</span>
-                <i data-lucide="arrow-up-right" class="w-3 h-3 text-rose-800"></i>
-              </button>
-            </div>
+          <!-- Stack Tags -->
+          <div class="pt-2 border-t border-dashed border-stone-300/80 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">PHP OOP</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">MYSQL</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">ACID</span>
           </div>
 
         </div>
     
 
-        <!-- PROJECT 8: GEO-ATTENDANCE (Arya Ziddan Paper Card Style) -->
-        <div class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-[0_12px_32px_rgba(0,0,0,0.55)] p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.65)] reveal cursor-default"
-             style="transform: rotate(-1deg);"
+        <!-- COMPACT ARCHIVE CARD: GEO-ATTENDANCE -->
+        <div onclick="openModal('modal-attendance')"
+             class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-md p-5 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-xl cursor-pointer w-[280px] sm:w-[320px] shrink-0 snap-center"
+             style="transform: rotate(-0.6deg);"
              data-category="mobile"
              data-title="Employee Attendance Mobile Application Android Native Java Google Maps GPS Geofencing SQLite">
           
           <!-- Masking Tape at Top -->
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-24 h-5 z-20 pointer-events-none select-none shadow-sm"
-               style="background: rgba(190, 18, 60, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(1.5deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-4 z-20 pointer-events-none select-none shadow-sm"
+               style="background: rgba(190, 18, 60, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(-1.2deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
           </div>
 
-          <!-- Top Eyebrow Metadata (Monospace) -->
+          <!-- Top Metadata Line -->
           <div>
-            <div class="flex items-center justify-between text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/80 pb-2">
-              <span class="truncate pr-2">ATTENDANCE · 2024 · ANDROID</span>
+            <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/70 pb-1.5">
+              <span class="truncate pr-1">ANDROID STUDIO · 2024</span>
               <span class="shrink-0 font-bold text-rose-800">GPS & SQLITE ↗</span>
             </div>
 
-            <!-- Big Heavy Title -->
-            <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2.5 leading-none group-hover:text-rose-900 transition-colors">
+            <!-- Title -->
+            <h4 class="text-xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2 leading-none group-hover:text-rose-900 transition-colors">
               GEO-ATTENDANCE
-            </h3>
+            </h4>
 
-            <!-- Role / Tagline -->
-            <div class="text-[10px] sm:text-xs font-mono font-semibold tracking-wider text-rose-800 uppercase mt-1">
-              ANDROID NATIVE · LOCATION SERVICES
+            <!-- Role -->
+            <div class="text-[10px] font-mono font-bold tracking-wider text-rose-800 uppercase mt-1">
+              ANDROID NATIVE
             </div>
 
-            <!-- Prominent Media Container -->
-            <div onclick="openModal('modal-sales')" class="h-48 sm:h-52 w-full rounded-sm overflow-hidden bg-[#1c1815] border border-stone-400/80 my-3.5 p-5 flex items-center justify-center shadow-inner text-center cursor-pointer">
-  <div>
-    <i data-lucide="smartphone" class="w-10 h-10 mx-auto text-rose-500 mb-2"></i>
-    <div class="font-bold text-white text-sm">Employee Attendance Mobile App</div>
-    <div class="text-[11px] text-stone-400 mt-1 font-mono">GPS Geotagging · Voice Input · SQLite</div>
-  </div>
-</div>
-
-            <!-- Concise Description -->
-            <p class="text-xs sm:text-[13px] text-stone-700 leading-relaxed font-sans line-clamp-3">
-              Native Android mobile application for precise employee check-in. Features Google Maps GPS coordinate geofencing, speech recognition voice inputs, and offline SQLite data persistence.
+            <!-- Description -->
+            <p class="text-xs text-stone-700 leading-relaxed font-sans line-clamp-3 my-3">
+              Native Android mobile app for field check-in. Features Google Maps GPS geofencing, speech recognition, and SQLite storage.
             </p>
           </div>
 
-          <!-- Bottom Section: Tech Stack + Dashed Line + Handwritten Note -->
-          <div class="mt-4 pt-2">
-            <!-- Boxed Tech Stack Pills -->
-            <div class="flex flex-wrap gap-1.5 mb-3">
-              <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">ANDROID JAVA</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">GOOGLE MAPS</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">SQLITE</span>
-            </div>
-
-            <!-- Dashed Separator Line -->
-            <div class="border-b border-dashed border-stone-400/80 my-2.5"></div>
-
-            <!-- Handwritten Annotation & Modal Action -->
-            <div class="flex items-center justify-between pt-0.5">
-              <span class="font-hand text-base sm:text-lg font-bold text-[#be123c] leading-none select-none tracking-wide">
-                geofenced check-in & local sqlite storage
-              </span>
-              <button onclick="openModal('modal-sales')" class="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-stone-800 hover:text-rose-900 transition underline underline-offset-2">
-                <span>inspect</span>
-                <i data-lucide="arrow-up-right" class="w-3 h-3 text-rose-800"></i>
-              </button>
-            </div>
+          <!-- Stack Tags -->
+          <div class="pt-2 border-t border-dashed border-stone-300/80 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">ANDROID JAVA</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">GOOGLE MAPS</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">SQLITE</span>
           </div>
 
         </div>
     
 
-        <!-- PROJECT 9: RX QUEUE SYSTEM (Arya Ziddan Paper Card Style) -->
-        <div class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-[0_12px_32px_rgba(0,0,0,0.55)] p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.65)] reveal cursor-default"
-             style="transform: rotate(1.4deg);"
+        <!-- COMPACT ARCHIVE CARD: RX QUEUE SYSTEM -->
+        <div onclick="openModal('modal-queue')"
+             class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-md p-5 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-xl cursor-pointer w-[280px] sm:w-[320px] shrink-0 snap-center"
+             style="transform: rotate(1deg);"
              data-category="desktop"
              data-title="Pharmacy Prescription Queue System (Desktop GUI) Java Swing NetBeans JDBC MySQL FIFO Loket Resep">
           
           <!-- Masking Tape at Top -->
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-24 h-5 z-20 pointer-events-none select-none shadow-sm"
-               style="background: rgba(217, 119, 6, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(-1.5deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-4 z-20 pointer-events-none select-none shadow-sm"
+               style="background: rgba(217, 119, 6, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(1deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
           </div>
 
-          <!-- Top Eyebrow Metadata (Monospace) -->
+          <!-- Top Metadata Line -->
           <div>
-            <div class="flex items-center justify-between text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/80 pb-2">
-              <span class="truncate pr-2">DISPENSARY QUEUE · 2023 · JAVA</span>
+            <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/70 pb-1.5">
+              <span class="truncate pr-1">DESKTOP GUI · 2023</span>
               <span class="shrink-0 font-bold text-rose-800">FIFO QUEUE ↗</span>
             </div>
 
-            <!-- Big Heavy Title -->
-            <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2.5 leading-none group-hover:text-rose-900 transition-colors">
+            <!-- Title -->
+            <h4 class="text-xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2 leading-none group-hover:text-rose-900 transition-colors">
               RX QUEUE SYSTEM
-            </h3>
+            </h4>
 
-            <!-- Role / Tagline -->
-            <div class="text-[10px] sm:text-xs font-mono font-semibold tracking-wider text-rose-800 uppercase mt-1">
-              DESKTOP GUI & DATABASE
+            <!-- Role -->
+            <div class="text-[10px] font-mono font-bold tracking-wider text-rose-800 uppercase mt-1">
+              JAVA SWING & DATABASE
             </div>
 
-            <!-- Prominent Media Container -->
-            <div onclick="openModal('modal-sales')" class="h-48 sm:h-52 w-full rounded-sm overflow-hidden bg-[#1c1815] border border-stone-400/80 my-3.5 p-5 flex items-center justify-center shadow-inner text-center cursor-pointer">
-  <div>
-    <i data-lucide="monitor" class="w-10 h-10 mx-auto text-rose-500 mb-2"></i>
-    <div class="font-bold text-white text-sm">Dispensary Prescription Queue System</div>
-    <div class="text-[11px] text-stone-400 mt-1 font-mono">Java Swing · JDBC MySQL · FIFO Queue</div>
-  </div>
-</div>
-
-            <!-- Concise Description -->
-            <p class="text-xs sm:text-[13px] text-stone-700 leading-relaxed font-sans line-clamp-3">
-              Desktop application managing prescription dispensing queues using First-In-First-Out (FIFO) scheduling. Features automated counter ticket calling and MySQL JDBC persistence.
+            <!-- Description -->
+            <p class="text-xs text-stone-700 leading-relaxed font-sans line-clamp-3 my-3">
+              Desktop prescription queue management application utilizing FIFO scheduling algorithm and MySQL JDBC persistence.
             </p>
           </div>
 
-          <!-- Bottom Section: Tech Stack + Dashed Line + Handwritten Note -->
-          <div class="mt-4 pt-2">
-            <!-- Boxed Tech Stack Pills -->
-            <div class="flex flex-wrap gap-1.5 mb-3">
-              <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">JAVA SWING</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">JDBC MYSQL</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">FIFO QUEUE</span>
-            </div>
-
-            <!-- Dashed Separator Line -->
-            <div class="border-b border-dashed border-stone-400/80 my-2.5"></div>
-
-            <!-- Handwritten Annotation & Modal Action -->
-            <div class="flex items-center justify-between pt-0.5">
-              <span class="font-hand text-base sm:text-lg font-bold text-[#be123c] leading-none select-none tracking-wide">
-                java swing with fifo queue algorithm
-              </span>
-              <button onclick="openModal('modal-sales')" class="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-stone-800 hover:text-rose-900 transition underline underline-offset-2">
-                <span>inspect</span>
-                <i data-lucide="arrow-up-right" class="w-3 h-3 text-rose-800"></i>
-              </button>
-            </div>
+          <!-- Stack Tags -->
+          <div class="pt-2 border-t border-dashed border-stone-300/80 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">JAVA SWING</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">JDBC MYSQL</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">FIFO</span>
           </div>
 
         </div>
     
 
-        <!-- PROJECT 10: JAVA EE PAYROLL (Arya Ziddan Paper Card Style) -->
-        <div class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-[0_12px_32px_rgba(0,0,0,0.55)] p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.65)] reveal cursor-default"
-             style="transform: rotate(-0.8deg);"
+        <!-- COMPACT ARCHIVE CARD: JAVA EE PAYROLL -->
+        <div onclick="openModal('modal-payroll')"
+             class="project-card group relative bg-[#f4eee5] text-stone-900 rounded-sm border border-stone-300/90 shadow-md p-5 flex flex-col justify-between transition-all duration-300 hover:rotate-0 hover:-translate-y-2 hover:shadow-xl cursor-pointer w-[280px] sm:w-[320px] shrink-0 snap-center"
+             style="transform: rotate(-1.4deg);"
              data-category="web mobile"
              data-title="Employee Payroll System Java EE JSP Servlet JasperReports Android SDK Camera API">
           
           <!-- Masking Tape at Top -->
-          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 w-24 h-5 z-20 pointer-events-none select-none shadow-sm"
-               style="background: rgba(136, 19, 55, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(1.8deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-4 z-20 pointer-events-none select-none shadow-sm"
+               style="background: rgba(136, 19, 55, 0.85); backdrop-filter: blur(2px); transform: translateX(-50%) rotate(-2deg); box-shadow: 0 1px 3px rgba(0,0,0,0.25); border-left: 1px dashed rgba(255,255,255,0.4); border-right: 1px dashed rgba(255,255,255,0.4);">
           </div>
 
-          <!-- Top Eyebrow Metadata (Monospace) -->
+          <!-- Top Metadata Line -->
           <div>
-            <div class="flex items-center justify-between text-[10px] sm:text-[11px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/80 pb-2">
-              <span class="truncate pr-2">PAYROLL · 2023 · ENTERPRISE</span>
-              <span class="shrink-0 font-bold text-rose-800">JASPER REPORTS ↗</span>
+            <div class="flex items-center justify-between text-[10px] font-mono uppercase tracking-wider text-stone-600 border-b border-stone-300/70 pb-1.5">
+              <span class="truncate pr-1">JAVA EE · 2023</span>
+              <span class="shrink-0 font-bold text-rose-800">JASPERREPORTS ↗</span>
             </div>
 
-            <!-- Big Heavy Title -->
-            <h3 class="text-2xl sm:text-3xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2.5 leading-none group-hover:text-rose-900 transition-colors">
+            <!-- Title -->
+            <h4 class="text-xl font-black tracking-tight text-stone-950 uppercase font-sans mt-2 leading-none group-hover:text-rose-900 transition-colors">
               JAVA EE PAYROLL
-            </h3>
+            </h4>
 
-            <!-- Role / Tagline -->
-            <div class="text-[10px] sm:text-xs font-mono font-semibold tracking-wider text-rose-800 uppercase mt-1">
-              JAVA ENTERPRISE & ANDROID MODULE
+            <!-- Role -->
+            <div class="text-[10px] font-mono font-bold tracking-wider text-rose-800 uppercase mt-1">
+              ENTERPRISE JAVA & ANDROID
             </div>
 
-            <!-- Prominent Media Container -->
-            <div onclick="openModal('modal-sales')" class="h-48 sm:h-52 w-full rounded-sm overflow-hidden bg-[#1c1815] border border-stone-400/80 my-3.5 p-5 flex items-center justify-center shadow-inner text-center cursor-pointer">
-  <div>
-    <i data-lucide="layers" class="w-10 h-10 mx-auto text-rose-500 mb-2"></i>
-    <div class="font-bold text-white text-sm">Enterprise Java Payroll System</div>
-    <div class="text-[11px] text-stone-400 mt-1 font-mono">JSP / Servlet · JasperReports · Camera API</div>
-  </div>
-</div>
-
-            <!-- Concise Description -->
-            <p class="text-xs sm:text-[13px] text-stone-700 leading-relaxed font-sans line-clamp-3">
-              Java EE web application for payroll processing (JSP & Servlets) with automated PDF payslip generation via JasperReports, paired with an Android multimedia camera module.
+            <!-- Description -->
+            <p class="text-xs text-stone-700 leading-relaxed font-sans line-clamp-3 my-3">
+              Java EE payroll application (JSP/Servlets) with automated PDF payslip compilation paired with an Android camera module.
             </p>
           </div>
 
-          <!-- Bottom Section: Tech Stack + Dashed Line + Handwritten Note -->
-          <div class="mt-4 pt-2">
-            <!-- Boxed Tech Stack Pills -->
-            <div class="flex flex-wrap gap-1.5 mb-3">
-              <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">JAVA EE (JSP)</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">SERVLETS</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/70 text-stone-900 font-mono text-[10px] sm:text-[11px] font-bold rounded-sm uppercase tracking-wide">JASPERREPORTS</span>
-            </div>
-
-            <!-- Dashed Separator Line -->
-            <div class="border-b border-dashed border-stone-400/80 my-2.5"></div>
-
-            <!-- Handwritten Annotation & Modal Action -->
-            <div class="flex items-center justify-between pt-0.5">
-              <span class="font-hand text-base sm:text-lg font-bold text-[#be123c] leading-none select-none tracking-wide">
-                enterprise jsp & automated jasperreports
-              </span>
-              <button onclick="openModal('modal-sales')" class="inline-flex items-center gap-1 text-[11px] font-mono font-bold text-stone-800 hover:text-rose-900 transition underline underline-offset-2">
-                <span>inspect</span>
-                <i data-lucide="arrow-up-right" class="w-3 h-3 text-rose-800"></i>
-              </button>
-            </div>
+          <!-- Stack Tags -->
+          <div class="pt-2 border-t border-dashed border-stone-300/80 flex flex-wrap gap-1.5">
+            <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">JAVA EE</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">JSP</span> <span class="px-2 py-0.5 border border-stone-400 bg-stone-200/80 text-stone-900 font-mono text-[10px] font-bold rounded-sm uppercase tracking-wide">JASPERREPORTS</span>
           </div>
 
         </div>
     
+        </div>
+
+        <!-- EARLIER WORK SECTION (UNDERNEATH ARCHIVE CARDS) -->
+        <div class="mt-12 pt-6 border-t border-rose-950/70">
+          <div class="text-xs font-mono text-stone-500 uppercase tracking-widest mb-4">
+            EARLIER WORK
+          </div>
+          
+          <div class="divide-y divide-rose-950/50 text-xs sm:text-sm font-sans">
+            <div class="py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-slate-300 hover:text-white transition">
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-white">SMA Negeri 1 Astanajapura School Web Portal</span>
+                <span class="text-[10px] font-mono text-stone-400 px-2 py-0.5 rounded bg-stone-900 border border-stone-800 uppercase">Academic Exploration</span>
+              </div>
+              <span class="text-xs text-slate-500 font-mono">Early static informational school portal built with HTML/CSS.</span>
+            </div>
+
+            <div class="py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-slate-300 hover:text-white transition">
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-white">Algorithms & Data Structures Laboratory</span>
+                <span class="text-[10px] font-mono text-stone-400 px-2 py-0.5 rounded bg-stone-900 border border-stone-800 uppercase">UNPAM</span>
+              </div>
+              <span class="text-xs text-slate-500 font-mono">Implementation of sorting algorithms, BST, and graph traversal in C++ & Java.</span>
+            </div>
+
+            <div class="py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-slate-300 hover:text-white transition">
+              <div class="flex items-center gap-3">
+                <span class="font-bold text-white">Object-Oriented Programming Practicum</span>
+                <span class="text-[10px] font-mono text-stone-400 px-2 py-0.5 rounded bg-stone-900 border border-stone-800 uppercase">UNPAM</span>
+              </div>
+              <span class="text-xs text-slate-500 font-mono">Encapsulation, inheritance, polymorphism, and JDBC database access.</span>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- Search No Results State -->
