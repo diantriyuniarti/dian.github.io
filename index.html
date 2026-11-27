@@ -9,7 +9,7 @@
   <!-- Google Fonts: Plus Jakarta Sans, Inter, & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Patrick+Hand&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Patrick+Hand&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -158,7 +158,42 @@
       text-shadow: 0 0 45px rgba(255, 255, 255, 0.45), 0 0 90px rgba(225, 29, 72, 0.25);
     }
 
-  </style>
+  
+    /* Academic Book Reader Styles */
+    .font-serif-academic { font-family: 'Playfair Display', Georgia, serif; }
+    .book-gutter-shadow {
+      background: linear-gradient(to right, 
+        rgba(0,0,0,0.18) 0%, 
+        rgba(0,0,0,0.06) 8%, 
+        transparent 25%, 
+        transparent 75%, 
+        rgba(0,0,0,0.06) 92%, 
+        rgba(0,0,0,0.18) 100%
+      );
+    }
+    .book-left-edge {
+      box-shadow: inset 14px 0 24px -10px rgba(0,0,0,0.14), -4px 0 8px -2px rgba(0,0,0,0.25);
+    }
+    .book-right-edge {
+      box-shadow: inset -14px 0 24px -10px rgba(0,0,0,0.14), 4px 0 8px -2px rgba(0,0,0,0.25);
+    }
+    @keyframes pageTurnNext {
+      0% { transform: perspective(2000px) rotateY(0deg); opacity: 1; filter: brightness(1); }
+      45% { transform: perspective(2000px) rotateY(-35deg) scale(0.98); opacity: 0.7; filter: brightness(0.9); }
+      100% { transform: perspective(2000px) rotateY(0deg); opacity: 1; filter: brightness(1); }
+    }
+    @keyframes pageTurnPrev {
+      0% { transform: perspective(2000px) rotateY(0deg); opacity: 1; filter: brightness(1); }
+      45% { transform: perspective(2000px) rotateY(35deg) scale(0.98); opacity: 0.7; filter: brightness(0.9); }
+      100% { transform: perspective(2000px) rotateY(0deg); opacity: 1; filter: brightness(1); }
+    }
+    .anim-turn-next {
+      animation: pageTurnNext 0.42s cubic-bezier(0.3, 0, 0.2, 1) forwards;
+    }
+    .anim-turn-prev {
+      animation: pageTurnPrev 0.42s cubic-bezier(0.3, 0, 0.2, 1) forwards;
+    }
+</style>
 </head>
 
 <body class="bg-[#090306] text-slate-100 min-h-screen font-sans antialiased selection:bg-rose-600 selection:text-white">
@@ -1176,145 +1211,90 @@
   </section>
 
   <!-- ==================== ACADEMIC PUBLICATIONS SECTION ==================== -->
-  <section id="publikasi" class="py-20 sm:py-24 bg-[#0a0407] border-b border-rose-950/60">
+    <!-- ==================== ACADEMIC PUBLICATIONS (INTERACTIVE BOOK READER) ==================== -->
+  <section id="publikasi" class="py-20 sm:py-28 bg-[#0a0306] border-b border-rose-950/60">
     <div class="max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
       
-      <!-- Section Header -->
-      <div class="mb-12">
-        <div class="flex items-center gap-3 mb-2">
-          <span class="w-6 h-[2px] bg-rose-500"></span>
-          <span class="text-xs font-mono font-bold tracking-widest text-rose-400 uppercase">// 03 · RESEARCH & PUBLICATIONS</span>
+      <!-- Section Header (Arya Ziddan Editorial Style) -->
+      <div class="mb-10 sm:mb-14 reveal">
+        <div class="text-xs sm:text-sm font-mono font-bold tracking-widest text-rose-500 uppercase mb-3 sm:mb-4">
+          // 03 · RESEARCH & PUBLICATIONS
         </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-          Peer-Reviewed & Indexed Publications
+        <h2 class="text-4xl sm:text-6xl lg:text-7xl font-black uppercase tracking-tight font-sans leading-none">
+          <span class="block text-white">PEER-REVIEWED</span>
+          <span class="block text-slate-500">PUBLICATIONS VOLUME.</span>
         </h2>
-        <p class="text-sm sm:text-base text-slate-400 mt-2 max-w-2xl">
-          Four applied computing research papers co-authored and published in accredited national scientific journals (SINTA) and Google Scholar.
+        <p class="text-xs sm:text-sm text-slate-400 mt-4 max-w-2xl font-mono">
+          Interactive manuscript volume: flip through the 4 peer-reviewed research papers published in accredited national journals (SINTA) & Google Scholar.
         </p>
       </div>
 
-      <!-- 4 Publication Archive Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- INTERACTIVE BOOK VIEWER COMPONENT -->
+      <div class="relative w-full max-w-5xl mx-auto select-none reveal">
         
-        <!-- Paper 1: OKTAL (Kopiluvium) -->
-        <div class="p-6 rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/60 transition flex flex-col justify-between shadow-lg reveal">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between gap-3">
-              <span class="px-2.5 py-1 rounded text-[11px] font-bold bg-rose-950/60 text-rose-300 border border-rose-900/40 font-mono">
-                OKTAL: Jurnal Ilmu Komputer & Sains (2025)
-              </span>
-              <span class="text-xs text-slate-400 font-mono">Vol. 4, No. 5</span>
-            </div>
-            <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
-              Design of a Web-Based Warehouse Stock-Taking Application Using the Waterfall Model at Kopiluvium
-            </h3>
-            <p class="text-xs font-mono text-slate-400">
-              Authors: <strong class="text-white">Yuniarti, D. T.</strong>, Alfitra, R., Prasetya, R. N., & Saprudin
-            </p>
-            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-              Details requirements engineering, UML modeling, Figma UI prototyping, PHP/MySQL implementation, and Black-Box verification for Kopiluvium warehouse inventory audits.
-            </p>
-          </div>
-
-          <div class="pt-4 mt-4 border-t border-rose-950/70 flex items-center gap-3">
-            <a href="https://journal.mediapublikasi.id/index.php/oktal" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-rose-600 hover:bg-rose-500 text-white transition">
-              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              <span>Open Journal Portal</span>
-            </a>
-            <a href="https://scholar.google.com/scholar?q=Perancangan+Aplikasi+Pendataan+Stok+Opname+Gudang+Berbasis+Web+Menggunakan+Metode+Waterfall+pada+Kopiluvium" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-rose-300 font-mono underline underline-offset-4">
-              Google Scholar ↗
-            </a>
-          </div>
+        <!-- Top Bookmarks / Chapter Ribbon Tabs -->
+        <div class="flex items-center gap-1.5 sm:gap-2 mb-3.5 overflow-x-auto pb-1.5 no-scrollbar">
+          <span class="text-[11px] font-mono text-rose-400/80 uppercase tracking-widest mr-1 flex items-center gap-1">
+            <span>CHAPTERS:</span>
+          </span>
+          <button onclick="goToBookPage(0)" id="book-tab-0" class="book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-rose-600 text-white shadow-sm whitespace-nowrap">
+            01 · Kopiluvium
+          </button>
+          <button onclick="goToBookPage(1)" id="book-tab-1" class="book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-[#180910] text-slate-400 hover:text-white border border-rose-950/80 whitespace-nowrap">
+            02 · WASPAS DSS
+          </button>
+          <button onclick="goToBookPage(2)" id="book-tab-2" class="book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-[#180910] text-slate-400 hover:text-white border border-rose-950/80 whitespace-nowrap">
+            03 · AI Education (SINTA 5)
+          </button>
+          <button onclick="goToBookPage(3)" id="book-tab-3" class="book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-[#180910] text-slate-400 hover:text-white border border-rose-950/80 whitespace-nowrap">
+            04 · Cybersecurity
+          </button>
         </div>
 
-        <!-- Paper 2: FASILKOM (WASPAS) -->
-        <div class="p-6 rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/60 transition flex flex-col justify-between shadow-lg reveal">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between gap-3">
-              <span class="px-2.5 py-1 rounded text-[11px] font-bold bg-rose-950/60 text-rose-300 border border-rose-900/40 font-mono">
-                Jurnal FASILKOM (2025)
-              </span>
-              <span class="text-xs text-slate-400 font-mono">Vol. 15, No. 3</span>
+        <!-- Outer Hardcover Book Frame -->
+        <div class="relative rounded-2xl p-2.5 sm:p-4 md:p-6 bg-gradient-to-br from-[#1c0813] via-[#12040c] to-[#0a0207] border-2 border-rose-950/80 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.95)]">
+          
+          <!-- Book Page Leaves Container (Click to Turn) -->
+          <div id="bookViewerContainer" class="relative rounded-lg bg-[#fbf8f1] text-stone-900 overflow-hidden shadow-2xl border border-stone-300 min-h-[460px] sm:min-h-[520px] cursor-pointer" onclick="handleBookSpreadClick(event)">
+            
+            <!-- Center Book Spine Shadow & Stitching Crease (Desktop Only) -->
+            <div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-12 sm:w-16 pointer-events-none z-20 book-gutter-shadow hidden md:block"></div>
+            <div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[1px] bg-stone-300/80 pointer-events-none z-20 hidden md:block"></div>
+
+            <!-- Page Content Container (Dynamic 3D Flip) -->
+            <div id="bookPageContent" class="h-full">
+              <!-- Rendered via JavaScript -->
             </div>
-            <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
-              Application Analysis of the WASPAS Method for Classifying Student Learning Patterns Based on Learning Styles
-            </h3>
-            <p class="text-xs font-mono text-slate-400">
-              Authors: Ester, R., <strong class="text-white">Yuniarti, D. T.</strong>, Valentina, P. E., & Putra, F. M. K.
-            </p>
-            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-              Implementation of the Weighted Aggregated Sum Product Assessment (WASPAS) decision support method to evaluate and recommend optimal learning patterns based on student behavioral preferences.
-            </p>
+
+            <!-- Bottom Floating Turn Hint Badge (Desktop) -->
+            <div class="absolute bottom-3 right-4 z-20 hidden md:flex items-center gap-1.5 text-[10px] font-mono text-stone-500 bg-stone-200/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-stone-300/80 pointer-events-none">
+              <span>Click page to turn</span>
+              <span>→</span>
+            </div>
+
           </div>
 
-          <div class="pt-4 mt-4 border-t border-rose-950/70 flex items-center gap-3">
-            <a href="https://ejurnal.umri.ac.id/index.php/JIK/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-rose-600 hover:bg-rose-500 text-white transition">
-              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              <span>Open Journal Portal</span>
-            </a>
-            <a href="https://scholar.google.com/scholar?q=Analisis+Penerapan+Metode+WASPAS+untuk+Penentuan+Pola+Belajar+Mahasiswa+Berdasarkan+Gaya+Belajar" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-rose-300 font-mono underline underline-offset-4">
-              Google Scholar ↗
-            </a>
-          </div>
         </div>
 
-        <!-- Paper 3: JUTECH SINTA 5 -->
-        <div class="p-6 rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/60 transition flex flex-col justify-between shadow-lg reveal">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between gap-3">
-              <span class="px-2.5 py-1 rounded text-[11px] font-bold bg-amber-500/10 text-amber-300 border border-amber-500/30 font-mono">
-                JUTECH (SINTA 5) · Dec 2025
-              </span>
-              <span class="text-xs text-slate-400 font-mono">Vol. 6, No. 2</span>
-            </div>
-            <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
-              Analysis of Information Technology and AI Integration in Preparing Vocational Students for the Digital Industry
-            </h3>
-            <p class="text-xs font-mono text-slate-400">
-              Authors: Suhada, J., Ardana, I. M. S., <strong class="text-white">Yuniarti, D. T.</strong>, & Rizky, M.
-            </p>
-            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-              Empirical research examining AI tool integration into vocational computing curricula to bridge digital workforce competency requirements.
-            </p>
+        <!-- Book Navigation Toolbar / Pagination Footer -->
+        <div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono">
+          <!-- Prev Button -->
+          <button onclick="prevBookPage()" id="bookPrevBtn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-[#180811] hover:bg-[#250d1b] border border-rose-950/80 text-slate-300 hover:text-white transition disabled:opacity-40 disabled:cursor-not-allowed">
+            <span>← Previous Page</span>
+          </button>
+
+          <!-- Page Indicator & Volume Status -->
+          <div class="flex items-center gap-2 text-slate-400">
+            <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+            <span>VOLUME ENTRY <strong id="bookPageCounter" class="text-white font-bold">1</strong> OF <strong>4</strong></span>
+            <span class="text-slate-600 hidden sm:inline">|</span>
+            <span id="bookTitlePreview" class="text-rose-400/90 hidden sm:inline truncate max-w-xs">OKTAL (2025)</span>
           </div>
 
-          <div class="pt-4 mt-4 border-t border-rose-950/70 flex items-center gap-3">
-            <a href="https://doi.org/10.31932/jutech.v6i2.5045" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-rose-600 hover:bg-rose-500 text-white transition">
-              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              <span>Open DOI Article</span>
-            </a>
-            <a href="https://jurnal.stkippersada.ac.id/jurnal/index.php/jutech/article/view/5045" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-rose-300 font-mono underline underline-offset-4">
-              OJS Portal ↗
-            </a>
-          </div>
-        </div>
-
-        <!-- Paper 4: E-Learning Security Assessment -->
-        <div class="p-6 rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/60 transition flex flex-col justify-between shadow-lg reveal">
-          <div class="space-y-3">
-            <div class="flex items-center justify-between gap-3">
-              <span class="px-2.5 py-1 rounded text-[11px] font-bold bg-rose-950/60 text-rose-300 border border-rose-900/40 font-mono">
-                Jurnal Kajian Komputasi Inovatif (2023)
-              </span>
-              <span class="text-xs text-slate-400 font-mono">Vol. 14, No. 1</span>
-            </div>
-            <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
-              Security Vulnerability Analysis of University E-Learning Web Application Using Vulnerability Assessment
-            </h3>
-            <p class="text-xs font-mono text-slate-400">
-              Authors: Kumalasari, I., <strong class="text-white">Yuniarti, D. T.</strong>, Indriani, R., Rizky, M., & Gea, K.
-            </p>
-            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-              Cybersecurity assessment of an institutional e-learning platform identifying configuration weaknesses, input sanitization gaps, and actionable security remediation strategies.
-            </p>
-          </div>
-
-          <div class="pt-4 mt-4 border-t border-rose-950/70 flex items-center gap-3">
-            <a href="https://scholar.google.com/scholar?q=Analisis+Celah+Keamanan+Aplikasi+Web+E-Learning+Universitas+Pamulang+Dian+Tri+Yuniarti" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-rose-600 hover:bg-rose-500 text-white transition">
-              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
-              <span>View on Google Scholar</span>
-            </a>
-          </div>
+          <!-- Next Button -->
+          <button onclick="nextBookPage()" id="bookNextBtn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-rose-600 hover:bg-rose-500 text-white font-bold shadow-md shadow-rose-950/50 transition disabled:opacity-40 disabled:cursor-not-allowed">
+            <span>Next Page →</span>
+          </button>
         </div>
 
       </div>
@@ -2200,6 +2180,326 @@
         }, 150);
       }
     }
-  </script>
+  
+    // ==================== ACADEMIC BOOK READER LOGIC ====================
+    const bookPapers = [
+      {
+        volume: "Vol. 4, No. 5 · 2025",
+        journal: "OKTAL: Jurnal Ilmu Komputer & Sains",
+        indexBadge: "PEER-REVIEWED JOURNAL",
+        badgeColor: "bg-rose-100 text-rose-800 border-rose-300",
+        title: "Design of a Web-Based Warehouse Stock-Taking Application Using the Waterfall Model at Kopiluvium",
+        authors: "Yuniarti, D. T., Alfitra, R., Prasetya, R. N., & Saprudin",
+        field: "Enterprise Software Engineering & Database Systems",
+        abstract: "Addresses persistent paper-based discrepancies in retail warehouse inventory management. The system automates stock opname audits, discrepancy logging, and role-based operational permissions at Kopiluvium, completely replacing manual paper ledgers with automated reconciliation.",
+        highlights: [
+          "Zero inventory discrepancy post-deployment",
+          "Automated audit trails with timestamps",
+          "UML Class & Sequence Architecture",
+          "Black-Box verification test coverage"
+        ],
+        primaryUrl: "https://journal.mediapublikasi.id/index.php/oktal",
+        primaryLabel: "Open Journal Portal ↗",
+        scholarUrl: "https://scholar.google.com/scholar?q=Perancangan+Aplikasi+Pendataan+Stok+Opname+Gudang+Berbasis+Web+Menggunakan+Metode+Waterfall+pada+Kopiluvium",
+        scholarLabel: "Google Scholar ↗",
+        handwrittenNote: "published from internship production work!"
+      },
+      {
+        volume: "Vol. 15, No. 3 · 2025",
+        journal: "Jurnal FASILKOM (Fakultas Ilmu Komputer)",
+        indexBadge: "ACCREDITED HIGHER-ED JOURNAL",
+        badgeColor: "bg-amber-100 text-amber-900 border-amber-300",
+        title: "Application Analysis of the WASPAS Method for Classifying Student Learning Patterns Based on Learning Styles",
+        authors: "Ester, R., Yuniarti, D. T., Valentina, P. E., & Putra, F. M. K.",
+        field: "Decision Support Systems (DSS) & Applied Algorithms",
+        abstract: "Formulates a mathematical decision-support framework to objectively classify multimodal student learning preferences. The WASPAS model evaluates weighted behavioral criteria to formulate adaptive academic recommendations tailored to individual cognitive traits.",
+        highlights: [
+          "Hybrid WSM + WPM multi-criteria weighting",
+          "Sensitivity validation across parameter variations",
+          "Algorithmic decision scoring matrix",
+          "Empirical educational dataset validation"
+        ],
+        primaryUrl: "https://ejurnal.umri.ac.id/index.php/JIK/",
+        primaryLabel: "Open Journal Portal ↗",
+        scholarUrl: "https://scholar.google.com/scholar?q=Analisis+Penerapan+Metode+WASPAS+untuk+Penentuan+Pola+Belajar+Mahasiswa+Berdasarkan+Gaya+Belajar",
+        scholarLabel: "Google Scholar ↗",
+        handwrittenNote: "rigorous algorithmic DSS modeling"
+      },
+      {
+        volume: "Vol. 6, No. 2 · Dec 2025",
+        journal: "JUTECH (Jurnal Pendidikan Teknologi Informasi)",
+        indexBadge: "SINTA 5 ACCREDITED",
+        badgeColor: "bg-emerald-100 text-emerald-900 border-emerald-300",
+        title: "Analysis of Information Technology and AI Integration in Preparing Vocational Students for the Digital Industry",
+        authors: "Suhada, J., Ardana, I. M. S., Yuniarti, D. T., & Rizky, M.",
+        field: "Artificial Intelligence & Technical Pedagogy",
+        abstract: "Empirical study evaluating the integration of generative AI tools and applied software engineering curricula within vocational technology students. Proposes actionable competency frameworks to bridge the gap between academic output and modern tech industry demands.",
+        highlights: [
+          "Nationally accredited (SINTA Rank 5)",
+          "Empirical competency evaluation",
+          "GenAI workflow adoption metrics",
+          "Industry alignment framework"
+        ],
+        primaryUrl: "https://doi.org/10.31932/jutech.v6i2.5045",
+        primaryLabel: "Open DOI Article ↗",
+        scholarUrl: "https://jurnal.stkippersada.ac.id/jurnal/index.php/jutech/article/view/5045",
+        scholarLabel: "OJS Portal ↗",
+        handwrittenNote: "indexed in national SINTA database"
+      },
+      {
+        volume: "Vol. 14, No. 1 · 2023",
+        journal: "Jurnal Kajian Komputasi Inovatif (JKKI)",
+        indexBadge: "CYBERSECURITY RESEARCH",
+        badgeColor: "bg-rose-100 text-rose-900 border-rose-300",
+        title: "Security Vulnerability Analysis of University E-Learning Web Application Using Vulnerability Assessment",
+        authors: "Kumalasari, I., Yuniarti, D. T., Indriani, R., Rizky, M., & Gea, K.",
+        field: "Web Application Security & Vulnerability Auditing",
+        abstract: "Comprehensive security assessment of an institutional higher-education LMS. Identifies critical configuration exposures, session management vulnerabilities, and input sanitization flaws, delivering a prioritized mitigation matrix for system administrators.",
+        highlights: [
+          "OWASP Top 10 vulnerability mapping",
+          "Automated + manual verification payloads",
+          "Authentication and session leak analysis",
+          "Actionable administrative remediation guide"
+        ],
+        primaryUrl: "https://scholar.google.com/scholar?q=Analisis+Celah+Keamanan+Aplikasi+Web+E-Learning+Universitas+Pamulang+Dian+Tri+Yuniarti",
+        primaryLabel: "View on Google Scholar ↗",
+        scholarUrl: "https://scholar.google.com/scholar?q=Analisis+Celah+Keamanan+Aplikasi+Web+E-Learning+Universitas+Pamulang+Dian+Tri+Yuniarti",
+        scholarLabel: "Citation Archive ↗",
+        handwrittenNote: "hands-on university LMS security audit"
+      }
+    ];
+
+    let currentBookIndex = 0;
+
+    function renderBookPage(idx, direction = null) {
+      const p = bookPapers[idx];
+      const pageNumLeft = (idx * 2) + 1;
+      const pageNumRight = (idx * 2) + 2;
+
+      const html = `
+        <!-- DESKTOP SPREAD (2 PAGES SIDE BY SIDE) -->
+        <div class="hidden md:grid grid-cols-2 divide-x divide-stone-300/80 h-full">
+          <!-- LEFT PAGE -->
+          <div class="p-6 sm:p-8 lg:p-10 flex flex-col justify-between book-left-edge bg-gradient-to-r from-stone-100/40 via-[#fbf8f1] to-[#fbf8f1]">
+            <div>
+              <div class="flex items-center justify-between border-b border-stone-300 pb-2.5 mb-5 text-[11px] font-mono text-stone-500 uppercase tracking-wider">
+                <span>DIAN TRI YUNIARTI  //  SCHOLARLY WORK</span>
+                <span>ENTRY 0${idx + 1}</span>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-2 mb-3">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold border ${p.badgeColor}">
+                  ${p.indexBadge}
+                </span>
+                <span class="text-xs font-mono font-bold text-rose-800">
+                  ${p.volume}
+                </span>
+              </div>
+
+              <div class="text-xs font-mono uppercase tracking-wider text-stone-600 mb-2 font-bold">
+                ${p.journal}
+              </div>
+
+              <h3 class="text-lg sm:text-xl lg:text-2xl font-bold font-serif-academic text-stone-900 leading-snug mb-3">
+                "${p.title}"
+              </h3>
+
+              <div class="text-xs font-mono text-stone-600 mb-4 bg-stone-200/50 p-2.5 rounded border border-stone-300/60">
+                <span class="text-stone-500 uppercase text-[10px] block mb-0.5">AUTHORS / RESEARCHERS:</span>
+                ${p.authors.replace('Yuniarti, D. T.', '<strong class="text-rose-900 font-black underline decoration-rose-500 decoration-2">Yuniarti, D. T.</strong>')}
+              </div>
+
+              <div class="text-xs text-stone-600 space-y-1">
+                <div class="text-[10px] font-mono uppercase tracking-wider text-stone-500">RESEARCH DOMAIN:</div>
+                <div class="font-medium text-stone-800">${p.field}</div>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-stone-300/80 mt-6 flex items-center justify-between text-[11px] font-mono text-stone-500">
+              <span>UNIVERSITAS PAMULANG</span>
+              <span>PG. ${pageNumLeft}</span>
+            </div>
+          </div>
+
+          <!-- RIGHT PAGE -->
+          <div class="p-6 sm:p-8 lg:p-10 flex flex-col justify-between book-right-edge bg-gradient-to-l from-stone-100/40 via-[#fbf8f1] to-[#fbf8f1]">
+            <div>
+              <div class="flex items-center justify-between border-b border-stone-300 pb-2.5 mb-5 text-[11px] font-mono text-stone-500 uppercase tracking-wider">
+                <span class="truncate max-w-[200px]">${p.journal}</span>
+                <span>PG. ${pageNumRight}</span>
+              </div>
+
+              <div class="mb-4">
+                <div class="text-[11px] font-mono font-bold uppercase tracking-wider text-stone-700 mb-1.5 flex items-center gap-1.5">
+                  <span class="w-1.5 h-1.5 bg-rose-600 rounded-full"></span>
+                  <span>ABSTRACT & EXECUTIVE SUMMARY</span>
+                </div>
+                <p class="text-xs sm:text-[13px] text-stone-700 leading-relaxed font-sans text-justify">
+                  ${p.abstract}
+                </p>
+              </div>
+
+              <div class="mb-4">
+                <div class="text-[10px] font-mono uppercase tracking-wider text-stone-500 mb-2">KEY METHODOLOGY & FINDINGS:</div>
+                <ul class="text-xs text-stone-700 space-y-1.5 font-mono">
+                  ${p.highlights.map(h => `<li class="flex items-start gap-1.5"><span class="text-rose-600 font-bold">✓</span> <span>${h}</span></li>`).join('')}
+                </ul>
+              </div>
+
+              <div class="font-handwriting text-rose-700 text-lg rotate-[-2deg] my-2">
+                ✦ ${p.handwrittenNote}
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-stone-300/80 mt-6">
+              <div class="flex flex-wrap items-center gap-2.5">
+                <a href="${p.primaryUrl}" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-mono font-bold bg-rose-700 hover:bg-rose-800 text-white shadow-sm transition transform hover:-translate-y-0.5">
+                  <span>${p.primaryLabel}</span>
+                </a>
+                <a href="${p.scholarUrl}" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-mono font-medium text-stone-700 hover:text-stone-900 bg-stone-200/80 hover:bg-stone-300/80 border border-stone-300 transition">
+                  <span>${p.scholarLabel}</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOBILE SINGLE FOLIO LEAF -->
+        <div class="md:hidden p-5 sm:p-6 flex flex-col justify-between bg-[#fbf8f1] space-y-4">
+          <div>
+            <div class="flex items-center justify-between border-b border-stone-300 pb-2 mb-3 text-[10px] font-mono text-stone-500 uppercase tracking-wider">
+              <span>RESEARCH PAPER 0${idx + 1} OF 04</span>
+              <span>PAGE ${idx + 1}</span>
+            </div>
+
+            <div class="flex flex-wrap items-center gap-1.5 mb-2.5">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono font-bold border ${p.badgeColor}">
+                ${p.indexBadge}
+              </span>
+              <span class="text-[11px] font-mono font-bold text-rose-800">
+                ${p.volume}
+              </span>
+            </div>
+
+            <div class="text-[11px] font-mono uppercase tracking-wider text-stone-600 font-bold mb-1.5">
+              ${p.journal}
+            </div>
+
+            <h3 class="text-base sm:text-lg font-bold font-serif-academic text-stone-900 leading-snug mb-2.5">
+              "${p.title}"
+            </h3>
+
+            <div class="text-[11px] font-mono text-stone-600 mb-3 bg-stone-200/50 p-2 rounded border border-stone-300/60 leading-snug">
+              <span class="text-stone-500 uppercase text-[9px] block">AUTHORS:</span>
+              ${p.authors.replace('Yuniarti, D. T.', '<strong class="text-rose-900 font-black underline decoration-rose-500">Yuniarti, D. T.</strong>')}
+            </div>
+
+            <p class="text-xs text-stone-700 leading-relaxed font-sans mb-3 text-justify">
+              ${p.abstract}
+            </p>
+
+            <ul class="text-[11px] text-stone-700 space-y-1 font-mono mb-3">
+              ${p.highlights.slice(0, 3).map(h => `<li class="flex items-start gap-1"><span class="text-rose-600 font-bold">✓</span> <span>${h}</span></li>`).join('')}
+            </ul>
+
+            <div class="font-handwriting text-rose-700 text-base rotate-[-1deg] my-1">
+              ✦ ${p.handwrittenNote}
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-stone-300">
+            <div class="flex flex-wrap items-center gap-2 mb-2">
+              <a href="${p.primaryUrl}" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-mono font-bold bg-rose-700 hover:bg-rose-800 text-white shadow-sm transition">
+                <span>${p.primaryLabel}</span>
+              </a>
+              <a href="${p.scholarUrl}" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg text-xs font-mono font-medium text-stone-700 bg-stone-200/80 border border-stone-300 transition">
+                <span>${p.scholarLabel}</span>
+              </a>
+            </div>
+            <div class="text-[10px] font-mono text-stone-500 text-center pt-1">
+              Tap page to turn to next paper →
+            </div>
+          </div>
+        </div>
+      `;
+
+      const container = document.getElementById('bookPageContent');
+      if (!container) return;
+
+      if (direction === 'next') {
+        container.classList.remove('anim-turn-next', 'anim-turn-prev');
+        void container.offsetWidth;
+        container.classList.add('anim-turn-next');
+        setTimeout(() => { container.innerHTML = html; }, 180);
+      } else if (direction === 'prev') {
+        container.classList.remove('anim-turn-next', 'anim-turn-prev');
+        void container.offsetWidth;
+        container.classList.add('anim-turn-prev');
+        setTimeout(() => { container.innerHTML = html; }, 180);
+      } else {
+        container.innerHTML = html;
+      }
+
+      const counter = document.getElementById('bookPageCounter');
+      if (counter) counter.textContent = idx + 1;
+
+      const titlePreview = document.getElementById('bookTitlePreview');
+      if (titlePreview) titlePreview.textContent = p.title;
+
+      for (let i = 0; i < 4; i++) {
+        const tab = document.getElementById(`book-tab-${i}`);
+        if (tab) {
+          if (i === idx) {
+            tab.className = "book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-rose-600 text-white shadow-sm whitespace-nowrap";
+          } else {
+            tab.className = "book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-[#180910] text-slate-400 hover:text-white border border-rose-950/80 whitespace-nowrap";
+          }
+        }
+      }
+
+      const prevBtn = document.getElementById('bookPrevBtn');
+      if (prevBtn) prevBtn.disabled = (idx === 0);
+
+      const nextBtn = document.getElementById('bookNextBtn');
+      if (nextBtn) nextBtn.disabled = (idx === bookPapers.length - 1);
+    }
+
+    function goToBookPage(idx, direction = 'next') {
+      if (idx >= 0 && idx < bookPapers.length) {
+        currentBookIndex = idx;
+        renderBookPage(currentBookIndex, direction);
+      }
+    }
+
+    function nextBookPage() {
+      if (currentBookIndex < bookPapers.length - 1) {
+        goToBookPage(currentBookIndex + 1, 'next');
+      } else {
+        goToBookPage(0, 'next');
+      }
+    }
+
+    function prevBookPage() {
+      if (currentBookIndex > 0) {
+        goToBookPage(currentBookIndex - 1, 'prev');
+      }
+    }
+
+    function handleBookSpreadClick(e) {
+      if (e.target.closest('a') || e.target.closest('button')) {
+        return;
+      }
+      nextBookPage();
+    }
+
+    // Initialize Book on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderBookPage(0, null);
+    });
+</script>
 </body>
 </html>
