@@ -160,7 +160,7 @@
   </style>
 </head>
 
-<body class="bg-slate-50 text-slate-800 dark:bg-[#080c14] dark:text-slate-100 min-h-screen transition-colors duration-300 font-sans antialiased selection:bg-brand-500 selection:text-white">
+<body class="bg-[#090306] text-slate-100 min-h-screen font-sans antialiased selection:bg-rose-600 selection:text-white">
 
   <!-- ==================== HEADER NAVBAR ==================== -->
   <header class="sticky top-0 z-50 bg-[#0d0406]/90 dark:bg-[#080305]/90 border-b border-rose-950/40 backdrop-blur-md transition-colors duration-300">
@@ -302,310 +302,375 @@
     </div>
   </section>
 
-  <!-- ==================== ABOUT ME SECTION ==================== -->
-  <section id="tentang" class="py-16 sm:py-20 bg-white dark:bg-[#080c14] border-b border-slate-200/80 dark:border-slate-800/70 transition-colors">
+  <!-- ==================== METRICS STRIP (MINIMALIST TECHNICAL BAR) ==================== -->
+  <section class="border-y border-rose-950/60 bg-[#0d0508] py-8 sm:py-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-0 divide-y md:divide-y-0 md:divide-x divide-rose-950/50">
         
-        <!-- Left: Heading with horizontal line label -->
-        <div class="lg:col-span-5 space-y-4">
-          <div class="flex items-center gap-3">
-            <span class="w-8 h-[2px] bg-slate-900 dark:bg-white"></span>
-            <span class="text-xs font-bold tracking-widest text-slate-900 dark:text-white uppercase font-mono">ABOUT ME</span>
+        <!-- Metric 1: GPA -->
+        <div class="px-3 sm:px-6 py-2 sm:py-0 text-left">
+          <div class="flex items-baseline gap-1">
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-black font-mono text-white tracking-tight">3.60</span>
+            <span class="text-xs sm:text-sm font-mono text-rose-400 font-bold">/ 4.00</span>
           </div>
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
-            Discover the Story, Passion, and Purpose <span class="text-slate-400 dark:text-slate-500 font-normal">Behind My Work and Engineering</span>
-          </h2>
-          
-          <!-- Key Achievements Pill Grid -->
-          <div class="pt-4 grid grid-cols-2 gap-3">
-            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800">
-              <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">Degree</span>
-              <span class="text-sm font-bold text-slate-900 dark:text-white">B.S. Informatics, UNPAM</span>
-            </div>
-            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800">
-              <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">Graduation GPA</span>
-              <span class="text-sm font-bold text-red-600 dark:text-rose-400 font-mono">3.60 / 4.00</span>
-            </div>
-            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800">
-              <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">Certification</span>
-              <span class="text-sm font-bold text-slate-900 dark:text-white">Programmer (BNSP)</span>
-            </div>
-            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800">
-              <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">Student Exchange</span>
-              <span class="text-sm font-bold text-slate-900 dark:text-white">PMM 4 (UNSRAT Manado)</span>
-            </div>
+          <div class="text-[11px] font-mono tracking-wider text-rose-300/80 uppercase mt-2">
+            Graduation GPA · B.S. Informatics
+          </div>
+          <div class="text-[10px] text-slate-400 font-mono mt-0.5">
+            Universitas Pamulang (Graduated with Honors)
           </div>
         </div>
 
-        <!-- Right: The exact Indonesian text requested by user -->
-        <div class="lg:col-span-7 space-y-5 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed pt-2">
-          <p>
-            I am an Informatics Engineering graduate from Universitas Pamulang with a strong focus and practical experience in software development, particularly <strong>Full-Stack Web Development</strong>, <strong>Android Development</strong>, and <strong>Machine Learning</strong>.
-          </p>
-          <p>
-            I have built web-based information systems, native Android applications, and machine learning models for data classification. I focus on developing reliable, user-friendly, and maintainable software while continuously deepening my technical foundation.
-          </p>
-          <p>
-            I also hold a Programmer Competency Certification from LSP Informatika / BNSP and have co-authored scientific research published in accredited national journals (SINTA).
-          </p>
+        <!-- Metric 2: Accuracy -->
+        <div class="px-3 sm:px-6 py-2 sm:py-0 text-left pt-4 md:pt-0">
+          <div class="flex items-baseline gap-1">
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-black font-mono text-white tracking-tight">100</span>
+            <span class="text-xs sm:text-sm font-mono text-emerald-400 font-bold">%</span>
+          </div>
+          <div class="text-[11px] font-mono tracking-wider text-rose-300/80 uppercase mt-2">
+            SVM Model Testing Accuracy
+          </div>
+          <div class="text-[10px] text-slate-400 font-mono mt-0.5">
+            99.19% Cross-Validation F1-Score (554 Samples)
+          </div>
+        </div>
 
-          <!-- Social Quick Links -->
-          <div class="pt-4 flex items-center gap-3">
-            <a href="https://linkedin.com/in/dian-tri-yuniarti-367890447" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
-              <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
-              <span>LinkedIn</span>
-            </a>
-            <a href="https://github.com/diantriyuniarti" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
-              <i data-lucide="github" class="w-3.5 h-3.5"></i>
-              <span>GitHub</span>
-            </a>
-            <a href="mailto:diantriyuniarti025@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
-              <i data-lucide="mail" class="w-3.5 h-3.5"></i>
-              <span>Email</span>
-            </a>
+        <!-- Metric 3: Shipped Projects -->
+        <div class="px-3 sm:px-6 py-2 sm:py-0 text-left pt-4 md:pt-0">
+          <div class="flex items-baseline gap-1">
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-black font-mono text-white tracking-tight">10</span>
+            <span class="text-xs sm:text-sm font-mono text-rose-400 font-bold">Systems</span>
+          </div>
+          <div class="text-[11px] font-mono tracking-wider text-rose-300/80 uppercase mt-2">
+            Shipped Applications
+          </div>
+          <div class="text-[10px] text-slate-400 font-mono mt-0.5">
+            Web Full-Stack, Android Native & ML Pipelines
+          </div>
+        </div>
+
+        <!-- Metric 4: Academic Publications -->
+        <div class="px-3 sm:px-6 py-2 sm:py-0 text-left pt-4 md:pt-0">
+          <div class="flex items-baseline gap-1">
+            <span class="text-3xl sm:text-4xl lg:text-5xl font-black font-mono text-white tracking-tight">4</span>
+            <span class="text-xs sm:text-sm font-mono text-amber-400 font-bold">Papers</span>
+          </div>
+          <div class="text-[11px] font-mono tracking-wider text-rose-300/80 uppercase mt-2">
+            Peer-Reviewed Publications
+          </div>
+          <div class="text-[10px] text-slate-400 font-mono mt-0.5">
+            Indexed in SINTA & Google Scholar + 1 National Award
           </div>
         </div>
 
       </div>
+    </div>
+  </section>
 
-      <!-- Animated Metrics Strip (4 Counters) -->
-      <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-[#0f172a]/70 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-rose-500/40 transition transform hover:-translate-y-1">
-          <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400">
-              <i data-lucide="cpu" class="w-5 h-5"></i>
+  <!-- ==================== MARQUEE TICKER (UNIFIED TRANSITION) ==================== -->
+  <div class="py-3 sm:py-3.5 bg-[#070204] text-slate-400 overflow-hidden border-b border-rose-950/50 select-none">
+    <div class="flex items-center gap-8 whitespace-nowrap animate-marquee font-mono text-xs sm:text-sm font-semibold tracking-widest uppercase">
+      <span>SOFTWARE ENGINEERING</span>
+      <span class="text-rose-500">✦</span>
+      <span>MACHINE LEARNING (SVM)</span>
+      <span class="text-rose-500">✦</span>
+      <span>FULL-STACK WEB DEV</span>
+      <span class="text-rose-500">✦</span>
+      <span>ANDROID NATIVE</span>
+      <span class="text-rose-500">✦</span>
+      <span>DATA CLASSIFICATION</span>
+      <span class="text-rose-500">✦</span>
+      <span>BNSP CERTIFIED</span>
+      <span class="text-rose-500">✦</span>
+      <span>SINTA 5 ACCREDITED</span>
+      <span class="text-rose-500">✦</span>
+      <span>CLEAN CODE</span>
+      <span class="text-rose-500">✦</span>
+      <span>SOFTWARE ENGINEERING</span>
+      <span class="text-rose-500">✦</span>
+      <span>MACHINE LEARNING (SVM)</span>
+      <span class="text-rose-500">✦</span>
+      <span>FULL-STACK WEB DEV</span>
+      <span class="text-rose-500">✦</span>
+      <span>ANDROID NATIVE</span>
+      <span class="text-rose-500">✦</span>
+      <span>DATA CLASSIFICATION</span>
+      <span class="text-rose-500">✦</span>
+      <span>BNSP CERTIFIED</span>
+      <span class="text-rose-500">✦</span>
+      <span>SINTA 5 ACCREDITED</span>
+      <span class="text-rose-500">✦</span>
+      <span>CLEAN CODE</span>
+      <span class="text-rose-500">✦</span>
+    </div>
+  </div>
+
+  <!-- ==================== ABOUT ME SECTION ==================== -->
+  <section id="tentang" class="py-20 sm:py-24 bg-[#0a0407] border-b border-rose-950/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="w-6 h-[2px] bg-rose-500"></span>
+          <span class="text-xs font-mono font-bold tracking-widest text-rose-400 uppercase">// 01 · ABOUT ME</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          Building Software with Discipline, Clarity & Applied Intelligence
+        </h2>
+        <p class="text-sm sm:text-base text-slate-400 mt-2 max-w-3xl">
+          From relational database schemas and native mobile modules to applied machine learning classification pipelines.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+        
+        <!-- Left Column: Crafted Profile Spec Card (Arya Ziddan Index Card Style) -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="bg-[#13070b] border border-rose-950/80 rounded-2xl p-6 relative overflow-hidden shadow-xl">
+            <!-- Accent Top Stripe -->
+            <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 via-rose-500 to-amber-500"></div>
+            
+            <div class="flex items-center justify-between border-b border-rose-950/70 pb-3 mb-4">
+              <span class="text-[11px] font-mono font-bold tracking-wider text-rose-400 uppercase">[SPEC-SHEET // PROFILE]</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">AVAILABLE FOR HIRE</span>
             </div>
-            <div>
-              <div class="text-2xl font-extrabold text-slate-900 dark:text-white font-mono">
-                <span class="counter" data-target="99.19" data-decimal="2">0</span>%
+
+            <!-- Profile Spec Rows -->
+            <div class="space-y-3 text-xs">
+              <div class="p-3 rounded-xl bg-[#19090f] border border-rose-950/60">
+                <span class="text-[10px] font-mono text-slate-400 block uppercase tracking-wider">Formal Degree</span>
+                <span class="text-sm font-bold text-white mt-0.5 block">B.S. Informatics Engineering</span>
+                <span class="text-[11px] text-rose-300 font-mono">Universitas Pamulang · GPA 3.60 / 4.00</span>
               </div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">SVM Model F1-Score</div>
-            </div>
-          </div>
-        </div>
 
-        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-[#0f172a]/70 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-rose-500/40 transition transform hover:-translate-y-1">
-          <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400">
-              <i data-lucide="book-open" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <div class="text-2xl font-extrabold text-slate-900 dark:text-white font-mono">
-                <span class="counter" data-target="4">0</span> Papers
+              <div class="p-3 rounded-xl bg-[#19090f] border border-rose-950/60">
+                <span class="text-[10px] font-mono text-slate-400 block uppercase tracking-wider">Formal Certification</span>
+                <span class="text-sm font-bold text-white mt-0.5 block">Programmer Competency</span>
+                <span class="text-[11px] text-slate-300 font-mono">LSP Informatika / BNSP (ACID & Security)</span>
               </div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Indexed in Scholar & SINTA</div>
+
+              <div class="p-3 rounded-xl bg-[#19090f] border border-rose-950/60">
+                <span class="text-[10px] font-mono text-slate-400 block uppercase tracking-wider">Academic Mobility</span>
+                <span class="text-sm font-bold text-white mt-0.5 block">PMM Batch 4 Exchange</span>
+                <span class="text-[11px] text-slate-300 font-mono">Universitas Sam Ratulangi (UNSRAT), Manado</span>
+              </div>
+
+              <div class="p-3 rounded-xl bg-[#19090f] border border-rose-950/60">
+                <span class="text-[10px] font-mono text-slate-400 block uppercase tracking-wider">Primary Technical Focus</span>
+                <div class="flex flex-wrap gap-1.5 mt-1.5">
+                  <span class="px-2 py-0.5 rounded bg-rose-950/60 text-rose-300 border border-rose-900/40 text-[11px] font-mono">Full-Stack Web</span>
+                  <span class="px-2 py-0.5 rounded bg-rose-950/60 text-rose-300 border border-rose-900/40 text-[11px] font-mono">Android Native</span>
+                  <span class="px-2 py-0.5 rounded bg-rose-950/60 text-rose-300 border border-rose-900/40 text-[11px] font-mono">Scikit-learn SVM</span>
+                </div>
+              </div>
             </div>
+
+            <!-- Social Action Links -->
+            <div class="pt-4 border-t border-rose-950/70 grid grid-cols-3 gap-2">
+              <a href="https://linkedin.com/in/dian-tri-yuniarti-367890447" target="_blank" class="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg text-xs font-mono bg-[#1c0a12] border border-rose-900/40 text-slate-200 hover:text-white hover:border-rose-500 transition">
+                <i data-lucide="linkedin" class="w-3.5 h-3.5 text-rose-400"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://github.com/diantriyuniarti" target="_blank" class="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg text-xs font-mono bg-[#1c0a12] border border-rose-900/40 text-slate-200 hover:text-white hover:border-rose-500 transition">
+                <i data-lucide="github" class="w-3.5 h-3.5 text-rose-400"></i>
+                <span>GitHub</span>
+              </a>
+              <a href="mailto:diantriyuniarti025@gmail.com" class="flex items-center justify-center gap-1.5 py-2 px-2.5 rounded-lg text-xs font-mono bg-[#1c0a12] border border-rose-900/40 text-slate-200 hover:text-white hover:border-rose-500 transition">
+                <i data-lucide="mail" class="w-3.5 h-3.5 text-rose-400"></i>
+                <span>Email</span>
+              </a>
+            </div>
+
           </div>
         </div>
 
-        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-[#0f172a]/70 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-amber-500/40 transition transform hover:-translate-y-1">
-          <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400">
-              <i data-lucide="award" class="w-5 h-5"></i>
+        <!-- Right Column: Narrative (Dignified, Authentic, Clean) -->
+        <div class="lg:col-span-7 space-y-6 text-sm sm:text-base text-slate-300 leading-relaxed pt-1">
+          <p>
+            I am an Informatics Engineering graduate from Universitas Pamulang with hands-on experience developing software systems across web environments, native Android applications, and machine learning models for data classification.
+          </p>
+          <p>
+            I approach software engineering with a focus on structured logic and reliability. During my internship at Kopiluvium, I designed and deployed a web-based warehouse stock-taking system that eliminated manual discrepancies. For my undergraduate thesis, I developed <em>AnxietyCheck</em>, a clinical screening application powered by a Support Vector Machine model that achieved 100% testing accuracy on 554 samples.
+          </p>
+          <p>
+            In addition to programming, I have co-authored 4 scientific research papers published in accredited national journals (SINTA-indexed), covering software engineering lifecycles, multi-criteria decision support systems, and cybersecurity vulnerability assessments.
+          </p>
+
+          <!-- Core Principles Grid -->
+          <div class="pt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="p-4 rounded-xl bg-[#13070b] border border-rose-950/70">
+              <div class="flex items-center gap-2 text-rose-400 font-mono text-xs font-bold mb-1">
+                <i data-lucide="code-2" class="w-4 h-4"></i>
+                <span>Structured Engineering</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Clear relational schemas, defensive programming against SQL injections, and maintainable MVC/OOP architecture.
+              </p>
             </div>
-            <div>
-              <div class="text-2xl font-extrabold text-slate-900 dark:text-white">4th Place</div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">National Scientific Poster (UNY)</div>
+
+            <div class="p-4 rounded-xl bg-[#13070b] border border-rose-950/70">
+              <div class="flex items-center gap-2 text-rose-400 font-mono text-xs font-bold mb-1">
+                <i data-lucide="flask-conical" class="w-4 h-4"></i>
+                <span>Verified Scientific Rationale</span>
+              </div>
+              <p class="text-xs text-slate-400 leading-relaxed">
+                Rigorous testing validation, cross-validation metrics, and documented academic methodology.
+              </p>
             </div>
           </div>
+
         </div>
 
-        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-[#0f172a]/70 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-emerald-500/40 transition transform hover:-translate-y-1">
-          <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-              <i data-lucide="git-merge" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <div class="text-2xl font-extrabold text-slate-900 dark:text-white font-mono">PMM Batch 4</div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Sam Ratulangi Univ., Manado</div>
-            </div>
-          </div>
-        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- ==================== MARQUEE TICKER (UNIFIED TRANSITION) ==================== -->
-  <div class="py-4 sm:py-5 bg-slate-950 text-white overflow-hidden border-b border-rose-950/40 select-none">
-    <div class="flex items-center gap-8 whitespace-nowrap animate-marquee font-mono text-xs sm:text-sm font-semibold tracking-widest uppercase">
-      <span>CLEAN CODE</span>
-      <span class="text-rose-500">✦</span>
-      <span>MACHINE LEARNING</span>
-      <span class="text-rose-500">✦</span>
-      <span>FULL-STACK WEB DEV</span>
-      <span class="text-rose-500">✦</span>
-      <span>ANDROID NATIVE</span>
-      <span class="text-rose-500">✦</span>
-      <span>INNOVATIVE SOLUTIONS</span>
-      <span class="text-rose-500">✦</span>
-      <span>BNSP CERTIFIED</span>
-      <span class="text-rose-500">✦</span>
-      <span>SINTA 5 ACCREDITED</span>
-      <span class="text-rose-500">✦</span>
-      <span>CLEAN CODE</span>
-      <span class="text-rose-500">✦</span>
-      <span>MACHINE LEARNING</span>
-      <span class="text-rose-500">✦</span>
-      <span>FULL-STACK WEB DEV</span>
-      <span class="text-rose-500">✦</span>
-      <span>ANDROID NATIVE</span>
-      <span class="text-rose-500">✦</span>
-      <span>INNOVATIVE SOLUTIONS</span>
-      <span class="text-rose-500">✦</span>
-      <span>BNSP CERTIFIED</span>
-      <span class="text-rose-500">✦</span>
-      <span>SINTA 5 ACCREDITED</span>
-      <span class="text-rose-500">✦</span>
-    </div>
-  </div>
-
   <!-- ==================== PROJECTS SHOWCASE SECTION ==================== -->
-  <section id="proyek" class="py-20 bg-slate-100/60 dark:bg-[#060a12] border-t border-b border-slate-200/80 dark:border-slate-800/70">
+  <section id="proyek" class="py-20 sm:py-24 bg-[#0e0609] border-b border-rose-950/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
+      <!-- Section Header -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 reveal">
         <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-cyan-400 bg-brand-500/10 dark:bg-cyan-500/10 mb-3">
-            <i data-lucide="folder-git-2" class="w-3.5 h-3.5"></i>
-            Featured Work
+          <div class="flex items-center gap-3 mb-2">
+            <span class="w-6 h-[2px] bg-rose-500"></span>
+            <span class="text-xs font-mono font-bold tracking-widest text-rose-400 uppercase">// 02 · FEATURED WORK</span>
           </div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Projects & Systems
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+            Things I Built. Tested & Documented.
           </h2>
-          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-2 max-w-2xl">
-            A portfolio of software systems, machine learning models, mobile applications, and research developed across academic milestones and internship.
+          <p class="text-sm sm:text-base text-slate-400 mt-2 max-w-2xl">
+            A curated portfolio of software systems, machine learning models, mobile apps, and research artifacts developed through academic milestones and industry internship.
           </p>
         </div>
 
         <!-- Search Bar Input -->
         <div class="w-full md:w-80 relative">
-          <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+          <i data-lucide="search" class="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
           <input 
             type="text" 
             id="projectSearchInput" 
-            placeholder="Search projects (e.g. Python, SVM, PHP)..." 
-            class="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm rounded-xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/50 transition shadow-sm"
+            placeholder="Search stack, title, or keywords..." 
+            class="w-full pl-10 pr-4 py-2.5 text-xs sm:text-sm rounded-xl bg-[#14070c] border border-rose-950/80 text-white placeholder-slate-500 focus:outline-none focus:border-rose-500 font-mono transition"
           />
         </div>
       </div>
 
       <!-- Filter Buttons Tabs: Horizontal Swipe on Mobile, Row on Desktop -->
-      <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none mb-8 text-xs sm:text-sm font-medium reveal -mx-4 px-4 sm:mx-0 sm:px-0">
-        <button class="filter-btn active px-3.5 sm:px-4 py-2 rounded-xl transition whitespace-nowrap bg-brand-600 text-white shadow-sm shadow-brand-500/30 shrink-0" data-filter="all">
+      <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none mb-10 text-xs font-mono reveal -mx-4 px-4 sm:mx-0 sm:px-0">
+        <button class="filter-btn active px-4 py-2 rounded-xl transition whitespace-nowrap bg-rose-600 text-white shadow-sm shrink-0" data-filter="all">
           All Projects (10)
         </button>
-        <button class="filter-btn px-3.5 sm:px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40 shrink-0" data-filter="ml">
+        <button class="filter-btn px-4 py-2 rounded-xl transition whitespace-nowrap bg-[#13070b] text-slate-400 border border-rose-950/80 hover:text-white hover:border-rose-800 shrink-0" data-filter="ml">
           Machine Learning & AI
         </button>
-        <button class="filter-btn px-3.5 sm:px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40 shrink-0" data-filter="web">
+        <button class="filter-btn px-4 py-2 rounded-xl transition whitespace-nowrap bg-[#13070b] text-slate-400 border border-rose-950/80 hover:text-white hover:border-rose-800 shrink-0" data-filter="web">
           Web Applications
         </button>
-        <button class="filter-btn px-3.5 sm:px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40 shrink-0" data-filter="mobile">
+        <button class="filter-btn px-4 py-2 rounded-xl transition whitespace-nowrap bg-[#13070b] text-slate-400 border border-rose-950/80 hover:text-white hover:border-rose-800 shrink-0" data-filter="mobile">
           Mobile Android
         </button>
-        <button class="filter-btn px-3.5 sm:px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40 shrink-0" data-filter="desktop">
+        <button class="filter-btn px-4 py-2 rounded-xl transition whitespace-nowrap bg-[#13070b] text-slate-400 border border-rose-950/80 hover:text-white hover:border-rose-800 shrink-0" data-filter="desktop">
           Desktop & UI/UX
         </button>
       </div>
 
-      <!-- PROJECT GRID -->
+      <!-- PROJECT GRID: 10 CARDS (ARYA ZIDDAN INSPIRED CRAFT BOXES IN WINE PALETTE) -->
       <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         
         <!-- PROJECT 1: AnxietyCheck (Skripsi SVM) -->
-        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="ml web" data-title="AnxietyCheck Machine Learning SVM Support Vector Machine Python GAD-7 Classification Web Application Thesis">
-          <div class="relative h-48 sm:h-52 overflow-hidden bg-slate-900 border-b border-slate-100 dark:border-slate-800/80">
-            <img src="assets/images/anxiety_beranda.png" alt="AnxietyCheck" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
-            
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-indigo-600 text-white tracking-wide shadow">
-              Thesis Project · 2026
-            </span>
-            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-500/90 text-white tracking-wide shadow flex items-center gap-1 font-mono">
-              <i data-lucide="check-circle" class="w-3 h-3"></i> 99.19% F1
-            </span>
+        <div class="project-card group rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/70 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-rose-950/30 reveal" data-category="ml web" data-title="AnxietyCheck Machine Learning SVM Support Vector Machine Python GAD-7 Classification Web Application Thesis">
+          <!-- Top Washi-Tape / Index Strip -->
+          <div class="px-4 py-2 bg-[#18090f] border-b border-rose-950/80 flex items-center justify-between text-[11px] font-mono text-rose-300/80">
+            <span>EXP.01 // THESIS PROJECT</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px]">100% ACCURACY</span>
           </div>
 
+          <!-- Card Image Preview -->
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-[#0c0407] border-b border-rose-950/70">
+            <img src="assets/images/anxiety_beranda.png" alt="AnxietyCheck" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#13070b] via-transparent to-transparent opacity-80"></div>
+          </div>
+
+          <!-- Card Content Body -->
           <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
-                <span>Machine Learning & Web App</span>
+              <div class="flex items-center gap-2 text-xs text-rose-400 font-mono mb-1.5">
+                <span>Machine Learning & Web</span>
                 <span>•</span>
-                <span>554 Participants</span>
+                <span>554 Samples</span>
               </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
+              <h3 class="text-lg font-bold text-white group-hover:text-rose-300 transition-colors">
                 AnxietyCheck: Early Anxiety Screening System (SVM)
               </h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
-                Web application classifying anxiety severity levels (Minimal, Mild, Moderate, Severe) using the clinical GAD-7 scale and Support Vector Machine (Linear Kernel, C=1) with 100% testing accuracy. Features interactive screening, historical records, analytics dashboard, and clinical psychologist validation.
+              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                Full-stack web application classifying anxiety levels into 4 tiers using the GAD-7 scale and Support Vector Machine (Linear Kernel, C=1) with 100% test accuracy. Features patient history and clinician validation.
               </p>
             </div>
 
             <div class="space-y-4 pt-2">
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Python</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Scikit-learn</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">SVM Linear</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Joblib</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Python</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Scikit-learn</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">SVM Linear</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Joblib</span>
               </div>
 
-              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
-                <button onclick="openModal('modal-anxiety')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-cyan-400 hover:underline">
+              <div class="pt-3 border-t border-rose-950/70 flex items-center justify-between">
+                <button onclick="openModal('modal-anxiety')" class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-rose-400 hover:text-rose-300 hover:underline">
                   <span>View Details & Gallery</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
                 </button>
-                <span class="text-[11px] text-slate-400 font-mono">Undergraduate Thesis</span>
+                <span class="text-[11px] text-slate-500 font-mono">Thesis 2026</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- PROJECT 2: Kopiluvium Inventory System -->
-        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="web" data-title="Kopiluvium Warehouse Inventory Stock Opname PHP Native MySQL Waterfall Internship Journal OKTAL System">
-          <div class="relative h-48 sm:h-52 overflow-hidden bg-slate-900 border-b border-slate-100 dark:border-slate-800/80">
-            <img src="assets/images/kopiluvium.jpg" alt="Kopiluvium Warehouse Inventory System" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
-            
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-600 text-white tracking-wide shadow">
-              Internship · 2025
-            </span>
-            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-amber-500 text-slate-950 tracking-wide shadow font-mono">
-              Published Paper
-            </span>
+        <div class="project-card group rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/70 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-rose-950/30 reveal" data-category="web" data-title="Kopiluvium Warehouse Inventory Stock Opname PHP Native MySQL Waterfall Internship Journal OKTAL System">
+          <div class="px-4 py-2 bg-[#18090f] border-b border-rose-950/80 flex items-center justify-between text-[11px] font-mono text-rose-300/80">
+            <span>EXP.02 // INTERNSHIP & SINTA</span>
+            <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30 text-[10px]">PUBLISHED PAPER</span>
+          </div>
+
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-[#0c0407] border-b border-rose-950/70">
+            <img src="assets/images/kopiluvium.jpg" alt="Kopiluvium Inventory System" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#13070b] via-transparent to-transparent opacity-80"></div>
           </div>
 
           <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
-                <span>Web Applications & Jurnal</span>
+              <div class="flex items-center gap-2 text-xs text-rose-400 font-mono mb-1.5">
+                <span>Enterprise Web & Audit</span>
                 <span>•</span>
                 <span>Kopiluvium</span>
               </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
+              <h3 class="text-lg font-bold text-white group-hover:text-rose-300 transition-colors">
                 Warehouse Inventory & Stock-Taking Information System
               </h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
-                Computerized inventory management web application replacing physical logbooks for Kopiluvium. Features role-based access for 3 user tiers (Admin, Staff, Employee), inbound/outbound goods tracking, physical vs. recorded stock audits, and automatic report exports.
+              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                Computerized inventory platform replacing physical logbooks. Engineered under the Waterfall model with 3 role tiers, real-time stock audits, discrepancy calculations, and automated report exports.
               </p>
             </div>
 
             <div class="space-y-4 pt-2">
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">PHP Native</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MySQL</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Figma UI</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Waterfall</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">PHP Native</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">MySQL</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Figma UI</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Waterfall</span>
               </div>
 
-              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
-                <button onclick="openModal('modal-kopiluvium')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-cyan-400 hover:underline">
+              <div class="pt-3 border-t border-rose-950/70 flex items-center justify-between">
+                <button onclick="openModal('modal-kopiluvium')" class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-rose-400 hover:text-rose-300 hover:underline">
                   <span>View Details & Metrics</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
                 </button>
-                <a href="https://journal.mediapublikasi.id/index.php/oktal" target="_blank" class="text-[11px] text-amber-500 hover:underline font-mono flex items-center gap-1">
-                  <span>Open Journal</span>
+                <a href="https://journal.mediapublikasi.id/index.php/oktal" target="_blank" class="text-[11px] text-amber-300 hover:underline font-mono flex items-center gap-1">
+                  <span>Open Paper</span>
                   <i data-lucide="external-link" class="w-3 h-3"></i>
                 </a>
               </div>
@@ -614,369 +679,381 @@
         </div>
 
         <!-- PROJECT 3: UI/UX Apotek UNSRAT -->
-        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="uiux" data-title="Pharmacy Web UI UX Design System Figma UNSRAT Sam Ratulangi Prototyping">
-          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-teal-900 to-slate-900 border-b border-slate-100 dark:border-slate-800/80 flex items-center justify-center p-6">
-            <div class="w-full h-full rounded-xl bg-slate-800/90 border border-teal-500/30 p-3 shadow-inner flex flex-col justify-between group-hover:scale-105 transition duration-500">
-              <div class="flex items-center justify-between border-b border-slate-700/60 pb-2">
+        <div class="project-card group rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/70 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-rose-950/30 reveal" data-category="uiux" data-title="Pharmacy Web UI UX Design System Figma UNSRAT Sam Ratulangi Prototyping">
+          <div class="px-4 py-2 bg-[#18090f] border-b border-rose-950/80 flex items-center justify-between text-[11px] font-mono text-rose-300/80">
+            <span>EXP.03 // DESIGN SYSTEM</span>
+            <span class="px-2 py-0.5 rounded bg-rose-950/60 text-rose-300 border border-rose-900/40 text-[10px]">UNSRAT PMM 4</span>
+          </div>
+
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-[#1a0812] to-[#0c0407] border-b border-rose-950/70 flex items-center justify-center p-6">
+            <div class="w-full h-full rounded-xl bg-[#14060c] border border-rose-500/20 p-3 shadow-inner flex flex-col justify-between group-hover:scale-105 transition duration-500">
+              <div class="flex items-center justify-between border-b border-rose-950/70 pb-2">
                 <div class="flex items-center gap-2">
-                  <div class="w-2.5 h-2.5 rounded-full bg-teal-400"></div>
+                  <div class="w-2.5 h-2.5 rounded-full bg-rose-400"></div>
                   <span class="text-[11px] font-bold text-white font-mono">E-Apotek Modern</span>
                 </div>
-                <span class="text-[10px] text-teal-300 bg-teal-500/20 px-1.5 py-0.5 rounded">Figma Prototype</span>
+                <span class="text-[10px] text-rose-300 bg-rose-950/60 border border-rose-900/40 px-1.5 py-0.5 rounded">Figma Prototype</span>
               </div>
               <div class="grid grid-cols-3 gap-2 my-1">
-                <div class="h-10 rounded bg-slate-700/50 border border-slate-600/30"></div>
-                <div class="h-10 rounded bg-slate-700/50 border border-slate-600/30"></div>
-                <div class="h-10 rounded bg-slate-700/50 border border-slate-600/30"></div>
+                <div class="h-10 rounded bg-[#1c0a12] border border-rose-900/20"></div>
+                <div class="h-10 rounded bg-[#1c0a12] border border-rose-900/20"></div>
+                <div class="h-10 rounded bg-[#1c0a12] border border-rose-900/20"></div>
               </div>
-              <div class="h-4 w-3/4 rounded bg-teal-400/20"></div>
+              <div class="h-3 w-3/4 rounded bg-rose-500/20"></div>
             </div>
-            
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-teal-600 text-white tracking-wide shadow">
-              UNSRAT • PMM 4 (2024)
-            </span>
           </div>
 
           <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
-                <span>UI/UX Design & Prototyping</span>
+              <div class="flex items-center gap-2 text-xs text-rose-400 font-mono mb-1.5">
+                <span>UI/UX & Prototyping</span>
                 <span>•</span>
                 <span>Figma</span>
               </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
+              <h3 class="text-lg font-bold text-white group-hover:text-rose-300 transition-colors">
                 Pharmacy Web Application Interface & Design System
               </h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-3 leading-relaxed">
                 User-centered design system and responsive web interface for an online pharmacy catalog, digital prescription submissions, and streamlined checkout flows.
               </p>
             </div>
 
             <div class="space-y-4 pt-2">
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Figma</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Wireframing</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Design System</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Figma</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Wireframing</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Design System</span>
               </div>
 
-              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
-                <button onclick="openModal('modal-apotek')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-cyan-400 hover:underline">
+              <div class="pt-3 border-t border-rose-950/70 flex items-center justify-between">
+                <button onclick="openModal('modal-apotek')" class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-rose-400 hover:text-rose-300 hover:underline">
                   <span>View Design Details</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
                 </button>
-                <span class="text-[11px] text-slate-400 font-mono">UI/UX Design</span>
+                <span class="text-[11px] text-slate-500 font-mono">Year 2024</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- PROJECT 4: Juara Harapan 1 Poster Nasional FSPI -->
-        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="uiux" data-title="National Poster Design Award FSPI UNY Yogyakarta Adobe Illustrator Cultural Heritage">
-          <div class="relative h-48 sm:h-52 overflow-hidden bg-slate-900 border-b border-slate-100 dark:border-slate-800/80">
+        <div class="project-card group rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/70 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-rose-950/30 reveal" data-category="uiux" data-title="National Poster Design Award FSPI UNY Yogyakarta Adobe Illustrator Cultural Heritage">
+          <div class="px-4 py-2 bg-[#18090f] border-b border-rose-950/80 flex items-center justify-between text-[11px] font-mono text-rose-300/80">
+            <span>EXP.04 // NATIONAL COMPETITION</span>
+            <span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/30 text-[10px]">4TH PLACE (UNY)</span>
+          </div>
+
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-[#0c0407] border-b border-rose-950/70">
             <img src="assets/images/poster_nusantara.jpg" alt="Poster Kebudayaan Nusantara Juara FSPI UNY" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-500" />
-            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent"></div>
-            
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-amber-500 text-slate-950 tracking-wide shadow flex items-center gap-1">
-              <i data-lucide="trophy" class="w-3 h-3"></i> 4th Place National
-            </span>
+            <div class="absolute inset-0 bg-gradient-to-t from-[#13070b] via-transparent to-transparent opacity-80"></div>
           </div>
 
           <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
-                <span>Digital Illustration & Graphics</span>
+              <div class="flex items-center gap-2 text-xs text-rose-400 font-mono mb-1.5">
+                <span>Vector & Typography</span>
                 <span>•</span>
                 <span>FSPI UNY 2023</span>
               </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
+              <h3 class="text-lg font-bold text-white group-hover:text-rose-300 transition-colors">
                 Scientific Poster: Preserving Nusantara Cultural Heritage
               </h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
-                Digital advocacy poster promoting Indonesian cultural preservation, awarded 4th Place nationally at the Festival Seni dan Pendidikan Ilmiah (FSPI) organized by Universitas Negeri Yogyakarta.
+              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                Digital advocacy poster promoting Indonesian cultural preservation, awarded 4th Place nationally at the Festival Seni dan Pendidikan Ilmiah (FSPI) by Universitas Negeri Yogyakarta.
               </p>
             </div>
 
             <div class="space-y-4 pt-2">
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Adobe Illustrator</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Digital Vector</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Typography</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Adobe Illustrator</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Vector Art</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Typography</span>
               </div>
 
-              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
-                <button onclick="openModal('modal-poster')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-cyan-400 hover:underline">
-                  <span>View Full-Resolution Poster</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              <div class="pt-3 border-t border-rose-950/70 flex items-center justify-between">
+                <button onclick="openModal('modal-poster')" class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-rose-400 hover:text-rose-300 hover:underline">
+                  <span>View Poster Details</span>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
                 </button>
-                <span class="text-[11px] text-slate-400 font-mono">National Award</span>
+                <span class="text-[11px] text-slate-500 font-mono">National Award</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- PROJECT 5: Validator Scientific Notation (Automata) -->
-        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="web" data-title="Scientific Notation Input Validator Finite State Automata FSA UNSRAT JavaScript RegEx Parser">
-          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-slate-900 to-indigo-950 border-b border-slate-100 dark:border-slate-800/80 p-5 flex flex-col justify-center font-mono">
-            <div class="p-3 rounded-lg bg-black/40 border border-indigo-500/30 text-xs space-y-1 text-cyan-400">
-              <p class="text-slate-400">// Regular Expression Parser</p>
-              <p class="text-emerald-400 font-bold">^[+-]?\d+(\.\d+)?[eE][+-]?\d+$</p>
-              <p class="text-slate-300">Input: <span class="text-amber-300">6.022e23</span> -&gt; <span class="text-emerald-400">VALID (Accepted)</span></p>
+        <div class="project-card group rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/70 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-rose-950/30 reveal" data-category="web" data-title="Scientific Notation Input Validator Finite State Automata FSA UNSRAT JavaScript RegEx Parser">
+          <div class="px-4 py-2 bg-[#18090f] border-b border-rose-950/80 flex items-center justify-between text-[11px] font-mono text-rose-300/80">
+            <span>EXP.05 // FORMAL AUTOMATA</span>
+            <span class="px-2 py-0.5 rounded bg-rose-950/60 text-rose-300 border border-rose-900/40 text-[10px]">UNSRAT PMM 4</span>
+          </div>
+
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-[#0c0407] border-b border-rose-950/70 p-5 flex flex-col justify-center font-mono">
+            <div class="p-3 rounded-lg bg-[#19090f] border border-rose-950/80 text-xs space-y-1">
+              <p class="text-slate-500">// Regex & State Machine</p>
+              <p class="text-rose-400 font-bold">^[+-]?\d+(\.\d+)?[eE][+-]?\d+$</p>
+              <p class="text-slate-400">Input: <span class="text-amber-300">6.022e23</span> -&gt; <span class="text-emerald-400">VALID (Accepted)</span></p>
             </div>
-            
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-indigo-600 text-white tracking-wide shadow">
-              UNSRAT • PMM 4 (2024)
-            </span>
           </div>
 
           <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
+              <div class="flex items-center gap-2 text-xs text-rose-400 font-mono mb-1.5">
                 <span>Automata Theory & Parsing</span>
               </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
+              <h3 class="text-lg font-bold text-white group-hover:text-rose-300 transition-colors">
                 Scientific Notation Input Validator (Automata)
               </h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
-                Interactive web utility verifying and validating real-number scientific notation syntax using Finite State Automata (FSA) state transitions and real-time regex parsing.
+              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                Interactive web utility validating real-number scientific notation syntax using Finite State Automata (FSA) state transitions and real-time regex parsing.
               </p>
             </div>
 
             <div class="space-y-4 pt-2">
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">JavaScript</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Finite State Automata</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">HTML5 / CSS3</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">JavaScript</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">FSA State Machine</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">HTML5 / CSS3</span>
               </div>
 
-              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
-                <button onclick="openModal('modal-automata')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-cyan-400 hover:underline">
+              <div class="pt-3 border-t border-rose-950/70 flex items-center justify-between">
+                <button onclick="openModal('modal-automata')" class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-rose-400 hover:text-rose-300 hover:underline">
                   <span>View Project Details</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
                 </button>
-                <span class="text-[11px] text-slate-400 font-mono">Automata Theory</span>
+                <span class="text-[11px] text-slate-500 font-mono">Year 2024</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- PROJECT 6: Sistem Penerimaan Peserta Didik Baru (PPDB / SPMB) -->
-        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="web" data-title="High School Student Admissions Portal SPMB PPDB PHP Laravel MySQL Bootstrap">
-          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-blue-900 to-slate-900 border-b border-slate-100 dark:border-slate-800/80 p-5 flex items-center justify-center">
-            <div class="w-full text-center p-4 rounded-xl bg-slate-800/80 border border-blue-500/30">
-              <i data-lucide="graduation-cap" class="w-8 h-8 mx-auto text-cyan-400 mb-2"></i>
+        <div class="project-card group rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/70 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-rose-950/30 reveal" data-category="web" data-title="High School Student Admissions Portal SPMB PPDB PHP Laravel MySQL Bootstrap">
+          <div class="px-4 py-2 bg-[#18090f] border-b border-rose-950/80 flex items-center justify-between text-[11px] font-mono text-rose-300/80">
+            <span>EXP.06 // PORTAL SYSTEM</span>
+            <span class="px-2 py-0.5 rounded bg-rose-950/60 text-rose-300 border border-rose-900/40 text-[10px]">WEB PORTAL</span>
+          </div>
+
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-[#1a0812] to-[#0c0407] border-b border-rose-950/70 p-5 flex items-center justify-center">
+            <div class="w-full text-center p-4 rounded-xl bg-[#14060c] border border-rose-500/20">
+              <i data-lucide="graduation-cap" class="w-8 h-8 mx-auto text-rose-400 mb-2"></i>
               <div class="font-bold text-white text-sm">Online Student Admissions Portal (SPMB)</div>
-              <div class="text-[11px] text-slate-400 mt-1">Applicant Registration & Automated Document Verification</div>
+              <div class="text-[11px] text-slate-400 mt-1">Self-Service Registration & Document Auditing</div>
             </div>
-            
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-blue-600 text-white tracking-wide shadow">
-              Web Applications
-            </span>
           </div>
 
           <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
+              <div class="flex items-center gap-2 text-xs text-rose-400 font-mono mb-1.5">
                 <span>Web Development</span>
                 <span>•</span>
                 <span>PHP & MySQL</span>
               </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
+              <h3 class="text-lg font-bold text-white group-hover:text-rose-300 transition-colors">
                 High School Student Admissions Portal (SPMB)
               </h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
-                Web-based student admission platform managing end-to-end enrollment: self-service registration, document validation, school committee reviews, and automated selection result announcements.
+              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                Web-based admissions system managing online applicant registration, academic certificate verification, review committees, and automated selection result notices.
               </p>
             </div>
 
             <div class="space-y-4 pt-2">
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">PHP Native / Laravel</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MySQL Database</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Bootstrap UI</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">PHP Native / MVC</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">MySQL Database</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Bootstrap UI</span>
               </div>
 
-              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
-                <button onclick="openModal('modal-ppdb')" class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-600 dark:text-cyan-400 hover:underline">
+              <div class="pt-3 border-t border-rose-950/70 flex items-center justify-between">
+                <button onclick="openModal('modal-ppdb')" class="inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-rose-400 hover:text-rose-300 hover:underline">
                   <span>View System Details</span>
-                  <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                  <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
                 </button>
-                <span class="text-[11px] text-slate-400 font-mono">Academic Project</span>
+                <span class="text-[11px] text-slate-500 font-mono">Academic Project</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- PROJECT 7: Sales Invoicing & Transaction Information System -->
-        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="web" data-title="Sales Invoicing & Transaction System LSP Informatika BNSP PHP Native OOP Transaksi ACID MySQL Bootstrap">
-          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-indigo-950 to-slate-900 border-b border-slate-100 dark:border-slate-800/80 p-5 flex items-center justify-center">
-            <div class="w-full text-center p-4 rounded-xl bg-slate-800/80 border border-indigo-500/30">
-              <i data-lucide="receipt" class="w-8 h-8 mx-auto text-indigo-400 mb-2"></i>
-              <div class="font-bold text-white text-sm">Sales Invoicing & Transaction System</div>
-              <div class="text-[11px] text-slate-400 mt-1">Engineered to National Programming Competency Standards</div>
-            </div>
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-blue-600 text-white tracking-wide shadow">
-              Competency Project 2024
-            </span>
-            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-500/90 text-white tracking-wide shadow font-mono">
-              ACID Safe
-            </span>
+        <div class="project-card group rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/70 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-rose-950/30 reveal" data-category="web" data-title="Sales Invoicing & Transaction System LSP Informatika BNSP PHP Native OOP Transaksi ACID MySQL Bootstrap">
+          <div class="px-4 py-2 bg-[#18090f] border-b border-rose-950/80 flex items-center justify-between text-[11px] font-mono text-rose-300/80">
+            <span>EXP.07 // COMPETENCY BENCHMARK</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px]">ACID SAFE</span>
           </div>
+
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-[#1c0812] to-[#0c0407] border-b border-rose-950/70 p-5 flex items-center justify-center">
+            <div class="w-full text-center p-4 rounded-xl bg-[#14060c] border border-rose-500/20">
+              <i data-lucide="receipt" class="w-8 h-8 mx-auto text-rose-400 mb-2"></i>
+              <div class="font-bold text-white text-sm">Sales Invoicing & Transaction System</div>
+              <div class="text-[11px] text-slate-400 mt-1">Engineered to National Programming Standards</div>
+            </div>
+          </div>
+
           <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
+              <div class="flex items-center gap-2 text-xs text-rose-400 font-mono mb-1.5">
                 <span>Enterprise Web & Finance</span>
                 <span>•</span>
                 <span>ACID Compliant</span>
               </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
-                Sales Invoicing & Transaction Information System
+              <h3 class="text-lg font-bold text-white group-hover:text-rose-300 transition-colors">
+                Sales Invoicing & Transaction Management System
               </h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
-                Sales transaction management application built on Object-Oriented Programming (OOP). Features automatic tax calculations, PDF invoice printing, prepared statement security, and ACID database transactions.
+              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                Sales transaction application built on Object-Oriented PHP. Features automated tax calculations, PDF invoice printing, prepared statement security, and ACID database transactions.
               </p>
             </div>
+
             <div class="space-y-4 pt-2">
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">PHP Native OOP</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MySQL Database</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">ACID Transactions</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Bootstrap</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">PHP OOP</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">MySQL Database</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">ACID Transactions</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Bootstrap</span>
               </div>
-              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
-                <span class="text-xs font-semibold text-brand-600 dark:text-cyan-400">Enterprise Invoicing</span>
-                <span class="text-[11px] text-slate-400 font-mono">Year 2024</span>
+
+              <div class="pt-3 border-t border-rose-950/70 flex items-center justify-between">
+                <span class="text-xs font-mono font-semibold text-rose-400">BNSP Certified Benchmark</span>
+                <span class="text-[11px] text-slate-500 font-mono">Year 2024</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- PROJECT 8: Employee Attendance Mobile Application Native -->
-        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="mobile" data-title="Employee Attendance Mobile Application Android Native Java Google Maps GPS Geofencing SQLite">
-          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-emerald-950 to-slate-900 border-b border-slate-100 dark:border-slate-800/80 p-5 flex items-center justify-center">
-            <div class="w-full text-center p-4 rounded-xl bg-slate-800/80 border border-emerald-500/30">
-              <i data-lucide="smartphone" class="w-8 h-8 mx-auto text-emerald-400 mb-2"></i>
-              <div class="font-bold text-white text-sm">Employee Attendance Mobile Application</div>
-              <div class="text-[11px] text-slate-400 mt-1">GPS Geotagging, Google Maps & Local SQLite Storage</div>
-            </div>
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-600 text-white tracking-wide shadow">
-              Android Studio 2024
-            </span>
-            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-indigo-600 text-white tracking-wide shadow font-mono">
-              GPS & SQLite
-            </span>
+        <div class="project-card group rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/70 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-rose-950/30 reveal" data-category="mobile" data-title="Employee Attendance Mobile Application Android Native Java Google Maps GPS Geofencing SQLite">
+          <div class="px-4 py-2 bg-[#18090f] border-b border-rose-950/80 flex items-center justify-between text-[11px] font-mono text-rose-300/80">
+            <span>EXP.08 // ANDROID NATIVE</span>
+            <span class="px-2 py-0.5 rounded bg-rose-950/60 text-rose-300 border border-rose-900/40 text-[10px]">GPS & SQLITE</span>
           </div>
+
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-[#1c0812] to-[#0c0407] border-b border-rose-950/70 p-5 flex items-center justify-center">
+            <div class="w-full text-center p-4 rounded-xl bg-[#14060c] border border-rose-500/20">
+              <i data-lucide="smartphone" class="w-8 h-8 mx-auto text-rose-400 mb-2"></i>
+              <div class="font-bold text-white text-sm">Employee Attendance Mobile Application</div>
+              <div class="text-[11px] text-slate-400 mt-1">Google Maps Geotagging & Offline Local Storage</div>
+            </div>
+          </div>
+
           <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
-                <span>Android Native Development</span>
+              <div class="flex items-center gap-2 text-xs text-rose-400 font-mono mb-1.5">
+                <span>Android Native Java</span>
                 <span>•</span>
                 <span>Location Services</span>
               </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
+              <h3 class="text-lg font-bold text-white group-hover:text-rose-300 transition-colors">
                 Employee Attendance & Geolocation Android App
               </h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
-                Native Android mobile application for precise employee check-in. Features Google Maps GPS coordinate geofencing, voice input speech recognition, and offline SQLite data persistence.
+              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                Native Android mobile application for precise employee check-in. Features Google Maps GPS coordinate geofencing, speech recognition voice inputs, and offline SQLite data persistence.
               </p>
             </div>
+
             <div class="space-y-4 pt-2">
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Android Studio</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Java</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Google Maps API</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">SQLite</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Android Studio</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Java</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Google Maps API</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">SQLite</span>
               </div>
-              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
-                <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Native Android App</span>
-                <span class="text-[11px] text-slate-400 font-mono">Year 2024</span>
+
+              <div class="pt-3 border-t border-rose-950/70 flex items-center justify-between">
+                <span class="text-xs font-mono font-semibold text-rose-400">Native Android App</span>
+                <span class="text-[11px] text-slate-500 font-mono">Year 2024</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- PROJECT 9: Pharmacy Prescription Queue System (Desktop GUI) -->
-        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="desktop" data-title="Pharmacy Prescription Queue System (Desktop GUI) Java Swing NetBeans JDBC MySQL FIFO Loket Resep">
-          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-violet-950 to-slate-900 border-b border-slate-100 dark:border-slate-800/80 p-5 flex items-center justify-center">
-            <div class="w-full text-center p-4 rounded-xl bg-slate-800/80 border border-violet-500/30">
-              <i data-lucide="monitor" class="w-8 h-8 mx-auto text-violet-400 mb-2"></i>
-              <div class="font-bold text-white text-sm">Pharmacy Prescription Queue System (Desktop GUI)</div>
-              <div class="text-[11px] text-slate-400 mt-1">Java Swing, JDBC MySQL & FIFO Queue Algorithm</div>
-            </div>
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-violet-600 text-white tracking-wide shadow">
-              Desktop GUI 2023
-            </span>
-            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-cyan-600 text-white tracking-wide shadow font-mono">
-              FIFO Queue
-            </span>
+        <div class="project-card group rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/70 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-rose-950/30 reveal" data-category="desktop" data-title="Pharmacy Prescription Queue System (Desktop GUI) Java Swing NetBeans JDBC MySQL FIFO Loket Resep">
+          <div class="px-4 py-2 bg-[#18090f] border-b border-rose-950/80 flex items-center justify-between text-[11px] font-mono text-rose-300/80">
+            <span>EXP.09 // DESKTOP SYSTEM</span>
+            <span class="px-2 py-0.5 rounded bg-rose-950/60 text-rose-300 border border-rose-900/40 text-[10px]">FIFO QUEUE</span>
           </div>
+
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-[#1c0812] to-[#0c0407] border-b border-rose-950/70 p-5 flex items-center justify-center">
+            <div class="w-full text-center p-4 rounded-xl bg-[#14060c] border border-rose-500/20">
+              <i data-lucide="monitor" class="w-8 h-8 mx-auto text-rose-400 mb-2"></i>
+              <div class="font-bold text-white text-sm">Pharmacy Prescription Queue System</div>
+              <div class="text-[11px] text-slate-400 mt-1">Java Swing, JDBC MySQL & FIFO Scheduling</div>
+            </div>
+          </div>
+
           <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
+              <div class="flex items-center gap-2 text-xs text-rose-400 font-mono mb-1.5">
                 <span>Desktop GUI & Database</span>
                 <span>•</span>
-                <span>Pharmacy Systems</span>
+                <span>Java Swing</span>
               </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
+              <h3 class="text-lg font-bold text-white group-hover:text-rose-300 transition-colors">
                 Pharmacy Prescription Queue System (Desktop GUI)
               </h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
-                Desktop application managing prescription dispensing queues using First-In-First-Out (FIFO) scheduling. Features automated counter ticket calling, queue status displays, and MySQL JDBC persistence.
+              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                Desktop application managing dispensary queues using First-In-First-Out (FIFO) scheduling. Features automated counter ticket calling, queue status display, and MySQL JDBC persistence.
               </p>
             </div>
+
             <div class="space-y-4 pt-2">
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Java Swing</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">NetBeans</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">JDBC MySQL</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">FIFO Queue</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Java Swing</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">NetBeans</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">JDBC MySQL</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">FIFO Queue</span>
               </div>
-              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
-                <span class="text-xs font-semibold text-violet-600 dark:text-violet-400">Desktop Application</span>
-                <span class="text-[11px] text-slate-400 font-mono">Year 2023</span>
+
+              <div class="pt-3 border-t border-rose-950/70 flex items-center justify-between">
+                <span class="text-xs font-mono font-semibold text-rose-400">Desktop GUI App</span>
+                <span class="text-[11px] text-slate-500 font-mono">Year 2023</span>
               </div>
             </div>
           </div>
         </div>
 
         <!-- PROJECT 10: Aplikasi Penggajian Karyawan Java Web & Multimedia Android -->
-        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="web mobile" data-title="Employee Payroll System Java EE JSP Servlet JasperReports Android SDK Camera API">
-          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-purple-950 to-slate-900 border-b border-slate-100 dark:border-slate-800/80 p-5 flex items-center justify-center">
-            <div class="w-full text-center p-4 rounded-xl bg-slate-800/80 border border-purple-500/30">
-              <i data-lucide="layers" class="w-8 h-8 mx-auto text-purple-400 mb-2"></i>
-              <div class="font-bold text-white text-sm">Enterprise Payroll System & Android Multimedia</div>
+        <div class="project-card group rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/70 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-rose-950/30 reveal" data-category="web mobile" data-title="Employee Payroll System Java EE JSP Servlet JasperReports Android SDK Camera API">
+          <div class="px-4 py-2 bg-[#18090f] border-b border-rose-950/80 flex items-center justify-between text-[11px] font-mono text-rose-300/80">
+            <span>EXP.10 // ENTERPRISE JAVA</span>
+            <span class="px-2 py-0.5 rounded bg-rose-950/60 text-rose-300 border border-rose-900/40 text-[10px]">JASPER REPORTS</span>
+          </div>
+
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-[#1c0812] to-[#0c0407] border-b border-rose-950/70 p-5 flex items-center justify-center">
+            <div class="w-full text-center p-4 rounded-xl bg-[#14060c] border border-rose-500/20">
+              <i data-lucide="layers" class="w-8 h-8 mx-auto text-rose-400 mb-2"></i>
+              <div class="font-bold text-white text-sm">Enterprise Java Payroll & Mobile Module</div>
               <div class="text-[11px] text-slate-400 mt-1">JSP / Servlet, JasperReports & Android Camera API</div>
             </div>
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-purple-600 text-white tracking-wide shadow">
-              Java Enterprise & Mobile
-            </span>
-            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-amber-500 text-slate-950 tracking-wide shadow font-mono">
-              JasperReports
-            </span>
           </div>
+
           <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
+              <div class="flex items-center gap-2 text-xs text-rose-400 font-mono mb-1.5">
                 <span>Java EE & Android SDK</span>
                 <span>•</span>
                 <span>Enterprise Payroll</span>
               </div>
-              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
+              <h3 class="text-lg font-bold text-white group-hover:text-rose-300 transition-colors">
                 Enterprise Java Payroll Web App & Mobile Module
               </h3>
-              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+              <p class="text-xs sm:text-sm text-slate-400 mt-2 line-clamp-3 leading-relaxed">
                 Java EE web application for payroll processing (JSP & Servlets) with automated PDF payslip generation via JasperReports, paired with an Android SDK multimedia camera module.
               </p>
             </div>
+
             <div class="space-y-4 pt-2">
               <div class="flex flex-wrap gap-1.5">
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Java EE (JSP)</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Servlet</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">JasperReports</span>
-                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Camera API</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Java EE (JSP)</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Servlets</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">JasperReports</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-rose-950/40 text-rose-300 border border-rose-900/30">Camera API</span>
               </div>
-              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
-                <span class="text-xs font-semibold text-purple-600 dark:text-purple-400">Enterprise Payroll</span>
-                <span class="text-[11px] text-slate-400 font-mono">Year 2023</span>
+
+              <div class="pt-3 border-t border-rose-950/70 flex items-center justify-between">
+                <span class="text-xs font-mono font-semibold text-rose-400">Enterprise Java</span>
+                <span class="text-[11px] text-slate-500 font-mono">Year 2023</span>
               </div>
             </div>
           </div>
@@ -984,149 +1061,152 @@
 
       </div>
 
+      <!-- Search No Results State -->
       <div id="noResults" class="hidden text-center py-16">
-        <i data-lucide="folder-search" class="w-12 h-12 mx-auto text-slate-400 mb-3"></i>
-        <p class="text-base font-semibold text-slate-700 dark:text-slate-200">No projects found matching your search.</p>
-        <p class="text-xs text-slate-500 mt-1">Try searching for keywords like "Python", "PHP", "Figma", or "SVM".</p>
+        <i data-lucide="folder-search" class="w-12 h-12 mx-auto text-slate-600 mb-3"></i>
+        <p class="text-base font-semibold text-slate-300">No projects found matching your search.</p>
+        <p class="text-xs text-slate-500 mt-1 font-mono">Try searching for "Python", "PHP", "SVM", or "Android".</p>
       </div>
 
     </div>
   </section>
 
   <!-- ==================== ACADEMIC PUBLICATIONS SECTION ==================== -->
-  <section id="publikasi" class="py-20 bg-white dark:bg-[#080c14] border-b border-slate-200/80 dark:border-slate-800/70">
+  <section id="publikasi" class="py-20 sm:py-24 bg-[#0a0407] border-b border-rose-950/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-semibold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 bg-indigo-500/10 mb-3">
-          <i data-lucide="file-check" class="w-3.5 h-3.5"></i>
-          Academic Research
+      <!-- Section Header -->
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="w-6 h-[2px] bg-rose-500"></span>
+          <span class="text-xs font-mono font-bold tracking-widest text-rose-400 uppercase">// 03 · RESEARCH & PUBLICATIONS</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
           Peer-Reviewed & Indexed Publications
         </h2>
-        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3 leading-relaxed">
-          Applied computing research spanning software engineering architecture, multi-criteria decision support systems, artificial intelligence, and cybersecurity vulnerability assessment.
+        <p class="text-sm sm:text-base text-slate-400 mt-2 max-w-2xl">
+          Four applied computing research papers co-authored and published in accredited national scientific journals (SINTA) and Google Scholar.
         </p>
       </div>
 
+      <!-- 4 Publication Archive Cards -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
-        <!-- Paper 1 -->
-        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-[#0f172a] border border-slate-200/90 dark:border-slate-800/80 hover:border-brand-500/40 transition flex flex-col justify-between reveal">
+        <!-- Paper 1: OKTAL (Kopiluvium) -->
+        <div class="p-6 rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/60 transition flex flex-col justify-between shadow-lg reveal">
           <div class="space-y-3">
             <div class="flex items-center justify-between gap-3">
-              <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-brand-500/15 text-brand-700 dark:text-cyan-400 font-mono">
+              <span class="px-2.5 py-1 rounded text-[11px] font-bold bg-rose-950/60 text-rose-300 border border-rose-900/40 font-mono">
                 OKTAL: Jurnal Ilmu Komputer & Sains (2025)
               </span>
-              <span class="text-xs text-slate-500 font-mono">Vol. 4, No. 5</span>
+              <span class="text-xs text-slate-400 font-mono">Vol. 4, No. 5</span>
             </div>
-            <h3 class="text-base font-bold text-slate-900 dark:text-white leading-snug">
+            <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
               Design of a Web-Based Warehouse Stock-Taking Application Using the Waterfall Model at Kopiluvium
             </h3>
-            <p class="text-xs font-medium text-slate-500 dark:text-slate-400">
-              Authors: <strong>Yuniarti, D. T.</strong>, Alfitra, R., Prasetya, R. N., & Saprudin
+            <p class="text-xs font-mono text-slate-400">
+              Authors: <strong class="text-white">Yuniarti, D. T.</strong>, Alfitra, R., Prasetya, R. N., & Saprudin
             </p>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
               Details requirements engineering, UML modeling, Figma UI prototyping, PHP/MySQL implementation, and Black-Box verification for Kopiluvium warehouse inventory audits.
             </p>
           </div>
 
-          <div class="pt-4 mt-4 border-t border-slate-200/80 dark:border-slate-800/80 flex items-center gap-3">
-            <a href="https://journal.mediapublikasi.id/index.php/oktal" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 hover:bg-brand-700 text-white transition transform hover:scale-105">
+          <div class="pt-4 mt-4 border-t border-rose-950/70 flex items-center gap-3">
+            <a href="https://journal.mediapublikasi.id/index.php/oktal" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-rose-600 hover:bg-rose-500 text-white transition">
               <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
               <span>Open Journal Portal</span>
             </a>
-            <a href="https://scholar.google.com/scholar?q=Perancangan+Aplikasi+Pendataan+Stok+Opname+Gudang+Berbasis+Web+Menggunakan+Metode+Waterfall+pada+Kopiluvium" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-cyan-400 font-mono underline underline-offset-4">
-              Google Scholar
+            <a href="https://scholar.google.com/scholar?q=Perancangan+Aplikasi+Pendataan+Stok+Opname+Gudang+Berbasis+Web+Menggunakan+Metode+Waterfall+pada+Kopiluvium" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-rose-300 font-mono underline underline-offset-4">
+              Google Scholar ↗
             </a>
           </div>
         </div>
 
-        <!-- Paper 2 -->
-        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-[#0f172a] border border-slate-200/90 dark:border-slate-800/80 hover:border-brand-500/40 transition flex flex-col justify-between reveal">
+        <!-- Paper 2: FASILKOM (WASPAS) -->
+        <div class="p-6 rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/60 transition flex flex-col justify-between shadow-lg reveal">
           <div class="space-y-3">
             <div class="flex items-center justify-between gap-3">
-              <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-indigo-500/15 text-indigo-700 dark:text-indigo-400 font-mono">
+              <span class="px-2.5 py-1 rounded text-[11px] font-bold bg-rose-950/60 text-rose-300 border border-rose-900/40 font-mono">
                 Jurnal FASILKOM (2025)
               </span>
-              <span class="text-xs text-slate-500 font-mono">Vol. 15, No. 3</span>
+              <span class="text-xs text-slate-400 font-mono">Vol. 15, No. 3</span>
             </div>
-            <h3 class="text-base font-bold text-slate-900 dark:text-white leading-snug">
+            <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
               Application Analysis of the WASPAS Method for Classifying Student Learning Patterns Based on Learning Styles
             </h3>
-            <p class="text-xs font-medium text-slate-500 dark:text-slate-400">
-              Authors: Ester, R., <strong>Yuniarti, D. T.</strong>, Valentina, P. E., & Putra, F. M. K.
+            <p class="text-xs font-mono text-slate-400">
+              Authors: Ester, R., <strong class="text-white">Yuniarti, D. T.</strong>, Valentina, P. E., & Putra, F. M. K.
             </p>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
               Implementation of the Weighted Aggregated Sum Product Assessment (WASPAS) decision support method to evaluate and recommend optimal learning patterns based on student behavioral preferences.
             </p>
           </div>
 
-          <div class="pt-4 mt-4 border-t border-slate-200/80 dark:border-slate-800/80 flex items-center gap-3">
-            <a href="https://ejurnal.umri.ac.id/index.php/JIK/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 hover:bg-brand-700 text-white transition transform hover:scale-105">
+          <div class="pt-4 mt-4 border-t border-rose-950/70 flex items-center gap-3">
+            <a href="https://ejurnal.umri.ac.id/index.php/JIK/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-rose-600 hover:bg-rose-500 text-white transition">
               <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
               <span>Open Journal Portal</span>
             </a>
-            <a href="https://scholar.google.com/scholar?q=Analisis+Penerapan+Metode+WASPAS+untuk+Penentuan+Pola+Belajar+Mahasiswa+Berdasarkan+Gaya+Belajar" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-cyan-400 font-mono underline underline-offset-4">
-              Google Scholar
+            <a href="https://scholar.google.com/scholar?q=Analisis+Penerapan+Metode+WASPAS+untuk+Penentuan+Pola+Belajar+Mahasiswa+Berdasarkan+Gaya+Belajar" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-rose-300 font-mono underline underline-offset-4">
+              Google Scholar ↗
             </a>
           </div>
         </div>
 
-        <!-- Paper 3 -->
-        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-[#0f172a] border border-slate-200/90 dark:border-slate-800/80 hover:border-brand-500/40 transition flex flex-col justify-between reveal">
+        <!-- Paper 3: JUTECH SINTA 5 -->
+        <div class="p-6 rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/60 transition flex flex-col justify-between shadow-lg reveal">
           <div class="space-y-3">
             <div class="flex items-center justify-between gap-3">
-              <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 font-mono">
-                JUTECH (SINTA 5) - Des 2025
+              <span class="px-2.5 py-1 rounded text-[11px] font-bold bg-amber-500/10 text-amber-300 border border-amber-500/30 font-mono">
+                JUTECH (SINTA 5) · Dec 2025
               </span>
-              <span class="text-xs text-slate-500 font-mono">Vol. 6, No. 2</span>
+              <span class="text-xs text-slate-400 font-mono">Vol. 6, No. 2</span>
             </div>
-            <h3 class="text-base font-bold text-slate-900 dark:text-white leading-snug">
+            <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
               Analysis of Information Technology and AI Integration in Preparing Vocational Students for the Digital Industry
             </h3>
-            <p class="text-xs font-medium text-slate-500 dark:text-slate-400">
-              Authors: Suhada, J., Ardana, I. M. S., <strong>Yuniarti, D. T.</strong>, & Rizky, M.
+            <p class="text-xs font-mono text-slate-400">
+              Authors: Suhada, J., Ardana, I. M. S., <strong class="text-white">Yuniarti, D. T.</strong>, & Rizky, M.
             </p>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
               Empirical research examining AI tool integration into vocational computing curricula to bridge digital workforce competency requirements.
             </p>
           </div>
 
-          <div class="pt-4 mt-4 border-t border-slate-200/80 dark:border-slate-800/80 flex items-center gap-3">
-            <a href="https://doi.org/10.31932/jutech.v6i2.5045" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white transition transform hover:scale-105">
+          <div class="pt-4 mt-4 border-t border-rose-950/70 flex items-center gap-3">
+            <a href="https://doi.org/10.31932/jutech.v6i2.5045" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-rose-600 hover:bg-rose-500 text-white transition">
               <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
               <span>Open DOI Article</span>
             </a>
-            <a href="https://jurnal.stkippersada.ac.id/jurnal/index.php/jutech/article/view/5045" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-cyan-400 font-mono underline underline-offset-4">
-              OJS Portal
+            <a href="https://jurnal.stkippersada.ac.id/jurnal/index.php/jutech/article/view/5045" target="_blank" rel="noopener noreferrer" class="text-xs text-slate-400 hover:text-rose-300 font-mono underline underline-offset-4">
+              OJS Portal ↗
             </a>
           </div>
         </div>
 
-        <!-- Paper 4 -->
-        <div class="p-6 rounded-2xl bg-slate-50 dark:bg-[#0f172a] border border-slate-200/90 dark:border-slate-800/80 hover:border-brand-500/40 transition flex flex-col justify-between reveal">
+        <!-- Paper 4: E-Learning Security Assessment -->
+        <div class="p-6 rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-700/60 transition flex flex-col justify-between shadow-lg reveal">
           <div class="space-y-3">
             <div class="flex items-center justify-between gap-3">
-              <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-amber-500/15 text-amber-700 dark:text-amber-400 font-mono">
+              <span class="px-2.5 py-1 rounded text-[11px] font-bold bg-rose-950/60 text-rose-300 border border-rose-900/40 font-mono">
                 Jurnal Kajian Komputasi Inovatif (2023)
               </span>
-              <span class="text-xs text-slate-500 font-mono">Vol. 14, No. 1</span>
+              <span class="text-xs text-slate-400 font-mono">Vol. 14, No. 1</span>
             </div>
-            <h3 class="text-base font-bold text-slate-900 dark:text-white leading-snug">
+            <h3 class="text-base sm:text-lg font-bold text-white leading-snug">
               Security Vulnerability Analysis of University E-Learning Web Application Using Vulnerability Assessment
             </h3>
-            <p class="text-xs font-medium text-slate-500 dark:text-slate-400">
-              Authors: Kumalasari, I., <strong>Yuniarti, D. T.</strong>, Indriani, R., Rizky, M., & Gea, K.
+            <p class="text-xs font-mono text-slate-400">
+              Authors: Kumalasari, I., <strong class="text-white">Yuniarti, D. T.</strong>, Indriani, R., Rizky, M., & Gea, K.
             </p>
-            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-              Cybersecurity assessment of a university e-learning platform identifying configuration weaknesses, input sanitization gaps, and actionable security remediation strategies.
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Cybersecurity assessment of an institutional e-learning platform identifying configuration weaknesses, input sanitization gaps, and actionable security remediation strategies.
             </p>
           </div>
 
-          <div class="pt-4 mt-4 border-t border-slate-200/80 dark:border-slate-800/80 flex items-center gap-3">
-            <a href="https://scholar.google.com/scholar?q=Analisis+Celah+Keamanan+Aplikasi+Web+E-Learning+Universitas+Pamulang+Dian+Tri+Yuniarti" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-brand-600 hover:bg-brand-700 text-white transition transform hover:scale-105">
+          <div class="pt-4 mt-4 border-t border-rose-950/70 flex items-center gap-3">
+            <a href="https://scholar.google.com/scholar?q=Analisis+Celah+Keamanan+Aplikasi+Web+E-Learning+Universitas+Pamulang+Dian+Tri+Yuniarti" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-mono font-semibold bg-rose-600 hover:bg-rose-500 text-white transition">
               <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
               <span>View on Google Scholar</span>
             </a>
@@ -1138,105 +1218,123 @@
     </div>
   </section>
 
-  <!-- ==================== SKILLS & MATRIX SECTION ==================== -->
-  <section id="keahlian" class="py-20 bg-slate-100/60 dark:bg-[#060a12] border-b border-slate-200/80 dark:border-slate-800/70">
+  <!-- ==================== SKILLS & STACK SECTION ==================== -->
+  <section id="keahlian" class="py-20 sm:py-24 bg-[#0e0609] border-b border-rose-950/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-3xl mx-auto mb-14 reveal">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-400 bg-cyan-500/10 mb-3">
-          <i data-lucide="code" class="w-3.5 h-3.5"></i>
-          Technical Skills
+      <!-- Section Header -->
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="w-6 h-[2px] bg-rose-500"></span>
+          <span class="text-xs font-mono font-bold tracking-widest text-rose-400 uppercase">// 04 · TECHNICAL STACK</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-          Core Stack & Engineering Skills
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          Languages, Frameworks & Tooling
         </h2>
-        <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 mt-3">
-          A solid technical foundation across backend logic, responsive interfaces, machine learning modeling, and structured database engineering.
+        <p class="text-sm sm:text-base text-slate-400 mt-2 max-w-2xl">
+          A disciplined technical toolkit spanning backend business logic, database engineering, responsive frontends, and machine learning pipelines.
         </p>
       </div>
 
+      <!-- 4 Minimalist Stack Boxes (Arya Ziddan Clean Columns) -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="p-6 rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 hover:border-brand-500/40 transition transform hover:-translate-y-1 reveal">
-          <div class="w-10 h-10 rounded-xl bg-brand-500/10 text-brand-600 dark:text-cyan-400 flex items-center justify-center">
+        <!-- Stack 1: Programming & Web -->
+        <div class="p-6 rounded-2xl bg-[#13070b] border border-rose-950/80 shadow-md space-y-4 hover:border-rose-700/60 transition reveal">
+          <div class="w-10 h-10 rounded-xl bg-rose-950/60 border border-rose-900/40 text-rose-400 flex items-center justify-center">
             <i data-lucide="terminal" class="w-5 h-5"></i>
           </div>
-          <h3 class="text-base font-bold text-slate-900 dark:text-white">Programming & Web</h3>
-          <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-2">
+          <h3 class="text-base font-bold text-white font-mono uppercase tracking-wider">01 · Backend & Web</h3>
+          <ul class="text-xs sm:text-sm text-slate-300 space-y-2 font-mono">
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span> Python (Backend & Scripting)
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Python (Backend & ML)
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span> PHP (Native & MVC)
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> PHP (Native & OOP MVC)
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span> JavaScript, HTML5, CSS3
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> JavaScript (ES6+), HTML5
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span> Java & C++ (Academic)
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Tailwind CSS, Bootstrap
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Java & C++ (Academic)
             </li>
           </ul>
         </div>
 
-        <div class="p-6 rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 hover:border-cyan-500/40 transition transform hover:-translate-y-1 reveal">
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 flex items-center justify-center">
-            <i data-lucide="database" class="w-5 h-5"></i>
+        <!-- Stack 2: ML & Data -->
+        <div class="p-6 rounded-2xl bg-[#13070b] border border-rose-950/80 shadow-md space-y-4 hover:border-rose-700/60 transition reveal">
+          <div class="w-10 h-10 rounded-xl bg-rose-950/60 border border-rose-900/40 text-rose-400 flex items-center justify-center">
+            <i data-lucide="cpu" class="w-5 h-5"></i>
           </div>
-          <h3 class="text-base font-bold text-slate-900 dark:text-white">Data & Machine Learning</h3>
-          <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-2">
+          <h3 class="text-base font-bold text-white font-mono uppercase tracking-wider">02 · Data & Machine Learning</h3>
+          <ul class="text-xs sm:text-sm text-slate-300 space-y-2 font-mono">
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Support Vector Machine (SVM)
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Support Vector Machine (SVM)
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Scikit-learn, StandardScaler
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Scikit-learn, StandardScaler
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> MySQL Database & Querying
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> MySQL Database & ACID
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Data Cleaning & Cross-Validation
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Cross-Validation & F1-Score
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Joblib Model Persistence
             </li>
           </ul>
         </div>
 
-        <div class="p-6 rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 hover:border-indigo-500/40 transition transform hover:-translate-y-1 reveal">
-          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+        <!-- Stack 3: UI/UX & Modeling -->
+        <div class="p-6 rounded-2xl bg-[#13070b] border border-rose-950/80 shadow-md space-y-4 hover:border-rose-700/60 transition reveal">
+          <div class="w-10 h-10 rounded-xl bg-rose-950/60 border border-rose-900/40 text-rose-400 flex items-center justify-center">
             <i data-lucide="layout" class="w-5 h-5"></i>
           </div>
-          <h3 class="text-base font-bold text-slate-900 dark:text-white">UI/UX & Design Systems</h3>
-          <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-2">
+          <h3 class="text-base font-bold text-white font-mono uppercase tracking-wider">03 · UI/UX & Architecture</h3>
+          <ul class="text-xs sm:text-sm text-slate-300 space-y-2 font-mono">
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Figma (UI/UX Prototyping)
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Figma (UI/UX Prototyping)
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Adobe Illustrator (Desain Grafis)
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Adobe Illustrator (Vector)
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> UML (Use Case, Activity, Sequence)
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> UML (Use Case, Activity, Seq)
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> ERD & Pemodelan Relasi Data
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> ERD & Relational Schemas
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Design Systems & Tokens
             </li>
           </ul>
         </div>
 
-        <div class="p-6 rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 shadow-sm space-y-4 hover:border-emerald-500/40 transition transform hover:-translate-y-1 reveal">
-          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
+        <!-- Stack 4: Tools & Testing -->
+        <div class="p-6 rounded-2xl bg-[#13070b] border border-rose-950/80 shadow-md space-y-4 hover:border-rose-700/60 transition reveal">
+          <div class="w-10 h-10 rounded-xl bg-rose-950/60 border border-rose-900/40 text-rose-400 flex items-center justify-center">
             <i data-lucide="shield-check" class="w-5 h-5"></i>
           </div>
-          <h3 class="text-base font-bold text-slate-900 dark:text-white">Testing & Tools</h3>
-          <ul class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 space-y-2">
+          <h3 class="text-base font-bold text-white font-mono uppercase tracking-wider">04 · Tools & Workflow</h3>
+          <ul class="text-xs sm:text-sm text-slate-300 space-y-2 font-mono">
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Black-Box Testing (Fungsional)
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Git & GitHub Version Control
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Git & GitHub Version Control
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Black-Box Functional Testing
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> VS Code, NetBeans, XAMPP
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> VS Code, Android Studio
             </li>
             <li class="flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Penulisan Jurnal Ilmiah
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> NetBeans & XAMPP Stack
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span> Scientific Writing (SINTA)
             </li>
           </ul>
         </div>
@@ -1247,75 +1345,81 @@
   </section>
 
   <!-- ==================== EDUCATION & TIMELINE SECTION ==================== -->
-  <section id="pendidikan" class="py-20 bg-white dark:bg-[#080c14] border-b border-slate-200/80 dark:border-slate-800/70">
+  <section id="pendidikan" class="py-20 sm:py-24 bg-[#0a0407] border-b border-rose-950/60">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
+      <!-- Section Header -->
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="w-6 h-[2px] bg-rose-500"></span>
+          <span class="text-xs font-mono font-bold tracking-widest text-rose-400 uppercase">// 05 · JOURNEY & MILESTONES</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          Academic Foundation & Practical Milestones
+        </h2>
+        <p class="text-sm sm:text-base text-slate-400 mt-2 max-w-2xl">
+          Formal academic training combined with an intensive student exchange program and industry software engineering internship.
+        </p>
+      </div>
+
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
-        <div class="lg:col-span-6 space-y-6 reveal">
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-cyan-400 bg-brand-500/10">
-            <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
-            Education & Background
-          </div>
-          <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Academic Foundation & Practical Engineering
-          </h2>
-          <div class="text-sm sm:text-base text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed">
-            <p>
-              I hold a <strong>Bachelor of Science in Informatics Engineering from Universitas Pamulang</strong> (GPA 3.60 / 4.00). My academic background gave me a rigorous grounding in software engineering principles, data structures, relational database design, and applied computational modeling.
-            </p>
-            <p>
-              Throughout my studies, I paired theory with hands-on development: engineering a warehouse stock-taking system during my internship at Kopiluvium, developing a machine learning thesis classifying anxiety disorder with 100% test accuracy, and completing an intensive academic semester through the <strong>Merdeka Student Exchange (PMM Batch 4) at Sam Ratulangi University, Manado</strong>.
-            </p>
-            <p>
-              Beyond coding, I focus on disciplined engineering workflows: translating business requirements into clear architectures, designing component-driven UI systems in Figma, and maintaining thorough documentation—backed by 4 published peer-reviewed journal papers.
-            </p>
-          </div>
+        <!-- Left: Summary Narrative -->
+        <div class="lg:col-span-5 space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed reveal">
+          <p>
+            My academic journey at <strong>Universitas Pamulang</strong> provided rigorous training in core computer science, software engineering methodology, and applied machine learning.
+          </p>
+          <p>
+            Through the national <strong>Merdeka Student Exchange (PMM Batch 4)</strong> at Universitas Sam Ratulangi in Manado, I completed advanced coursework in automata theory, software architecture, and cross-cultural collaborative research.
+          </p>
+          <p>
+            During my internship at <strong>Kopiluvium</strong>, I put these principles into practice by designing and developing a warehouse stock-taking system under the Waterfall model, culminating in a published research paper in the OKTAL Journal.
+          </p>
         </div>
 
-        <div class="lg:col-span-6 space-y-6 reveal">
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
-            <i data-lucide="graduation-cap" class="w-5 h-5 text-brand-600 dark:text-cyan-400"></i>
-            Education & Background Terpilih
-          </h3>
-
-          <div class="space-y-4 border-l-2 border-slate-200 dark:border-slate-800 pl-4 sm:pl-6 ml-2">
+        <!-- Right: Minimalist Timeline -->
+        <div class="lg:col-span-7 space-y-6 reveal">
+          <div class="space-y-6 border-l-2 border-rose-950/80 pl-6 ml-2">
             
+            <!-- Milestone 1 -->
             <div class="relative group">
-              <span class="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-600 ring-4 ring-white dark:ring-[#080c14]"></span>
-              <div class="text-xs font-mono text-brand-600 dark:text-cyan-400">2022 – Agustus 2026</div>
-              <h4 class="text-base font-bold text-slate-900 dark:text-white">Universitas Pamulang</h4>
-              <p class="text-xs text-slate-500 dark:text-slate-400">B.S. in Informatics Engineering • GPA: 3.60 / 4.00</p>
-              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
-                Undergraduate Thesis: <em>Implementation of Support Vector Machine Algorithm for Early Anxiety Disorder Classification in Generation Z (Web-Based).</em>
+              <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-rose-600 ring-4 ring-[#0a0407]"></span>
+              <div class="text-xs font-mono text-rose-400 font-bold">2022 – August 2026</div>
+              <h4 class="text-base font-bold text-white mt-0.5">Universitas Pamulang</h4>
+              <p class="text-xs text-rose-300 font-mono">B.S. in Informatics Engineering · GPA 3.60 / 4.00 (Honors)</p>
+              <p class="text-xs sm:text-sm text-slate-400 mt-1.5 leading-relaxed">
+                Undergraduate Thesis: <em>Implementation of Support Vector Machine Algorithm for Early Anxiety Disorder Classification in Generation Z (Web-Based)</em>. Model achieved 100% testing accuracy.
               </p>
             </div>
 
+            <!-- Milestone 2 -->
             <div class="relative group">
-              <span class="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-cyan-500 ring-4 ring-white dark:ring-[#080c14]"></span>
-              <div class="text-xs font-mono text-cyan-600 dark:text-cyan-400">Januari 2024 – Juni 2024</div>
-              <h4 class="text-base font-bold text-slate-900 dark:text-white">Universitas Sam Ratulangi (UNSRAT), Manado</h4>
-              <p class="text-xs text-slate-500 dark:text-slate-400">Independent Student Exchange Program (PMM Batch 4)</p>
-              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
-                Completed cross-disciplinary coursework in advanced computing and collaborative regional research projects.
+              <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-amber-500 ring-4 ring-[#0a0407]"></span>
+              <div class="text-xs font-mono text-amber-300 font-bold">January 2024 – June 2024</div>
+              <h4 class="text-base font-bold text-white mt-0.5">Universitas Sam Ratulangi (UNSRAT), Manado</h4>
+              <p class="text-xs text-slate-400 font-mono">Independent Student Exchange Program (PMM Batch 4)</p>
+              <p class="text-xs sm:text-sm text-slate-400 mt-1.5 leading-relaxed">
+                Cross-disciplinary computing coursework, automata theory projects, and collaborative user experience research.
               </p>
             </div>
 
+            <!-- Milestone 3 -->
             <div class="relative group">
-              <span class="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-500 ring-4 ring-white dark:ring-[#080c14]"></span>
-              <div class="text-xs font-mono text-emerald-600 dark:text-emerald-400">Mei 2025 – Juni 2025</div>
-              <h4 class="text-base font-bold text-slate-900 dark:text-white">Web Developer Intern • Kopiluvium</h4>
-              <p class="text-xs text-slate-500 dark:text-slate-400">Software Engineering Internship · Warehouse Inventory System</p>
-              <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
-                Designed system architecture, Figma UI mockups, MySQL database schema, and custom PHP web application for physical warehouse audits.
+              <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-500 ring-4 ring-[#0a0407]"></span>
+              <div class="text-xs font-mono text-emerald-400 font-bold">May 2025 – June 2025</div>
+              <h4 class="text-base font-bold text-white mt-0.5">Web Developer Intern · Kopiluvium</h4>
+              <p class="text-xs text-slate-400 font-mono">Software Engineering Internship · Warehouse Inventory System</p>
+              <p class="text-xs sm:text-sm text-slate-400 mt-1.5 leading-relaxed">
+                Designed system architecture, Figma UI mockups, MySQL database schema, and native PHP application for physical warehouse inventory audits. Resulted in published SINTA journal paper.
               </p>
             </div>
 
+            <!-- Milestone 4 -->
             <div class="relative group">
-              <span class="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-400 ring-4 ring-white dark:ring-[#080c14]"></span>
-              <div class="text-xs font-mono text-slate-400">2019 – 2022</div>
-              <h4 class="text-base font-bold text-slate-900 dark:text-white">SMA Negeri 1 Astanajapura, Cirebon</h4>
-              <p class="text-xs text-slate-500 dark:text-slate-400">High School Diploma · Mathematics & Natural Sciences (MIPA)</p>
+              <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-600 ring-4 ring-[#0a0407]"></span>
+              <div class="text-xs font-mono text-slate-500">2019 – 2022</div>
+              <h4 class="text-base font-bold text-white mt-0.5">SMA Negeri 1 Astanajapura, Cirebon</h4>
+              <p class="text-xs text-slate-400 font-mono">High School Diploma · Mathematics & Natural Sciences (MIPA)</p>
             </div>
 
           </div>
@@ -1327,69 +1431,76 @@
   </section>
 
   <!-- ==================== CONTACT & FOOTER SECTION ==================== -->
-  <section id="kontak" class="py-20 bg-slate-900 text-white relative overflow-hidden">
-    <div class="absolute bottom-0 right-0 w-[500px] h-[300px] bg-brand-600/20 blur-[120px] -z-0 pointer-events-none rounded-full"></div>
+  <section id="kontak" class="py-20 sm:py-24 bg-[#070204] text-white relative overflow-hidden">
+    <!-- Ambient Radial Glow -->
+    <div class="absolute bottom-0 right-1/4 w-[500px] h-[300px] bg-rose-600/15 blur-[140px] pointer-events-none rounded-full"></div>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-8 reveal">
       
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium bg-white/10 text-cyan-300 border border-white/10">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono text-rose-300 bg-rose-950/60 border border-rose-900/40">
         <i data-lucide="send" class="w-3.5 h-3.5"></i>
-        <span>Get In Touch</span>
+        <span>// 06 · HIT ME UP</span>
       </div>
 
       <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">
-        Interested in Collaborating or Hiring?
+        Interested in Working Together?
       </h2>
 
-      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-        I am actively seeking full-time opportunities in Full-Stack Web Development, Machine Learning, and Software Engineering. Let's discuss how I can contribute to your team.
+      <p class="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+        I am actively seeking full-time roles in Full-Stack Web Development, Machine Learning, and Software Engineering. Let's discuss how I can contribute to your engineering goals.
       </p>
 
+      <!-- 3 Direct Action Cards (Arya Ziddan Clean Style) -->
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-left">
         
-        <a href="mailto:diantriyuniarti025@gmail.com" class="p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-400/50 hover:bg-white/10 transition transform hover:-translate-y-1 group">
-          <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center mb-3 group-hover:scale-110 transition">
+        <!-- Email Card -->
+        <a href="mailto:diantriyuniarti025@gmail.com" class="p-5 rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-500/60 transition transform hover:-translate-y-1 group">
+          <div class="w-10 h-10 rounded-xl bg-rose-950/60 border border-rose-900/40 text-rose-400 flex items-center justify-center mb-3 group-hover:scale-105 transition">
             <i data-lucide="mail" class="w-5 h-5"></i>
           </div>
-          <div class="text-xs text-slate-400 font-mono">Email</div>
+          <div class="text-xs text-slate-500 font-mono">Email Address</div>
           <div class="text-sm font-bold text-white truncate mt-0.5">diantriyuniarti025@gmail.com</div>
         </a>
 
-        <a href="https://wa.me/6289660164156" target="_blank" class="p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-emerald-400/50 hover:bg-white/10 transition transform hover:-translate-y-1 group">
-          <div class="w-10 h-10 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center mb-3 group-hover:scale-110 transition">
+        <!-- WhatsApp Card -->
+        <a href="https://wa.me/6289660164156" target="_blank" class="p-5 rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-500/60 transition transform hover:-translate-y-1 group">
+          <div class="w-10 h-10 rounded-xl bg-rose-950/60 border border-rose-900/40 text-rose-400 flex items-center justify-center mb-3 group-hover:scale-105 transition">
             <i data-lucide="phone" class="w-5 h-5"></i>
           </div>
-          <div class="text-xs text-slate-400 font-mono">Phone / WhatsApp</div>
-          <div class="text-sm font-bold text-white mt-0.5">0896-6016-4156</div>
+          <div class="text-xs text-slate-500 font-mono">WhatsApp Direct</div>
+          <div class="text-sm font-bold text-white mt-0.5 font-mono">+62 896-6016-4156</div>
         </a>
 
-        <a href="https://www.linkedin.com/in/dian-tri-yuniarti-367890447/" target="_blank" class="p-5 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-400/50 hover:bg-white/10 transition transform hover:-translate-y-1 group">
-          <div class="w-10 h-10 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center mb-3 group-hover:scale-110 transition">
+        <!-- LinkedIn Card -->
+        <a href="https://www.linkedin.com/in/dian-tri-yuniarti-367890447/" target="_blank" class="p-5 rounded-2xl bg-[#13070b] border border-rose-950/80 hover:border-rose-500/60 transition transform hover:-translate-y-1 group">
+          <div class="w-10 h-10 rounded-xl bg-rose-950/60 border border-rose-900/40 text-rose-400 flex items-center justify-center mb-3 group-hover:scale-105 transition">
             <i data-lucide="linkedin" class="w-5 h-5"></i>
           </div>
-          <div class="text-xs text-slate-400 font-mono">LinkedIn Profile</div>
-          <div class="text-sm font-bold text-white mt-0.5 truncate">linkedin.com/in/dian-tri-yuniarti-367890447</div>
+          <div class="text-xs text-slate-500 font-mono">LinkedIn Profile</div>
+          <div class="text-sm font-bold text-white mt-0.5 truncate font-mono">in/dian-tri-yuniarti</div>
         </a>
 
       </div>
 
+      <!-- Action Button: Download Official Resume / CV -->
       <div class="pt-6">
-        <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" download="CV_Dian_Tri_Yuniarti.pdf" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-sm font-bold bg-gradient-to-r from-brand-600 via-indigo-600 to-cyan-500 hover:from-brand-500 hover:to-cyan-400 text-white shadow-xl shadow-brand-500/25 transition transform hover:-translate-y-1 hover:shadow-2xl hover:shadow-brand-500/35">
+        <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" download="CV_Dian_Tri_Yuniarti.pdf" class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-sm font-bold bg-gradient-to-r from-red-600 via-rose-600 to-red-700 hover:from-red-500 hover:to-rose-600 text-white shadow-xl shadow-red-900/40 transition transform hover:-translate-y-1">
           <i data-lucide="download" class="w-4 h-4"></i>
           <span>Download Official Resume / CV (PDF)</span>
         </a>
       </div>
 
-      <div class="pt-16 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+      <!-- Minimalist Clean Footer -->
+      <div class="pt-16 border-t border-rose-950/60 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-mono gap-4">
         <div>
-          © 2026 <strong>Dian Tri Yuniarti, S.Kom.</strong> All rights reserved.
+          © 2026 <strong class="text-slate-300">Dian Tri Yuniarti, S.Kom.</strong> All rights reserved.
         </div>
         <div class="flex items-center gap-4">
-          <a href="#hero" class="hover:text-white transition">Back to Top ↑</a>
+          <a href="#hero" class="hover:text-rose-400 transition">Back to Top ↑</a>
           <span>•</span>
-          <a href="#proyek" class="hover:text-white transition">Projects</a>
+          <a href="#proyek" class="hover:text-rose-400 transition">Projects</a>
           <span>•</span>
-          <a href="#publikasi" class="hover:text-white transition">Publications</a>
+          <a href="#publikasi" class="hover:text-rose-400 transition">Publications</a>
         </div>
       </div>
 
@@ -1400,13 +1511,13 @@
 
   <!-- MODAL 1: AnxietyCheck -->
   <div id="modal-anxiety" class="modal-backdrop fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
-    <div class="relative bg-white dark:bg-[#0f172a] max-w-4xl w-full rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col transition-all duration-300">
-      <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+    <div class="relative bg-[#13070b] max-w-4xl w-full rounded-3xl border border-rose-950/80 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col transition-all duration-300">
+      <div class="p-6 border-b border-rose-950/80 flex items-center justify-between bg-[#18090f]">
         <div>
-          <span class="text-xs font-mono text-brand-600 dark:text-cyan-400 uppercase tracking-wider">Thesis Project · 2026</span>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white">AnxietyCheck: Deteksi Dini Gangguan Kecemasan (SVM)</h3>
+          <span class="text-xs font-mono text-rose-400 uppercase tracking-wider">Thesis Project · 2026</span>
+          <h3 class="text-xl font-bold text-white">AnxietyCheck: Early Anxiety Disorder Screening System (SVM)</h3>
         </div>
-        <button onclick="closeModal('modal-anxiety')" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+        <button onclick="closeModal('modal-anxiety')" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-rose-950/60 transition">
           <i data-lucide="x" class="w-6 h-6"></i>
         </button>
       </div>
@@ -1414,67 +1525,67 @@
       <div class="p-6 overflow-y-auto space-y-6">
         <div>
           <h4 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3 font-mono">System Screenshot Gallery</h4>
-          <div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-slate-950">
+          <div class="rounded-2xl border border-rose-950/80 overflow-hidden bg-slate-950">
             <img id="anxietyGalleryMain" src="assets/images/anxiety_beranda.png" alt="Preview AnxietyCheck" class="w-full h-72 sm:h-96 object-contain bg-slate-900 transition-all duration-300" />
           </div>
           <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-3">
-            <button onclick="changeAnxietyImage('assets/images/anxiety_beranda.png')" class="rounded-lg overflow-hidden border-2 border-brand-500 h-12 bg-slate-800 focus:outline-none hover:scale-105 transition">
+            <button onclick="changeAnxietyImage('assets/images/anxiety_beranda.png')" class="rounded-lg overflow-hidden border-2 border-rose-500 h-12 bg-slate-800 focus:outline-none hover:scale-105 transition">
               <img src="assets/images/anxiety_beranda.png" class="w-full h-full object-cover" />
             </button>
-            <button onclick="changeAnxietyImage('assets/images/anxiety_dashboard_user.png')" class="rounded-lg overflow-hidden border-2 border-transparent hover:border-brand-500 h-12 bg-slate-800 focus:outline-none hover:scale-105 transition">
+            <button onclick="changeAnxietyImage('assets/images/anxiety_dashboard_user.png')" class="rounded-lg overflow-hidden border-2 border-transparent hover:border-rose-500 h-12 bg-slate-800 focus:outline-none hover:scale-105 transition">
               <img src="assets/images/anxiety_dashboard_user.png" class="w-full h-full object-cover" />
             </button>
-            <button onclick="changeAnxietyImage('assets/images/anxiety_test.png')" class="rounded-lg overflow-hidden border-2 border-transparent hover:border-brand-500 h-12 bg-slate-800 focus:outline-none hover:scale-105 transition">
+            <button onclick="changeAnxietyImage('assets/images/anxiety_test.png')" class="rounded-lg overflow-hidden border-2 border-transparent hover:border-rose-500 h-12 bg-slate-800 focus:outline-none hover:scale-105 transition">
               <img src="assets/images/anxiety_test.png" class="w-full h-full object-cover" />
             </button>
-            <button onclick="changeAnxietyImage('assets/images/anxiety_hasil.png')" class="rounded-lg overflow-hidden border-2 border-transparent hover:border-brand-500 h-12 bg-slate-800 focus:outline-none hover:scale-105 transition">
+            <button onclick="changeAnxietyImage('assets/images/anxiety_hasil.png')" class="rounded-lg overflow-hidden border-2 border-transparent hover:border-rose-500 h-12 bg-slate-800 focus:outline-none hover:scale-105 transition">
               <img src="assets/images/anxiety_hasil.png" class="w-full h-full object-cover" />
             </button>
-            <button onclick="changeAnxietyImage('assets/images/anxiety_dashboard_admin.png')" class="rounded-lg overflow-hidden border-2 border-transparent hover:border-brand-500 h-12 bg-slate-800 focus:outline-none hover:scale-105 transition">
+            <button onclick="changeAnxietyImage('assets/images/anxiety_dashboard_admin.png')" class="rounded-lg overflow-hidden border-2 border-transparent hover:border-rose-500 h-12 bg-slate-800 focus:outline-none hover:scale-105 transition">
               <img src="assets/images/anxiety_dashboard_admin.png" class="w-full h-full object-cover" />
             </button>
-            <button onclick="changeAnxietyImage('assets/images/anxiety_model_svm.png')" class="rounded-lg overflow-hidden border-2 border-transparent hover:border-brand-500 h-12 bg-slate-800 focus:outline-none hover:scale-105 transition">
+            <button onclick="changeAnxietyImage('assets/images/anxiety_model_svm.png')" class="rounded-lg overflow-hidden border-2 border-transparent hover:border-rose-500 h-12 bg-slate-800 focus:outline-none hover:scale-105 transition">
               <img src="assets/images/anxiety_model_svm.png" class="w-full h-full object-cover" />
             </button>
           </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm">
-          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800">
-            <h5 class="font-bold text-slate-900 dark:text-white mb-1.5 flex items-center gap-1.5 text-brand-600 dark:text-cyan-400">
+          <div class="p-4 rounded-xl bg-[#19090f] border border-rose-950/80">
+            <h5 class="font-bold text-white mb-1.5 flex items-center gap-1.5 text-rose-400">
               <i data-lucide="target" class="w-4 h-4"></i> Background & Problem
             </h5>
-            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            <p class="text-slate-300 leading-relaxed">
               Elevated stress and anxiety rates in Generation Z often go undiagnosed due to limited access to psychological screening and social stigma. This necessitates an accessible, accurate, and clinically validated web screening utility.
             </p>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800">
-            <h5 class="font-bold text-slate-900 dark:text-white mb-1.5 flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400">
+          <div class="p-4 rounded-xl bg-[#19090f] border border-rose-950/80">
+            <h5 class="font-bold text-white mb-1.5 flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400">
               <i data-lucide="sparkles" class="w-4 h-4"></i> Solution & Architecture
             </h5>
-            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            <p class="text-slate-300 leading-relaxed">
               Developed a full-stack web application implementing the 7-item GAD-7 clinical scale powered by a Support Vector Machine classifier (Linear Kernel, C=1). Features multi-step assessments, downloadable PDF diagnostic summaries, and an administrative dashboard for model performance and dataset tracking.
             </p>
           </div>
         </div>
 
-        <div class="p-4 rounded-xl bg-indigo-500/10 border border-indigo-500/20 text-xs sm:text-sm">
-          <h5 class="font-bold text-indigo-700 dark:text-cyan-300 mb-2 font-mono">Evaluation Results & Scientific Metrics:</h5>
+        <div class="p-4 rounded-xl bg-rose-950/30 border border-rose-900/40 text-xs sm:text-sm">
+          <h5 class="font-bold text-rose-300 mb-2 font-mono">Evaluation Results & Scientific Metrics:</h5>
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-            <div class="bg-white dark:bg-slate-900 p-2.5 rounded-lg border border-indigo-500/20">
+            <div class="bg-[#18090f] p-2.5 rounded-lg border border-rose-900/40">
               <span class="text-xs text-slate-400 block font-mono">Dataset Size</span>
-              <span class="font-bold text-base text-slate-900 dark:text-white">554 Samples</span>
+              <span class="font-bold text-base text-white">554 Samples</span>
             </div>
-            <div class="bg-white dark:bg-slate-900 p-2.5 rounded-lg border border-indigo-500/20">
+            <div class="bg-[#18090f] p-2.5 rounded-lg border border-rose-900/40">
               <span class="text-xs text-slate-400 block font-mono">Train / Test Split</span>
-              <span class="font-bold text-base text-slate-900 dark:text-white">80% : 20%</span>
+              <span class="font-bold text-base text-white">80% : 20%</span>
             </div>
-            <div class="bg-white dark:bg-slate-900 p-2.5 rounded-lg border border-indigo-500/20">
+            <div class="bg-[#18090f] p-2.5 rounded-lg border border-rose-900/40">
               <span class="text-xs text-slate-400 block font-mono">CV Macro F1</span>
-              <span class="font-bold text-base text-brand-600 dark:text-cyan-400">99,19%</span>
+              <span class="font-bold text-base text-rose-400">99,19%</span>
             </div>
-            <div class="bg-white dark:bg-slate-900 p-2.5 rounded-lg border border-indigo-500/20">
+            <div class="bg-[#18090f] p-2.5 rounded-lg border border-rose-900/40">
               <span class="text-xs text-slate-400 block font-mono">Test Accuracy</span>
               <span class="font-bold text-base text-emerald-600 dark:text-emerald-400">100%</span>
             </div>
@@ -1483,13 +1594,13 @@
 
       </div>
 
-      <div class="p-6 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 flex items-center justify-between">
-        <a href="https://github.com/diantriyuniarti/anxietycheck-svm-gad7" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-brand-600 text-white hover:bg-brand-500 transition shadow">
+      <div class="p-6 border-t border-rose-950/80 bg-[#18090f] flex items-center justify-between">
+        <a href="https://github.com/diantriyuniarti/anxietycheck-svm-gad7" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-rose-600 text-white hover:bg-rose-500 transition shadow">
           <i data-lucide="github" class="w-4 h-4"></i>
           <span>View Source Code on GitHub</span>
         </a>
-        <button onclick="closeModal('modal-anxiety')" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-700 transition">
-          Tutup
+        <button onclick="closeModal('modal-anxiety')" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#1e0b14] text-slate-200 border border-rose-900/40 hover:bg-rose-900/40 hover:text-white transition">
+          Close
         </button>
       </div>
 
@@ -1498,27 +1609,27 @@
 
   <!-- MODAL 2: Kopiluvium -->
   <div id="modal-kopiluvium" class="modal-backdrop fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
-    <div class="relative bg-white dark:bg-[#0f172a] max-w-3xl w-full rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
-      <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+    <div class="relative bg-[#13070b] max-w-3xl w-full rounded-3xl border border-rose-950/80 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
+      <div class="p-6 border-b border-rose-950/80 flex items-center justify-between bg-[#18090f]">
         <div>
           <span class="text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">Internship & Research Publication 2025</span>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Warehouse Inventory & Stock-Taking System · Kopiluvium</h3>
+          <h3 class="text-xl font-bold text-white">Warehouse Inventory & Stock-Taking System · Kopiluvium</h3>
         </div>
-        <button onclick="closeModal('modal-kopiluvium')" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+        <button onclick="closeModal('modal-kopiluvium')" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-rose-950/60 transition">
           <i data-lucide="x" class="w-6 h-6"></i>
         </button>
       </div>
       <div class="p-6 overflow-y-auto space-y-5 text-xs sm:text-sm">
-        <img src="assets/images/kopiluvium.jpg" alt="Kopiluvium" class="w-full h-56 object-cover rounded-xl border border-slate-200 dark:border-slate-800" />
+        <img src="assets/images/kopiluvium.jpg" alt="Kopiluvium" class="w-full h-56 object-cover rounded-xl border border-rose-950/80" />
         <div>
-          <h4 class="font-bold text-slate-900 dark:text-white mb-2">Project Overview</h4>
-          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+          <h4 class="font-bold text-white mb-2">Project Overview</h4>
+          <p class="text-slate-300 leading-relaxed">
             A computerized web application built with native PHP and MySQL relational database. Designed to replace paper-based inventory tracking with real-time stock validation, inbound/outbound material logs, and discrepancy audits.
           </p>
         </div>
-        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800 space-y-2">
-          <h5 class="font-bold text-slate-900 dark:text-white">Key Features:</h5>
-          <ul class="list-disc pl-5 space-y-1 text-slate-600 dark:text-slate-300">
+        <div class="p-4 rounded-xl bg-[#19090f] border border-rose-950/80 space-y-2">
+          <h5 class="font-bold text-white">Key Features:</h5>
+          <ul class="list-disc pl-5 space-y-1 text-slate-300">
             <li>Multi-tier role-based access control (Admin, Warehouse Staff, Employee)</li>
             <li>Master data management for item categories and units of measurement</li>
             <li>Inbound and outbound transaction logging with audit timestamps</li>
@@ -1527,13 +1638,13 @@
           </ul>
         </div>
       </div>
-      <div class="p-6 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 flex items-center justify-between">
+      <div class="p-6 border-t border-rose-950/80 bg-[#18090f] flex items-center justify-between">
         <a href="https://github.com/diantriyuniarti/kopi-luvium-stock-keeper" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-emerald-600 text-white hover:bg-emerald-500 transition shadow">
           <i data-lucide="github" class="w-4 h-4"></i>
           <span>View Source Code on GitHub</span>
         </a>
-        <button onclick="closeModal('modal-kopiluvium')" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-700 transition">
-          Tutup
+        <button onclick="closeModal('modal-kopiluvium')" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#1e0b14] text-slate-200 border border-rose-900/40 hover:bg-rose-900/40 hover:text-white transition">
+          Close
         </button>
       </div>
     </div>
@@ -1541,27 +1652,27 @@
 
   <!-- MODAL 3: UI Apotek -->
   <div id="modal-apotek" class="modal-backdrop fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
-    <div class="relative bg-white dark:bg-[#0f172a] max-w-3xl w-full rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
-      <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+    <div class="relative bg-[#13070b] max-w-3xl w-full rounded-3xl border border-rose-950/80 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
+      <div class="p-6 border-b border-rose-950/80 flex items-center justify-between bg-[#18090f]">
         <div>
-          <span class="text-xs font-mono text-teal-600 dark:text-teal-400 uppercase tracking-wider">UNSRAT PMM 4 • 2024</span>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Pharmacy Web Application Interface & Design System</h3>
+          <span class="text-xs font-mono text-rose-400 uppercase tracking-wider">UNSRAT PMM 4 • 2024</span>
+          <h3 class="text-xl font-bold text-white">Pharmacy Web Application Interface & Design System</h3>
         </div>
-        <button onclick="closeModal('modal-apotek')" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+        <button onclick="closeModal('modal-apotek')" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-rose-950/60 transition">
           <i data-lucide="x" class="w-6 h-6"></i>
         </button>
       </div>
       <div class="p-6 overflow-y-auto space-y-5 text-xs sm:text-sm">
-        <div class="p-5 rounded-2xl bg-teal-500/10 border border-teal-500/30 text-teal-800 dark:text-teal-200">
-          <i data-lucide="layout" class="w-6 h-6 mb-2 text-teal-600 dark:text-teal-400"></i>
+        <div class="p-5 rounded-2xl bg-rose-950/30 border border-rose-900/40 text-rose-200">
+          <i data-lucide="layout" class="w-6 h-6 mb-2 text-rose-400"></i>
           <h4 class="font-bold text-base mb-1">User-Centered Design Concept</h4>
           <p class="leading-relaxed text-xs sm:text-sm">
             Crafted in Figma to solve common usability friction in traditional online pharmacies, streamlining prescription submissions and medication discovery.
           </p>
         </div>
         <div class="space-y-3">
-          <h5 class="font-bold text-slate-900 dark:text-white">Design Highlights:</h5>
-          <ul class="list-disc pl-5 space-y-1.5 text-slate-600 dark:text-slate-300">
+          <h5 class="font-bold text-white">Design Highlights:</h5>
+          <ul class="list-disc pl-5 space-y-1.5 text-slate-300">
             <li>Medication catalog filtered by medical indication, category, and price range</li>
             <li>Digital doctor prescription upload workflow with pharmacist verification</li>
             <li>Streamlined cart and checkout flow designed for minimal user cognitive load</li>
@@ -1569,9 +1680,9 @@
           </ul>
         </div>
       </div>
-      <div class="p-6 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 flex justify-end">
-        <button onclick="closeModal('modal-apotek')" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-700 transition">
-          Tutup
+      <div class="p-6 border-t border-rose-950/80 bg-[#18090f] flex justify-end">
+        <button onclick="closeModal('modal-apotek')" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#1e0b14] text-slate-200 border border-rose-900/40 hover:bg-rose-900/40 hover:text-white transition">
+          Close
         </button>
       </div>
     </div>
@@ -1579,27 +1690,27 @@
 
   <!-- MODAL 4: Poster Nasional FSPI -->
   <div id="modal-poster" class="modal-backdrop fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
-    <div class="relative bg-white dark:bg-[#0f172a] max-w-3xl w-full rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
-      <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+    <div class="relative bg-[#13070b] max-w-3xl w-full rounded-3xl border border-rose-950/80 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
+      <div class="p-6 border-b border-rose-950/80 flex items-center justify-between bg-[#18090f]">
         <div>
           <span class="text-xs font-mono text-amber-600 dark:text-amber-400 uppercase tracking-wider">4th Place National Award · FSPI UNY 2023</span>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Advocacy Poster: Preserving Nusantara Cultural Heritage</h3>
+          <h3 class="text-xl font-bold text-white">Advocacy Poster: Preserving Nusantara Cultural Heritage</h3>
         </div>
-        <button onclick="closeModal('modal-poster')" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+        <button onclick="closeModal('modal-poster')" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-rose-950/60 transition">
           <i data-lucide="x" class="w-6 h-6"></i>
         </button>
       </div>
       <div class="p-6 overflow-y-auto space-y-4 text-center">
-        <div class="rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-900 inline-block shadow-lg max-h-[60vh]">
+        <div class="rounded-2xl overflow-hidden border border-rose-950/80 bg-slate-900 inline-block shadow-lg max-h-[60vh]">
           <img src="assets/images/poster_nusantara.jpg" alt="Poster Kebudayaan Nusantara" class="max-h-[60vh] w-auto mx-auto object-contain" />
         </div>
-        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-xl mx-auto leading-relaxed text-left">
+        <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed text-left">
           Illustrated with Adobe Illustrator, harmonizing traditional Indonesian ethnic motifs with modern typographic layout to inspire youth engagement with cultural preservation.
         </p>
       </div>
-      <div class="p-6 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 flex justify-end">
-        <button onclick="closeModal('modal-poster')" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-700 transition">
-          Tutup
+      <div class="p-6 border-t border-rose-950/80 bg-[#18090f] flex justify-end">
+        <button onclick="closeModal('modal-poster')" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#1e0b14] text-slate-200 border border-rose-900/40 hover:bg-rose-900/40 hover:text-white transition">
+          Close
         </button>
       </div>
     </div>
@@ -1607,18 +1718,18 @@
 
   <!-- MODAL 5: Automata -->
   <div id="modal-automata" class="modal-backdrop fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
-    <div class="relative bg-white dark:bg-[#0f172a] max-w-2xl w-full rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
-      <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+    <div class="relative bg-[#13070b] max-w-2xl w-full rounded-3xl border border-rose-950/80 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
+      <div class="p-6 border-b border-rose-950/80 flex items-center justify-between bg-[#18090f]">
         <div>
-          <span class="text-xs font-mono text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">UNSRAT PMM 4 • Teori Automata</span>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Scientific Notation Syntax Validator (Automata)</h3>
+          <span class="text-xs font-mono text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">UNSRAT PMM 4 · Automata Theory</span>
+          <h3 class="text-xl font-bold text-white">Scientific Notation Syntax Validator (Automata)</h3>
         </div>
-        <button onclick="closeModal('modal-automata')" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+        <button onclick="closeModal('modal-automata')" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-rose-950/60 transition">
           <i data-lucide="x" class="w-6 h-6"></i>
         </button>
       </div>
       <div class="p-6 overflow-y-auto space-y-4 text-xs sm:text-sm">
-        <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+        <p class="text-slate-300 leading-relaxed">
           Implements theoretical Finite State Automata (FSA) state transition machines to verify whether numeric string inputs adhere to valid scientific notation formats (e.g., <code>+3.14e-10</code>, <code>6.022E23</code>, <code>-1.5e5</code>).
         </p>
         <div class="p-4 rounded-xl bg-slate-900 text-cyan-400 font-mono text-xs space-y-1">
@@ -1631,9 +1742,9 @@
           <div>State 6: Exponent digits (Final State - Accepted)</div>
         </div>
       </div>
-      <div class="p-6 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 flex justify-end">
-        <button onclick="closeModal('modal-automata')" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-700 transition">
-          Tutup
+      <div class="p-6 border-t border-rose-950/80 bg-[#18090f] flex justify-end">
+        <button onclick="closeModal('modal-automata')" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#1e0b14] text-slate-200 border border-rose-900/40 hover:bg-rose-900/40 hover:text-white transition">
+          Close
         </button>
       </div>
     </div>
@@ -1641,28 +1752,28 @@
 
   <!-- MODAL 6: PPDB -->
   <div id="modal-ppdb" class="modal-backdrop fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 overflow-y-auto">
-    <div class="relative bg-white dark:bg-[#0f172a] max-w-2xl w-full rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
-      <div class="p-6 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between bg-slate-50 dark:bg-slate-900/50">
+    <div class="relative bg-[#13070b] max-w-2xl w-full rounded-3xl border border-rose-950/80 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
+      <div class="p-6 border-b border-rose-950/80 flex items-center justify-between bg-[#18090f]">
         <div>
           <span class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider">Web Development Project</span>
-          <h3 class="text-xl font-bold text-slate-900 dark:text-white">Online Student Admissions Portal (SPMB)</h3>
+          <h3 class="text-xl font-bold text-white">Online Student Admissions Portal (SPMB)</h3>
         </div>
-        <button onclick="closeModal('modal-ppdb')" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+        <button onclick="closeModal('modal-ppdb')" class="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-rose-950/60 transition">
           <i data-lucide="x" class="w-6 h-6"></i>
         </button>
       </div>
       <div class="p-6 overflow-y-auto space-y-4 text-xs sm:text-sm">
-        <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+        <p class="text-slate-300 leading-relaxed">
           An integrated school admission platform handling student registration, academic record submissions, certificate uploads, committee verification, and admission result announcements.
         </p>
-        <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800">
-          <span class="font-bold text-slate-900 dark:text-white block mb-1">Technology Stack:</span>
-          <span class="text-slate-600 dark:text-slate-300">PHP, MySQL, Bootstrap CSS, JavaScript, PDF Export.</span>
+        <div class="p-4 rounded-xl bg-[#19090f] border border-rose-950/80">
+          <span class="font-bold text-white block mb-1">Technology Stack:</span>
+          <span class="text-slate-300">PHP, MySQL, Bootstrap CSS, JavaScript, PDF Export.</span>
         </div>
       </div>
-      <div class="p-6 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50 flex justify-end">
-        <button onclick="closeModal('modal-ppdb')" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-700 transition">
-          Tutup
+      <div class="p-6 border-t border-rose-950/80 bg-[#18090f] flex justify-end">
+        <button onclick="closeModal('modal-ppdb')" class="px-5 py-2.5 rounded-xl text-xs font-semibold bg-[#1e0b14] text-slate-200 border border-rose-900/40 hover:bg-rose-900/40 hover:text-white transition">
+          Close
         </button>
       </div>
     </div>
@@ -1824,12 +1935,12 @@
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         filterButtons.forEach(b => {
-          b.classList.remove('active', 'bg-brand-600', 'text-white', 'shadow-sm', 'shadow-brand-500/30');
-          b.classList.add('bg-white', 'dark:bg-[#0f172a]', 'text-slate-600', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-800');
+          b.classList.remove('active', 'bg-rose-600', 'text-white', 'shadow-sm');
+          b.classList.add('bg-[#13070b]', 'text-slate-400', 'border', 'border-rose-950/80');
         });
 
-        btn.classList.add('active', 'bg-brand-600', 'text-white', 'shadow-sm', 'shadow-brand-500/30');
-        btn.classList.remove('bg-white', 'dark:bg-[#0f172a]', 'text-slate-600', 'dark:text-slate-300', 'border', 'border-slate-200', 'dark:border-slate-800');
+        btn.classList.add('active', 'bg-rose-600', 'text-white', 'shadow-sm');
+        btn.classList.remove('bg-[#13070b]', 'text-slate-400', 'border', 'border-rose-950/80');
 
         currentFilter = btn.getAttribute('data-filter');
         filterProjects();
