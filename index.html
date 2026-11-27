@@ -9,7 +9,7 @@
   <!-- Google Fonts: Plus Jakarta Sans, Inter, & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Patrick+Hand&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Patrick+Hand&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -192,6 +192,66 @@
     }
     .anim-turn-prev {
       animation: pageTurnPrev 0.42s cubic-bezier(0.3, 0, 0.2, 1) forwards;
+    }
+
+    /* Academic Book Reader Styles */
+    .font-serif-academic { font-family: 'Playfair Display', Georgia, serif; }
+    .font-title-cover { font-family: 'Cinzel', serif; }
+    .book-gutter-shadow {
+      background: linear-gradient(to right, 
+        rgba(0,0,0,0.2) 0%, 
+        rgba(0,0,0,0.06) 8%, 
+        transparent 25%, 
+        transparent 75%, 
+        rgba(0,0,0,0.06) 92%, 
+        rgba(0,0,0,0.2) 100%
+      );
+    }
+    .book-left-edge {
+      box-shadow: inset 14px 0 24px -10px rgba(0,0,0,0.14), -4px 0 8px -2px rgba(0,0,0,0.25);
+    }
+    .book-right-edge {
+      box-shadow: inset -14px 0 24px -10px rgba(0,0,0,0.14), 4px 0 8px -2px rgba(0,0,0,0.25);
+    }
+    .book-edge-stacked {
+      background: repeating-linear-gradient(
+        to bottom,
+        #fbf8f1,
+        #fbf8f1 3px,
+        #e2d9c8 3px,
+        #e2d9c8 4px
+      );
+    }
+    @keyframes pageTurnNext {
+      0% { transform: perspective(2200px) rotateY(0deg); opacity: 1; filter: brightness(1); }
+      40% { transform: perspective(2200px) rotateY(-40deg) scale(0.97); opacity: 0.6; filter: brightness(0.85); }
+      100% { transform: perspective(2200px) rotateY(0deg); opacity: 1; filter: brightness(1); }
+    }
+    @keyframes pageTurnPrev {
+      0% { transform: perspective(2200px) rotateY(0deg); opacity: 1; filter: brightness(1); }
+      40% { transform: perspective(2200px) rotateY(40deg) scale(0.97); opacity: 0.6; filter: brightness(0.85); }
+      100% { transform: perspective(2200px) rotateY(0deg); opacity: 1; filter: brightness(1); }
+    }
+    .anim-turn-next {
+      animation: pageTurnNext 0.45s cubic-bezier(0.3, 0, 0.2, 1) forwards;
+    }
+    .anim-turn-prev {
+      animation: pageTurnPrev 0.45s cubic-bezier(0.3, 0, 0.2, 1) forwards;
+    }
+    @keyframes coverOpen {
+      0% { transform: perspective(2500px) rotateY(0deg) scale(1); opacity: 1; }
+      50% { transform: perspective(2500px) rotateY(-80deg) scale(0.95); opacity: 0.4; filter: brightness(0.7); }
+      100% { transform: perspective(2500px) rotateY(-180deg) scale(0.9); opacity: 0; pointer-events: none; }
+    }
+    @keyframes openSpreadAppear {
+      0% { transform: perspective(2500px) rotateY(40deg) scale(0.94); opacity: 0; }
+      100% { transform: perspective(2500px) rotateY(0deg) scale(1); opacity: 1; }
+    }
+    .anim-cover-open {
+      animation: coverOpen 0.52s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+    .anim-spread-appear {
+      animation: openSpreadAppear 0.52s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
 </style>
 </head>
@@ -1212,6 +1272,7 @@
 
   <!-- ==================== ACADEMIC PUBLICATIONS SECTION ==================== -->
     <!-- ==================== ACADEMIC PUBLICATIONS (INTERACTIVE BOOK READER) ==================== -->
+    <!-- ==================== ACADEMIC PUBLICATIONS (INTERACTIVE CLOSED COVER & SPREAD BOOK) ==================== -->
   <section id="publikasi" class="py-20 sm:py-28 bg-[#0a0306] border-b border-rose-950/60">
     <div class="max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
       
@@ -1225,76 +1286,174 @@
           <span class="block text-slate-500">PUBLICATIONS VOLUME.</span>
         </h2>
         <p class="text-xs sm:text-sm text-slate-400 mt-4 max-w-2xl font-mono">
-          Interactive manuscript volume: flip through the 4 peer-reviewed research papers published in accredited national journals (SINTA) & Google Scholar.
+          An interactive bound manuscript: click the cover to open and flip page-by-page through 4 peer-reviewed research papers.
         </p>
       </div>
 
-      <!-- INTERACTIVE BOOK VIEWER COMPONENT -->
-      <div class="relative w-full max-w-5xl mx-auto select-none reveal">
+      <!-- MAIN BOOK WRAPPER -->
+      <div class="relative w-full max-w-4xl mx-auto select-none reveal">
         
-        <!-- Top Bookmarks / Chapter Ribbon Tabs -->
-        <div class="flex items-center gap-1.5 sm:gap-2 mb-3.5 overflow-x-auto pb-1.5 no-scrollbar">
-          <span class="text-[11px] font-mono text-rose-400/80 uppercase tracking-widest mr-1 flex items-center gap-1">
-            <span>CHAPTERS:</span>
-          </span>
-          <button onclick="goToBookPage(0)" id="book-tab-0" class="book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-rose-600 text-white shadow-sm whitespace-nowrap">
-            01 · Kopiluvium
-          </button>
-          <button onclick="goToBookPage(1)" id="book-tab-1" class="book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-[#180910] text-slate-400 hover:text-white border border-rose-950/80 whitespace-nowrap">
-            02 · WASPAS DSS
-          </button>
-          <button onclick="goToBookPage(2)" id="book-tab-2" class="book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-[#180910] text-slate-400 hover:text-white border border-rose-950/80 whitespace-nowrap">
-            03 · AI Education (SINTA 5)
-          </button>
-          <button onclick="goToBookPage(3)" id="book-tab-3" class="book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-[#180910] text-slate-400 hover:text-white border border-rose-950/80 whitespace-nowrap">
-            04 · Cybersecurity
-          </button>
-        </div>
-
-        <!-- Outer Hardcover Book Frame -->
-        <div class="relative rounded-2xl p-2.5 sm:p-4 md:p-6 bg-gradient-to-br from-[#1c0813] via-[#12040c] to-[#0a0207] border-2 border-rose-950/80 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.95)]">
-          
-          <!-- Book Page Leaves Container (Click to Turn) -->
-          <div id="bookViewerContainer" class="relative rounded-lg bg-[#fbf8f1] text-stone-900 overflow-hidden shadow-2xl border border-stone-300 min-h-[460px] sm:min-h-[520px] cursor-pointer" onclick="handleBookSpreadClick(event)">
+        <!-- ==================== STATE 1: CLOSED BOOK COVER ==================== -->
+        <div id="bookCoverView" class="relative transition-all duration-500">
+          <div onclick="openBook()" class="group relative rounded-2xl p-6 sm:p-10 md:p-14 bg-gradient-to-br from-[#240a18] via-[#160510] to-[#0d0208] border-2 border-rose-900/60 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.95)] cursor-pointer overflow-hidden transform hover:-translate-y-1 hover:shadow-rose-950/40 transition-all duration-300">
             
-            <!-- Center Book Spine Shadow & Stitching Crease (Desktop Only) -->
-            <div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-12 sm:w-16 pointer-events-none z-20 book-gutter-shadow hidden md:block"></div>
-            <div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[1px] bg-stone-300/80 pointer-events-none z-20 hidden md:block"></div>
-
-            <!-- Page Content Container (Dynamic 3D Flip) -->
-            <div id="bookPageContent" class="h-full">
-              <!-- Rendered via JavaScript -->
+            <!-- Book Spine Ridge on the Left -->
+            <div class="absolute inset-y-0 left-0 w-8 sm:w-12 bg-gradient-to-r from-black/80 via-white/10 to-transparent border-r border-rose-950/80 pointer-events-none">
+              <div class="h-full flex flex-col justify-between py-8 items-center opacity-40">
+                <span class="w-full h-[2px] bg-rose-500/40"></span>
+                <span class="w-full h-[2px] bg-rose-500/40"></span>
+                <span class="w-full h-[2px] bg-rose-500/40"></span>
+                <span class="w-full h-[2px] bg-rose-500/40"></span>
+              </div>
             </div>
 
-            <!-- Bottom Floating Turn Hint Badge (Desktop) -->
-            <div class="absolute bottom-3 right-4 z-20 hidden md:flex items-center gap-1.5 text-[10px] font-mono text-stone-500 bg-stone-200/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-stone-300/80 pointer-events-none">
-              <span>Click page to turn</span>
-              <span>→</span>
+            <!-- Gold / Crimson Decorative Filigree Border -->
+            <div class="border border-rose-500/30 rounded-xl p-6 sm:p-10 md:p-12 relative flex flex-col items-center text-center ml-4 sm:ml-6">
+              
+              <!-- Corner Accents -->
+              <div class="absolute top-2 left-2 text-rose-500/50 text-xs font-mono">✦</div>
+              <div class="absolute top-2 right-2 text-rose-500/50 text-xs font-mono">✦</div>
+              <div class="absolute bottom-2 left-2 text-rose-500/50 text-xs font-mono">✦</div>
+              <div class="absolute bottom-2 right-2 text-rose-500/50 text-xs font-mono">✦</div>
+
+              <!-- Top Monogram & Series Tag -->
+              <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-[11px] font-mono tracking-widest text-rose-300 bg-rose-950/60 border border-rose-800/40 uppercase mb-6 sm:mb-8">
+                <span>ACADEMIC MANUSCRIPT ARCHIVE</span>
+                <span>·</span>
+                <span>VOL. 2023–2025</span>
+              </div>
+
+              <!-- Emblem Icon -->
+              <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-rose-900/60 to-black/80 border border-rose-500/40 flex items-center justify-center text-rose-300 mb-6 group-hover:scale-105 transition-transform shadow-lg shadow-rose-950/60">
+                <svg class="w-7 h-7 sm:w-8 sm:h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                  <path d="M12 6v6"/>
+                  <path d="M9 9h6"/>
+                </svg>
+              </div>
+
+              <!-- Book Title (Foil Roman Look) -->
+              <h3 class="text-2xl sm:text-4xl md:text-5xl font-black font-title-cover text-white tracking-wider uppercase mb-3 sm:mb-4 leading-tight group-hover:text-rose-100 transition-colors">
+                PUBLISHED ARTICLES & RESEARCH
+              </h3>
+
+              <!-- Subtitle -->
+              <p class="text-xs sm:text-sm font-serif-academic italic text-rose-300/80 max-w-lg mb-8 leading-relaxed">
+                "A Bound Compendium of 4 Peer-Reviewed Journal Publications in Applied Machine Learning, Decision Support Systems, and Software Engineering"
+              </p>
+
+              <!-- Decorative Divider -->
+              <div class="flex items-center gap-3 w-48 mb-8 opacity-60">
+                <span class="flex-1 h-[1px] bg-gradient-to-r from-transparent to-rose-400"></span>
+                <span class="text-rose-400 text-xs">❦</span>
+                <span class="flex-1 h-[1px] bg-gradient-to-l from-transparent to-rose-400"></span>
+              </div>
+
+              <!-- Author / Universitas -->
+              <div class="text-xs sm:text-sm font-mono text-slate-300 uppercase tracking-widest mb-10">
+                BY <strong class="text-white font-bold">DIAN TRI YUNIARTI, S.KOM.</strong>
+                <div class="text-[11px] text-rose-400/80 font-mono tracking-wider mt-1">UNIVERSITAS PAMULANG · INFORMATICS</div>
+              </div>
+
+              <!-- Click to Open Prompt Pill -->
+              <div class="inline-flex items-center gap-3 px-6 py-3 rounded-full text-xs sm:text-sm font-bold font-mono bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white shadow-xl shadow-red-700/50 group-hover:scale-105 group-hover:from-red-500 group-hover:to-rose-600 transition-all duration-300">
+                <span>CLICK TO OPEN BOOK</span>
+                <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"/>
+                </svg>
+              </div>
+
             </div>
+
+            <!-- Bottom Book Thickness Edge -->
+            <div class="absolute -bottom-2 inset-x-4 h-3 rounded-b-lg book-edge-stacked border-x border-b border-stone-400/60 opacity-80 pointer-events-none"></div>
 
           </div>
-
         </div>
 
-        <!-- Book Navigation Toolbar / Pagination Footer -->
-        <div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono">
-          <!-- Prev Button -->
-          <button onclick="prevBookPage()" id="bookPrevBtn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-[#180811] hover:bg-[#250d1b] border border-rose-950/80 text-slate-300 hover:text-white transition disabled:opacity-40 disabled:cursor-not-allowed">
-            <span>← Previous Page</span>
-          </button>
+        <!-- ==================== STATE 2: OPEN BOOK SPREAD ==================== -->
+        <div id="bookSpreadView" class="hidden relative transition-all duration-500">
+          
+          <!-- Top Toolbar: Chapter Ribbon Tabs & Close Book Button -->
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3.5 pb-1">
+            
+            <!-- Chapter Ribbons -->
+            <div class="flex items-center gap-1.5 sm:gap-2 overflow-x-auto pb-1 no-scrollbar flex-1">
+              <button onclick="goToBookPage(0)" id="book-tab-0" class="book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-rose-600 text-white shadow-sm whitespace-nowrap">
+                01 · Kopiluvium
+              </button>
+              <button onclick="goToBookPage(1)" id="book-tab-1" class="book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-[#180910] text-slate-400 hover:text-white border border-rose-950/80 whitespace-nowrap">
+                02 · WASPAS DSS
+              </button>
+              <button onclick="goToBookPage(2)" id="book-tab-2" class="book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-[#180910] text-slate-400 hover:text-white border border-rose-950/80 whitespace-nowrap">
+                03 · AI Education (SINTA 5)
+              </button>
+              <button onclick="goToBookPage(3)" id="book-tab-3" class="book-tab-btn px-3 py-1 rounded text-xs font-mono font-bold transition bg-[#180910] text-slate-400 hover:text-white border border-rose-950/80 whitespace-nowrap">
+                04 · Cybersecurity
+              </button>
+            </div>
 
-          <!-- Page Indicator & Volume Status -->
-          <div class="flex items-center gap-2 text-slate-400">
-            <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
-            <span>VOLUME ENTRY <strong id="bookPageCounter" class="text-white font-bold">1</strong> OF <strong>4</strong></span>
-            <span class="text-slate-600 hidden sm:inline">|</span>
-            <span id="bookTitlePreview" class="text-rose-400/90 hidden sm:inline truncate max-w-xs">OKTAL (2025)</span>
+            <!-- Close Book Button (Back to Cover) -->
+            <button onclick="closeBook()" title="Tutup Buku / Back to Cover" class="inline-flex items-center gap-1.5 px-3 py-1 rounded text-xs font-mono font-semibold bg-stone-900/90 hover:bg-rose-950 border border-rose-900/60 text-slate-300 hover:text-white transition whitespace-nowrap shadow-sm">
+              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+              <span>Close Book (Cover)</span>
+            </button>
+
           </div>
 
-          <!-- Next Button -->
-          <button onclick="nextBookPage()" id="bookNextBtn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-rose-600 hover:bg-rose-500 text-white font-bold shadow-md shadow-rose-950/50 transition disabled:opacity-40 disabled:cursor-not-allowed">
-            <span>Next Page →</span>
-          </button>
+          <!-- Outer Hardcover Book Frame -->
+          <div class="relative rounded-2xl p-2.5 sm:p-4 md:p-6 bg-gradient-to-br from-[#1c0813] via-[#12040c] to-[#0a0207] border-2 border-rose-950/80 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.95)]">
+            
+            <!-- Book Page Leaves Container -->
+            <div id="bookViewerContainer" class="relative rounded-lg bg-[#fbf8f1] text-stone-900 overflow-hidden shadow-2xl border border-stone-300 min-h-[460px] sm:min-h-[520px] cursor-pointer" onclick="handleBookSpreadClick(event)">
+              
+              <!-- Center Book Spine Shadow & Stitching Crease (Desktop Only) -->
+              <div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-12 sm:w-16 pointer-events-none z-20 book-gutter-shadow hidden md:block"></div>
+              <div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-[1px] bg-stone-300/80 pointer-events-none z-20 hidden md:block"></div>
+
+              <!-- Page Content Container (Dynamic 3D Flip) -->
+              <div id="bookPageContent" class="h-full">
+                <!-- Rendered via JavaScript -->
+              </div>
+
+              <!-- Bottom Floating Turn Hint Badge (Desktop) -->
+              <div class="absolute bottom-3 right-4 z-20 hidden md:flex items-center gap-1.5 text-[10px] font-mono text-stone-500 bg-stone-200/80 backdrop-blur-sm px-2.5 py-1 rounded-full border border-stone-300/80 pointer-events-none">
+                <span>Click page to turn</span>
+                <span>→</span>
+              </div>
+
+            </div>
+
+            <!-- Bottom Book Thickness Edge -->
+            <div class="absolute -bottom-2 inset-x-6 h-3 rounded-b-lg book-edge-stacked border-x border-b border-stone-400/60 opacity-80 pointer-events-none"></div>
+
+          </div>
+
+          <!-- Book Navigation Toolbar / Pagination Footer -->
+          <div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-mono">
+            <!-- Prev Button -->
+            <button onclick="prevBookPage()" id="bookPrevBtn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-[#180811] hover:bg-[#250d1b] border border-rose-950/80 text-slate-300 hover:text-white transition disabled:opacity-40 disabled:cursor-not-allowed">
+              <span>← Previous Page</span>
+            </button>
+
+            <!-- Page Indicator & Volume Status -->
+            <div class="flex items-center gap-2 text-slate-400">
+              <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+              <span>VOLUME ENTRY <strong id="bookPageCounter" class="text-white font-bold">1</strong> OF <strong>4</strong></span>
+              <span class="text-slate-600 hidden sm:inline">|</span>
+              <span id="bookTitlePreview" class="text-rose-400/90 hidden sm:inline truncate max-w-xs">OKTAL (2025)</span>
+            </div>
+
+            <!-- Next Button -->
+            <button onclick="nextBookPage()" id="bookNextBtn" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-rose-600 hover:bg-rose-500 text-white font-bold shadow-md shadow-rose-950/50 transition disabled:opacity-40 disabled:cursor-not-allowed">
+              <span>Next Page →</span>
+            </button>
+          </div>
+
         </div>
 
       </div>
@@ -2181,7 +2340,7 @@
       }
     }
   
-    // ==================== ACADEMIC BOOK READER LOGIC ====================
+    // ==================== ACADEMIC BOOK READER LOGIC (COVER & SPREAD) ====================
     const bookPapers = [
       {
         volume: "Vol. 4, No. 5 · 2025",
@@ -2270,6 +2429,37 @@
     ];
 
     let currentBookIndex = 0;
+    let isBookOpen = false;
+
+    function openBook(targetIndex = 0) {
+      const cover = document.getElementById('bookCoverView');
+      const spread = document.getElementById('bookSpreadView');
+      if (!cover || !spread) return;
+      
+      cover.classList.add('anim-cover-open');
+      
+      setTimeout(() => {
+        cover.classList.add('hidden');
+        cover.classList.remove('anim-cover-open');
+        
+        spread.classList.remove('hidden');
+        spread.classList.add('anim-spread-appear');
+        isBookOpen = true;
+        renderBookPage(targetIndex, null);
+      }, 350);
+    }
+
+    function closeBook() {
+      const cover = document.getElementById('bookCoverView');
+      const spread = document.getElementById('bookSpreadView');
+      if (!cover || !spread) return;
+      
+      spread.classList.add('hidden');
+      spread.classList.remove('anim-spread-appear');
+      
+      cover.classList.remove('hidden');
+      isBookOpen = false;
+    }
 
     function renderBookPage(idx, direction = null) {
       const p = bookPapers[idx];
@@ -2496,9 +2686,22 @@
       nextBookPage();
     }
 
-    // Initialize Book on page load
-    document.addEventListener('DOMContentLoaded', () => {
-      renderBookPage(0, null);
+    window.addEventListener('keydown', (e) => {
+      if (!isBookOpen) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          const pubSec = document.getElementById('publikasi');
+          if (pubSec) {
+            const rect = pubSec.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+              openBook();
+            }
+          }
+        }
+        return;
+      }
+      if (e.key === 'ArrowRight') nextBookPage();
+      if (e.key === 'ArrowLeft') prevBookPage();
+      if (e.key === 'Escape') closeBook();
     });
 </script>
 </body>
