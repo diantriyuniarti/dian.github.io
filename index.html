@@ -167,12 +167,12 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
       <!-- Brand: Avatar + Dian Tri Yuniarti -->
-      <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-9 h-9 rounded-full overflow-hidden border border-rose-500/40 shadow-sm bg-black/40">
+      <a href="#hero" class="flex items-center gap-2.5 sm:gap-3 group shrink-0">
+        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden border border-rose-500/40 shadow-sm bg-black/40 shrink-0">
           <img src="assets/images/dian_full_figure.png" alt="Dian Tri Yuniarti" class="w-full h-full object-cover object-top" />
         </div>
         <div class="flex flex-col">
-          <span class="text-sm sm:text-base font-bold tracking-wider text-white uppercase font-mono group-hover:text-rose-400 transition-colors">
+          <span class="text-xs sm:text-base font-bold tracking-wider text-white uppercase font-mono group-hover:text-rose-400 transition-colors">
             DIAN TRI YUNIARTI
           </span>
           <span class="text-[10px] text-rose-300/70 font-mono -mt-0.5 hidden sm:block">Full-Stack & ML Specialist</span>
@@ -191,15 +191,15 @@
       </nav>
 
       <!-- Right: Action CTA -->
-      <div class="flex items-center gap-3">
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         <!-- Let's Talk CTA Pill -->
-        <a href="#kontak" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-950 hover:bg-slate-100 transition shadow-md">
+        <a href="#kontak" class="inline-flex items-center gap-1 sm:gap-1.5 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-bold bg-white text-slate-950 hover:bg-slate-100 transition shadow-md whitespace-nowrap">
           <span>Let's Talk</span>
-          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          <i data-lucide="arrow-up-right" class="w-3 h-3 sm:w-3.5 sm:h-3.5"></i>
         </a>
 
         <!-- Mobile Menu Toggle Button -->
-        <button id="mobileMenuBtn" aria-label="Buka Menu" class="md:hidden p-2 rounded-lg border border-slate-700 text-slate-300">
+        <button id="mobileMenuBtn" aria-label="Buka Menu" class="md:hidden p-1.5 sm:p-2 rounded-lg border border-slate-700 text-slate-300 hover:text-white hover:bg-white/5 transition">
           <i data-lucide="menu" class="w-4 h-4"></i>
         </button>
       </div>
@@ -258,24 +258,24 @@
       </div>
 
       <!-- Center Foreground Portrait: Clean portrait with flowers, no pavement, seamlessly grounded -->
-      <div class="relative z-10 flex justify-center -mt-36 sm:-mt-56 md:-mt-72 lg:-mt-84 pointer-events-none">
+      <div class="relative z-10 flex justify-center -mt-20 sm:-mt-44 md:-mt-64 lg:-mt-80 pointer-events-none">
         <img 
           src="assets/images/dian_full_figure.png" 
           alt="Dian Tri Yuniarti, S.Kom." 
-          class="max-h-[440px] sm:max-h-[550px] md:max-h-[630px] lg:max-h-[690px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.95)] filter contrast-[1.04]"
+          class="max-h-[350px] sm:max-h-[480px] md:max-h-[600px] lg:max-h-[680px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.95)] filter contrast-[1.04]"
         />
       </div>
 
-      <!-- Bottom Controls & Intro: 2 Columns Overlay -->
-      <div class="relative z-20 grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-end -mt-10 sm:-mt-14 md:-mt-16 pt-2">
+      <!-- Bottom Controls & Intro: 2 Columns Overlay on Desktop, Clean Stacked on Mobile -->
+      <div class="relative z-20 grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-end mt-3 sm:-mt-10 md:-mt-14 lg:-mt-16 pt-2">
         
         <!-- Left: Welcome to My Portfolio + Status Pill -->
         <div class="md:col-span-7 text-center md:text-left space-y-2.5">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+          <div class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
             <span>Terbuka untuk Peluang Kerja & Kolaborasi</span>
           </div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
             Welcome to My Portfolio
           </h2>
           <p class="text-xs sm:text-sm text-slate-300 max-w-lg leading-relaxed mx-auto md:mx-0">
@@ -284,14 +284,14 @@
         </div>
 
         <!-- Right: Action Buttons (Red Download CV & Dark Glass GitHub Profile) -->
-        <div class="md:col-span-5 flex flex-col sm:flex-row md:flex-col items-center md:items-end justify-center md:justify-end gap-2.5">
+        <div class="md:col-span-5 flex flex-col sm:flex-row md:flex-col items-center md:items-end justify-center md:justify-end gap-2.5 w-full">
           <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" download="CV_Dian_Tri_Yuniarti.pdf" 
-             class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-full text-xs sm:text-sm font-bold bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white shadow-xl shadow-red-700/40 hover:from-red-500 hover:to-rose-600 transition transform hover:-translate-y-0.5 active:translate-y-0">
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white shadow-xl shadow-red-700/40 hover:from-red-500 hover:to-rose-600 transition transform hover:-translate-y-0.5 active:translate-y-0">
             <span>Download CV Resmi (PDF)</span>
             <i data-lucide="arrow-down" class="w-4 h-4"></i>
           </a>
           <a href="https://github.com/diantriyuniarti" target="_blank" 
-             class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-full text-xs sm:text-sm font-bold bg-black/70 backdrop-blur-md text-white border border-white/20 hover:bg-black/90 hover:border-white/40 transition transform hover:-translate-y-0.5 active:translate-y-0">
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold bg-black/70 backdrop-blur-md text-white border border-white/20 hover:bg-black/90 hover:border-white/40 transition transform hover:-translate-y-0.5 active:translate-y-0">
             <span>GitHub Profile</span>
             <i data-lucide="github" class="w-4 h-4"></i>
           </a>
@@ -492,21 +492,21 @@
         </div>
       </div>
 
-      <!-- Filter Buttons Tabs -->
-      <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none mb-8 text-xs sm:text-sm font-medium reveal">
-        <button class="filter-btn active px-4 py-2 rounded-xl transition whitespace-nowrap bg-brand-600 text-white shadow-sm shadow-brand-500/30" data-filter="all">
+      <!-- Filter Buttons Tabs: Horizontal Swipe on Mobile, Row on Desktop -->
+      <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none mb-8 text-xs sm:text-sm font-medium reveal -mx-4 px-4 sm:mx-0 sm:px-0">
+        <button class="filter-btn active px-3.5 sm:px-4 py-2 rounded-xl transition whitespace-nowrap bg-brand-600 text-white shadow-sm shadow-brand-500/30 shrink-0" data-filter="all">
           Semua Proyek (10)
         </button>
-        <button class="filter-btn px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40" data-filter="ml">
+        <button class="filter-btn px-3.5 sm:px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40 shrink-0" data-filter="ml">
           Machine Learning & AI
         </button>
-        <button class="filter-btn px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40" data-filter="web">
+        <button class="filter-btn px-3.5 sm:px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40 shrink-0" data-filter="web">
           Web Application
         </button>
-        <button class="filter-btn px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40" data-filter="mobile">
+        <button class="filter-btn px-3.5 sm:px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40 shrink-0" data-filter="mobile">
           Mobile Android
         </button>
-        <button class="filter-btn px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40" data-filter="desktop">
+        <button class="filter-btn px-3.5 sm:px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40 shrink-0" data-filter="desktop">
           Desktop & UI/UX
         </button>
       </div>
@@ -1368,7 +1368,7 @@
             <i data-lucide="linkedin" class="w-5 h-5"></i>
           </div>
           <div class="text-xs text-slate-400 font-mono">Profil Profesional</div>
-          <div class="text-sm font-bold text-white mt-0.5">linkedin.com/in/dian-tri-yuniarti-367890447</div>
+          <div class="text-sm font-bold text-white mt-0.5 truncate">linkedin.com/in/dian-tri-yuniarti-367890447</div>
         </a>
 
       </div>
@@ -1417,7 +1417,7 @@
           <div class="rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden bg-slate-950">
             <img id="anxietyGalleryMain" src="assets/images/anxiety_beranda.png" alt="Preview AnxietyCheck" class="w-full h-72 sm:h-96 object-contain bg-slate-900 transition-all duration-300" />
           </div>
-          <div class="grid grid-cols-6 gap-2 mt-3">
+          <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-3">
             <button onclick="changeAnxietyImage('assets/images/anxiety_beranda.png')" class="rounded-lg overflow-hidden border-2 border-brand-500 h-12 bg-slate-800 focus:outline-none hover:scale-105 transition">
               <img src="assets/images/anxiety_beranda.png" class="w-full h-full object-cover" />
             </button>
