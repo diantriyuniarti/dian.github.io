@@ -162,34 +162,38 @@
 
 <body class="bg-slate-50 text-slate-800 dark:bg-[#080c14] dark:text-slate-100 min-h-screen transition-colors duration-300 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
-  <!-- ==================== STICKY SLIM NAVBAR ==================== -->
-  <header id="mainNavbar" class="fixed top-0 inset-x-0 z-50 bg-slate-900/95 dark:bg-[#070b12]/95 border-b border-rose-950/50 backdrop-blur-md -translate-y-full opacity-0 pointer-events-none transition-all duration-300 shadow-xl">
+  <!-- ==================== HEADER NAVBAR ==================== -->
+  <header class="sticky top-0 z-50 bg-[#0d0406]/90 dark:bg-[#080305]/90 border-b border-rose-950/40 backdrop-blur-md transition-colors duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
       <!-- Brand: Avatar + Dian Tri Yuniarti -->
-      <a href="#hero" class="flex items-center gap-2.5 group">
-        <div class="w-8 h-8 rounded-full overflow-hidden border border-rose-500/40 bg-black/40">
-          <img src="assets/images/dian_hero_cutout.png" alt="Dian Tri Yuniarti" class="w-full h-full object-cover object-top" />
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-full overflow-hidden border border-rose-500/40 shadow-sm bg-black/40">
+          <img src="assets/images/dian_full_figure.png" alt="Dian Tri Yuniarti" class="w-full h-full object-cover object-top" />
         </div>
-        <span class="text-sm sm:text-base font-bold tracking-wider text-white uppercase font-mono group-hover:text-rose-400 transition-colors">
-          DIAN TRI YUNIARTI
-        </span>
+        <div class="flex flex-col">
+          <span class="text-sm sm:text-base font-bold tracking-wider text-white uppercase font-mono group-hover:text-rose-400 transition-colors">
+            DIAN TRI YUNIARTI
+          </span>
+          <span class="text-[10px] text-rose-300/70 font-mono -mt-0.5 hidden sm:block">Full-Stack & ML Specialist</span>
+        </div>
       </a>
 
       <!-- Middle: Clean Nav Links -->
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
-        <a href="#hero" class="nav-link py-1 hover:text-white transition">Home</a>
-        <a href="#tentang" class="nav-link py-1 hover:text-white transition">About Me</a>
-        <a href="#proyek" class="nav-link py-1 hover:text-white transition">Projects</a>
-        <a href="#publikasi" class="nav-link py-1 hover:text-white transition">Publications</a>
-        <a href="#keahlian" class="nav-link py-1 hover:text-white transition">Skills</a>
-        <a href="#kontak" class="nav-link py-1 hover:text-white transition">Hit Me Up</a>
+      <nav class="hidden md:flex items-center gap-7 text-xs sm:text-sm font-medium text-slate-300">
+        <a href="#hero" class="hover:text-white transition py-1">Home</a>
+        <a href="#tentang" class="hover:text-white transition py-1">About Me</a>
+        <a href="#proyek" class="hover:text-white transition py-1">Projects</a>
+        <a href="#publikasi" class="hover:text-white transition py-1">Publications</a>
+        <a href="#pendidikan" class="hover:text-white transition py-1">Education</a>
+        <a href="#keahlian" class="hover:text-white transition py-1">Skills</a>
+        <a href="#kontak" class="hover:text-white transition py-1">Hit Me Up</a>
       </nav>
 
       <!-- Right: Theme Toggle & Actions -->
       <div class="flex items-center gap-3">
         <!-- Theme Toggle Button -->
-        <button id="themeToggleBtn" aria-label="Ganti Tema" class="p-2 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition transform hover:scale-105 active:scale-95">
+        <button id="themeToggleBtn" aria-label="Ganti Tema" class="p-2 rounded-full border border-rose-950/80 bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 transition">
           <i data-lucide="sun" id="sunIcon" class="w-4 h-4 hidden dark:block text-amber-400"></i>
           <i data-lucide="moon" id="moonIcon" class="w-4 h-4 block dark:hidden text-white"></i>
         </button>
@@ -201,9 +205,9 @@
         </a>
 
         <!-- Unduh CV Button: Solid Red Rounded with Download Icon -->
-        <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" download="CV_Dian_Tri_Yuniarti.pdf" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-semibold bg-rose-600 hover:bg-rose-500 text-white transition shadow-sm">
+        <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" download="CV_Dian_Tri_Yuniarti.pdf" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-gradient-to-r from-red-600 to-rose-700 hover:from-red-500 hover:to-rose-600 text-white transition shadow-sm">
           <i data-lucide="download" class="w-3.5 h-3.5"></i>
-          <span>CV</span>
+          <span>Download CV</span>
         </a>
 
         <!-- Mobile Menu Toggle Button -->
@@ -215,133 +219,94 @@
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-800 bg-[#0c121e] px-4 py-3 space-y-2 text-sm font-medium">
+    <div id="mobileMenu" class="hidden md:hidden border-t border-rose-950/50 bg-[#0d0406] px-4 py-3 space-y-2 text-sm font-medium">
       <a href="#hero" class="block py-2 text-slate-200 hover:text-rose-400">Home</a>
       <a href="#tentang" class="block py-2 text-slate-200 hover:text-rose-400">About Me</a>
       <a href="#proyek" class="block py-2 text-slate-200 hover:text-rose-400">Projects</a>
       <a href="#publikasi" class="block py-2 text-slate-200 hover:text-rose-400">Publications</a>
+      <a href="#pendidikan" class="block py-2 text-slate-200 hover:text-rose-400">Education</a>
       <a href="#keahlian" class="block py-2 text-slate-200 hover:text-rose-400">Skills</a>
       <a href="#kontak" class="block py-2 text-slate-200 hover:text-rose-400">Hit Me Up</a>
       <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" class="block text-center mt-2 px-4 py-2 rounded-full text-xs font-semibold bg-rose-600 text-white">Unduh CV Resmi (PDF)</a>
     </div>
   </header>
 
-  <!-- ==================== HERO SECTION: EXACT DESIGN AS REQUESTED ==================== -->
-  <section id="hero" class="pt-4 sm:pt-6 pb-6 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <!-- ==================== HERO SECTION: SEAMLESS UNIFIED CANVAS ==================== -->
+  <section id="hero" class="relative overflow-hidden pt-6 sm:pt-10 pb-12 sm:pb-20 border-b border-rose-950/40"
+           style="background: radial-gradient(circle at 50% 28%, #2e0f15 0%, #1a080c 45%, #080c14 100%);">
     
-    <!-- Floating Dark Maroon Hero Card -->
-    <div class="relative rounded-3xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl border border-rose-950/60 transition-all duration-300"
-         style="background: radial-gradient(circle at 50% 32%, #321117 0%, #1f0a0d 50%, #0d0305 100%);">
+    <!-- Ambient Radial Glows -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[450px] bg-rose-600/20 blur-[140px] rounded-full pointer-events-none -z-10"></div>
+    <div class="absolute bottom-0 right-1/4 w-[500px] h-[350px] bg-red-900/15 blur-[120px] rounded-full pointer-events-none -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       
-      <!-- Ambient Glow Behind Elements -->
-      <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[650px] h-[350px] bg-rose-600/15 blur-[120px] rounded-full pointer-events-none"></div>
-      <div class="absolute bottom-0 right-0 w-[450px] h-[320px] bg-red-800/10 blur-[100px] rounded-full pointer-events-none"></div>
-
-      <!-- Top Inner Bar inside Hero Card -->
-      <div class="relative z-30 px-6 sm:px-10 pt-6 pb-4 flex items-center justify-between border-b border-white/5 backdrop-blur-sm">
-        <!-- Brand with Avatar -->
-        <a href="#hero" class="flex items-center gap-3 group">
-          <div class="w-9 h-9 rounded-full overflow-hidden border border-rose-400/40 shadow-sm bg-black/40">
-            <img src="assets/images/dian_hero_cutout.png" alt="Dian Tri Yuniarti" class="w-full h-full object-cover object-top" />
-          </div>
-          <span class="font-bold text-white text-sm sm:text-base tracking-wide group-hover:text-rose-300 transition">
-            Dian Tri Yuniarti
-          </span>
-        </a>
-
-        <!-- Middle Nav Links -->
-        <div class="hidden md:flex items-center gap-7 text-xs sm:text-sm font-medium text-slate-300">
-          <a href="#hero" class="hover:text-white transition py-1">Home</a>
-          <a href="#tentang" class="hover:text-white transition py-1">Who's This</a>
-          <a href="#proyek" class="hover:text-white transition py-1">Projects</a>
-          <a href="#publikasi" class="hover:text-white transition py-1">Publications</a>
-          <a href="#keahlian" class="hover:text-white transition py-1">Experience</a>
-          <a href="#kontak" class="hover:text-white transition py-1">Hit Me Up</a>
+      <!-- Faint Code Watermarks (matching mock) -->
+      <div class="absolute inset-0 z-0 flex items-center justify-between px-4 sm:px-12 pointer-events-none select-none opacity-20 font-mono text-[10px] sm:text-xs text-rose-300/40">
+        <div class="hidden sm:block space-y-1">
+          <div>10100101</div>
+          <div>1.0.0.1.0</div>
+          <div>0.0.1.0</div>
+          <div>0.1.0</div>
+          <div>1.0</div>
         </div>
-
-        <!-- Right: Theme Toggle & Let's Talk CTA Pill -->
-        <div class="flex items-center gap-3">
-          <button id="heroThemeToggleBtn" aria-label="Ganti Tema" class="p-2 rounded-full bg-white/10 text-slate-300 hover:text-white hover:bg-white/15 transition border border-white/10">
-            <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-amber-300"></i>
-            <i data-lucide="moon" class="w-4 h-4 block dark:hidden text-white"></i>
-          </button>
-          <a href="#kontak" class="inline-flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-bold bg-white text-slate-950 hover:bg-slate-100 transition shadow-md transform hover:scale-105 active:scale-95">
-            <span>Let's Talk</span>
-            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-          </a>
+        <div class="hidden sm:block space-y-1 text-right">
+          <div>10100101</div>
+          <div>1.0.0.1.0</div>
+          <div>0.0.1.0</div>
+          <div>0.1.0</div>
+          <div>1.0</div>
         </div>
       </div>
 
-      <!-- Center Stage: Giant Typographic & Cutout Overlay -->
-      <div class="relative min-h-[460px] sm:min-h-[540px] md:min-h-[600px] lg:min-h-[640px] flex flex-col justify-between overflow-hidden px-6 sm:px-10 pt-2 pb-6 sm:pb-8">
+      <!-- Giant Typography in Background Layer -->
+      <div class="relative z-0 text-center select-none pointer-events-none pt-2 sm:pt-4">
+        <div class="text-[13vw] sm:text-[10.5vw] lg:text-[8.5rem] font-black tracking-widest text-white/95 uppercase leading-none font-sans glow-giant-text">
+          SOFTWARE
+        </div>
+        <div class="text-[15vw] sm:text-[12.5vw] lg:text-[10.2rem] font-black tracking-widest text-white/95 uppercase leading-none font-sans glow-giant-text -mt-3 sm:-mt-6 lg:-mt-10">
+          ENGINEER
+        </div>
+      </div>
+
+      <!-- Center Foreground Portrait: Clean portrait with flowers, no pavement, seamlessly grounded -->
+      <div class="relative z-10 flex justify-center -mt-36 sm:-mt-56 md:-mt-72 lg:-mt-84 pointer-events-none">
+        <img 
+          src="assets/images/dian_full_figure.png" 
+          alt="Dian Tri Yuniarti, S.Kom." 
+          class="max-h-[440px] sm:max-h-[550px] md:max-h-[630px] lg:max-h-[690px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.95)] filter contrast-[1.04]"
+        />
+      </div>
+
+      <!-- Bottom Controls & Intro: 2 Columns Overlay -->
+      <div class="relative z-20 grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-end -mt-10 sm:-mt-14 md:-mt-16 pt-2">
         
-        <!-- Faint Matrix / Binary Background Watermarks (matching mock) -->
-        <div class="absolute inset-0 z-0 flex items-center justify-between px-6 sm:px-16 pointer-events-none select-none opacity-20 font-mono text-[10px] sm:text-xs text-rose-300/40">
-          <div class="hidden sm:block space-y-1">
-            <div>10100101</div>
-            <div>1.0.0.1.0</div>
-            <div>0.0.1.0</div>
-            <div>0.1.0</div>
-            <div>1.0</div>
+        <!-- Left: Welcome to My Portfolio + Status Pill -->
+        <div class="md:col-span-7 text-center md:text-left space-y-2.5">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 border border-emerald-500/30 text-emerald-400">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            <span>Terbuka untuk Peluang Kerja & Kolaborasi</span>
           </div>
-          <div class="hidden sm:block space-y-1 text-right">
-            <div>10100101</div>
-            <div>1.0.0.1.0</div>
-            <div>0.0.1.0</div>
-            <div>0.1.0</div>
-            <div>1.0</div>
-          </div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Welcome to My Portfolio
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-300 max-w-lg leading-relaxed mx-auto md:mx-0">
+            Halo! Saya <strong>Dian Tri Yuniarti</strong>, Lulusan S1 Teknik Informatika Universitas Pamulang (<span class="text-rose-400 font-mono font-bold">IPK 3,60</span>) tersertifikasi BNSP. Berpengalaman membangun aplikasi Full-Stack Web, Android Native, dan Machine Learning Support Vector Machine (SVM) akurasi 100%.
+          </p>
         </div>
 
-        <!-- Giant Typography in Background -->
-        <div class="absolute inset-x-0 top-8 sm:top-12 md:top-14 text-center select-none pointer-events-none z-0">
-          <div class="text-[12vw] sm:text-[9.5vw] lg:text-[7.6rem] font-black tracking-widest text-white/95 uppercase leading-none font-sans glow-giant-text">
-            SOFTWARE
-          </div>
-          <div class="text-[14vw] sm:text-[11.5vw] lg:text-[9.3rem] font-black tracking-widest text-white/95 uppercase leading-none font-sans glow-giant-text -mt-2 sm:-mt-5 lg:-mt-8">
-            ENGINEER
-          </div>
-        </div>
-
-        <!-- Foreground Cutout: Dian holding flowers with transparent background -->
-        <div class="absolute inset-x-0 bottom-0 z-10 flex justify-center pointer-events-none">
-          <img 
-            src="assets/images/dian_hero_cutout.png" 
-            alt="Dian Tri Yuniarti, S.Kom." 
-            class="max-h-[440px] sm:max-h-[540px] md:max-h-[620px] lg:max-h-[680px] object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.95)] filter contrast-[1.04] translate-y-1 sm:translate-y-2"
-          />
-        </div>
-
-        <!-- Spacer -->
-        <div class="relative z-20"></div>
-
-        <!-- Bottom Controls & Intro: 2 Columns Overlay -->
-        <div class="relative z-20 grid grid-cols-1 md:grid-cols-12 gap-6 items-end mt-auto pt-60 sm:pt-72 md:pt-80">
-          
-          <!-- Left: Welcome to My Portfolio -->
-          <div class="md:col-span-7 text-left space-y-2">
-            <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">
-              Welcome to My Portfolio
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-300 max-w-md leading-relaxed">
-              Explore my work, skills, and experience as a software engineer dedicated to building reliable digital solutions.
-            </p>
-          </div>
-
-          <!-- Right: Action Buttons (Red Download CV & Dark Glass GitHub Profile) -->
-          <div class="md:col-span-5 flex flex-col sm:flex-row md:flex-col items-start md:items-end gap-2.5">
-            <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" download="CV_Dian_Tri_Yuniarti.pdf" 
-               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs sm:text-sm font-bold bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white shadow-xl shadow-red-700/40 hover:from-red-500 hover:to-rose-600 transition transform hover:-translate-y-0.5 active:translate-y-0">
-              <span>Download CV</span>
-              <i data-lucide="arrow-down" class="w-4 h-4"></i>
-            </a>
-            <a href="https://github.com/diantriyuniarti" target="_blank" 
-               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs sm:text-sm font-bold bg-black/60 backdrop-blur-md text-white border border-white/20 hover:bg-black/80 hover:border-white/40 transition transform hover:-translate-y-0.5 active:translate-y-0">
-              <span>GitHub Profile</span>
-              <i data-lucide="github" class="w-4 h-4"></i>
-            </a>
-          </div>
-
+        <!-- Right: Action Buttons (Red Download CV & Dark Glass GitHub Profile) -->
+        <div class="md:col-span-5 flex flex-col sm:flex-row md:flex-col items-center md:items-end justify-center md:justify-end gap-2.5">
+          <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" download="CV_Dian_Tri_Yuniarti.pdf" 
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-full text-xs sm:text-sm font-bold bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white shadow-xl shadow-red-700/40 hover:from-red-500 hover:to-rose-600 transition transform hover:-translate-y-0.5 active:translate-y-0">
+            <span>Download CV Resmi (PDF)</span>
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+          </a>
+          <a href="https://github.com/diantriyuniarti" target="_blank" 
+             class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3 rounded-full text-xs sm:text-sm font-bold bg-black/70 backdrop-blur-md text-white border border-white/20 hover:bg-black/90 hover:border-white/40 transition transform hover:-translate-y-0.5 active:translate-y-0">
+            <span>GitHub Profile</span>
+            <i data-lucide="github" class="w-4 h-4"></i>
+          </a>
         </div>
 
       </div>
@@ -349,7 +314,7 @@
     </div>
   </section>
 
-  <!-- ==================== ABOUT ME SECTION (EXACT DESIGN FROM MOCKUP) ==================== -->
+  <!-- ==================== ABOUT ME SECTION ==================== -->
   <section id="tentang" class="py-16 sm:py-20 bg-white dark:bg-[#080c14] border-b border-slate-200/80 dark:border-slate-800/70 transition-colors">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -417,11 +382,66 @@
 
       </div>
 
+      <!-- Animated Metrics Strip (4 Counters) -->
+      <div class="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-[#0f172a]/70 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-rose-500/40 transition transform hover:-translate-y-1">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400">
+              <i data-lucide="cpu" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-slate-900 dark:text-white font-mono">
+                <span class="counter" data-target="99.19" data-decimal="2">0</span>%
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">F1-Score Model SVM</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-[#0f172a]/70 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-rose-500/40 transition transform hover:-translate-y-1">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-rose-500/10 text-rose-600 dark:text-rose-400">
+              <i data-lucide="book-open" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-slate-900 dark:text-white font-mono">
+                <span class="counter" data-target="4">0</span> Artikel
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Terindeks Scholar & SINTA</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-[#0f172a]/70 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-amber-500/40 transition transform hover:-translate-y-1">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400">
+              <i data-lucide="award" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-slate-900 dark:text-white">Harapan 1</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Poster Nasional FSPI UNY</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-5 rounded-2xl bg-slate-50 dark:bg-[#0f172a]/70 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-emerald-500/40 transition transform hover:-translate-y-1">
+          <div class="flex items-center gap-3">
+            <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
+              <i data-lucide="git-merge" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-slate-900 dark:text-white font-mono">PMM Batch 4</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Univ. Sam Ratulangi Manado</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ==================== MARQUEE TICKER (FROM MOCKUP) ==================== -->
-  <div class="py-4 sm:py-5 bg-slate-900 text-white overflow-hidden border-b border-slate-800 select-none">
+  <!-- ==================== MARQUEE TICKER (UNIFIED TRANSITION) ==================== -->
+  <div class="py-4 sm:py-5 bg-slate-950 text-white overflow-hidden border-b border-rose-950/40 select-none">
     <div class="flex items-center gap-8 whitespace-nowrap animate-marquee font-mono text-xs sm:text-sm font-semibold tracking-widest uppercase">
       <span>CLEAN CODE</span>
       <span class="text-rose-500">✦</span>
@@ -487,7 +507,7 @@
       <!-- Filter Buttons Tabs -->
       <div class="flex items-center gap-2 overflow-x-auto pb-4 scrollbar-none mb-8 text-xs sm:text-sm font-medium reveal">
         <button class="filter-btn active px-4 py-2 rounded-xl transition whitespace-nowrap bg-brand-600 text-white shadow-sm shadow-brand-500/30" data-filter="all">
-          Semua Proyek (6)
+          Semua Proyek (10)
         </button>
         <button class="filter-btn px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40" data-filter="ml">
           Machine Learning & AI
@@ -495,8 +515,11 @@
         <button class="filter-btn px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40" data-filter="web">
           Web Application
         </button>
-        <button class="filter-btn px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40" data-filter="uiux">
-          UI/UX & Desain Grafis
+        <button class="filter-btn px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40" data-filter="mobile">
+          Mobile Android
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-xl transition whitespace-nowrap bg-white dark:bg-[#0f172a] text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-800 hover:border-brand-500/40" data-filter="desktop">
+          Desktop & UI/UX
         </button>
       </div>
 
@@ -790,6 +813,182 @@
                   <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                 </button>
                 <span class="text-[11px] text-slate-400 font-mono">Academic Project</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 7: Sistem Informasi Faktur Penjualan (Sertifikasi BNSP) -->
+        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="web" data-title="Sistem Informasi Faktur Penjualan LSP Informatika BNSP PHP Native OOP Transaksi ACID MySQL Bootstrap">
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-indigo-950 to-slate-900 border-b border-slate-100 dark:border-slate-800/80 p-5 flex items-center justify-center">
+            <div class="w-full text-center p-4 rounded-xl bg-slate-800/80 border border-indigo-500/30">
+              <i data-lucide="receipt" class="w-8 h-8 mx-auto text-indigo-400 mb-2"></i>
+              <div class="font-bold text-white text-sm">Sistem Informasi Faktur Penjualan</div>
+              <div class="text-[11px] text-slate-400 mt-1">Uji Sertifikasi Programmer LSP / BNSP</div>
+            </div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-blue-600 text-white tracking-wide shadow">
+              BNSP Certified 2024
+            </span>
+            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-500/90 text-white tracking-wide shadow font-mono">
+              ACID Safe
+            </span>
+          </div>
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
+                <span>Web Enterprise & Keuangan</span>
+                <span>•</span>
+                <span>BNSP Standard</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
+                Sistem Informasi Faktur Penjualan (Sertifikasi BNSP)
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                Aplikasi pengelolaan transaksi penjualan berbasis Object-Oriented Programming (OOP). Mengimplementasikan kalkulasi otomatis PPN/DP, cetak invoice, proteksi prepared statements, dan transaksi database ACID sesuai standar kompetensi kerja nasional.
+              </p>
+            </div>
+            <div class="space-y-4 pt-2">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">PHP Native OOP</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">MySQL Database</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">ACID Transactions</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Bootstrap</span>
+              </div>
+              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+                <span class="text-xs font-semibold text-brand-600 dark:text-cyan-400">Kompetensi Programmer</span>
+                <span class="text-[11px] text-slate-400 font-mono">Tahun 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 8: Aplikasi Presensi Karyawan Android Native -->
+        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="mobile" data-title="Aplikasi Manajemen Presensi Karyawan Android Native Studio Java Google Maps API SQLite Voice Speech Input">
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-emerald-950 to-slate-900 border-b border-slate-100 dark:border-slate-800/80 p-5 flex items-center justify-center">
+            <div class="w-full text-center p-4 rounded-xl bg-slate-800/80 border border-emerald-500/30">
+              <i data-lucide="smartphone" class="w-8 h-8 mx-auto text-emerald-400 mb-2"></i>
+              <div class="font-bold text-white text-sm">Aplikasi Presensi Karyawan Android</div>
+              <div class="text-[11px] text-slate-400 mt-1">Geotagging GPS Google Maps & Database SQLite</div>
+            </div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-emerald-600 text-white tracking-wide shadow">
+              Android Studio 2024
+            </span>
+            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-indigo-600 text-white tracking-wide shadow font-mono">
+              GPS & SQLite
+            </span>
+          </div>
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
+                <span>Android Native Development</span>
+                <span>•</span>
+                <span>Location Services</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
+                Aplikasi Manajemen & Presensi Karyawan Android Native
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                Aplikasi mobile Android native untuk pencatatan presensi kehadiran karyawan secara presisi. Dilengkapi penandaan titik koordinat GPS Google Maps, masukan perintah suara (voice speech recognition), dan penyimpanan database offline SQLite.
+              </p>
+            </div>
+            <div class="space-y-4 pt-2">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Android Studio</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Java</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Google Maps API</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">SQLite</span>
+              </div>
+              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+                <span class="text-xs font-semibold text-emerald-600 dark:text-emerald-400">Mobile Android Native</span>
+                <span class="text-[11px] text-slate-400 font-mono">Tahun 2024</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 9: Aplikasi Antrian Apotik Desktop GUI -->
+        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="desktop" data-title="Aplikasi Antrian Apotik Desktop GUI Java Swing NetBeans JDBC MySQL FIFO Loket Resep">
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-violet-950 to-slate-900 border-b border-slate-100 dark:border-slate-800/80 p-5 flex items-center justify-center">
+            <div class="w-full text-center p-4 rounded-xl bg-slate-800/80 border border-violet-500/30">
+              <i data-lucide="monitor" class="w-8 h-8 mx-auto text-violet-400 mb-2"></i>
+              <div class="font-bold text-white text-sm">Aplikasi Antrian Apotik Desktop GUI</div>
+              <div class="text-[11px] text-slate-400 mt-1">Java Swing, JDBC MySQL & Algoritma FIFO</div>
+            </div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-violet-600 text-white tracking-wide shadow">
+              Desktop GUI 2023
+            </span>
+            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-cyan-600 text-white tracking-wide shadow font-mono">
+              FIFO Antrian
+            </span>
+          </div>
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
+                <span>Desktop GUI & Database</span>
+                <span>•</span>
+                <span>Sistem Apotek</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
+                Aplikasi Antrian Apotik Desktop GUI
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                Aplikasi desktop antrian loket resep obat berbasis First-In-First-Out (FIFO). Dilengkapi fitur pemanggilan otomatis nomor antrian loket, manajemen antrian per loket, dan koneksi database JDBC MySQL terintegrasi.
+              </p>
+            </div>
+            <div class="space-y-4 pt-2">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Java Swing</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">NetBeans</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">JDBC MySQL</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">FIFO Queue</span>
+              </div>
+              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+                <span class="text-xs font-semibold text-violet-600 dark:text-violet-400">Desktop Software</span>
+                <span class="text-[11px] text-slate-400 font-mono">Tahun 2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT 10: Aplikasi Penggajian Karyawan Java Web & Multimedia Android -->
+        <div class="project-card group rounded-2xl bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800/80 overflow-hidden flex flex-col shadow-md hover:border-brand-500/50 hover:shadow-xl dark:hover:shadow-brand-500/10 reveal" data-category="web mobile" data-title="Aplikasi Sistem Penggajian Karyawan Java Web JSP Servlet JasperReports Multimedia Hardware Kamera Android SDK">
+          <div class="relative h-48 sm:h-52 overflow-hidden bg-gradient-to-br from-purple-950 to-slate-900 border-b border-slate-100 dark:border-slate-800/80 p-5 flex items-center justify-center">
+            <div class="w-full text-center p-4 rounded-xl bg-slate-800/80 border border-purple-500/30">
+              <i data-lucide="layers" class="w-8 h-8 mx-auto text-purple-400 mb-2"></i>
+              <div class="font-bold text-white text-sm">Sistem Penggajian Java & Multimedia Android</div>
+              <div class="text-[11px] text-slate-400 mt-1">JSP/Servlet, JasperReports & Android Camera API</div>
+            </div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-purple-600 text-white tracking-wide shadow">
+              Java Enterprise & Mobile
+            </span>
+            <span class="absolute top-3 right-3 px-2.5 py-1 rounded-md text-[11px] font-semibold bg-amber-500 text-slate-950 tracking-wide shadow font-mono">
+              JasperReports
+            </span>
+          </div>
+          <div class="p-5 sm:p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-brand-600 dark:text-cyan-400 font-mono mb-1.5">
+                <span>Java EE & Android SDK</span>
+                <span>•</span>
+                <span>Enterprise Payroll</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-cyan-400 transition-colors">
+                Sistem Penggajian Java Web & Multimedia Android
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-2 line-clamp-3 leading-relaxed">
+                Pengembangan aplikasi web penggajian karyawan berbasis Java EE (JSP & Servlet) dengan cetak slip gaji otomatis PDF engine JasperReports, serta modul mobile multimedia kamera dan TabLayout interaktif pada Android SDK.
+              </p>
+            </div>
+            <div class="space-y-4 pt-2">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Java EE (JSP)</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Servlet</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">JasperReports</span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">Camera API</span>
+              </div>
+              <div class="pt-2 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between">
+                <span class="text-xs font-semibold text-purple-600 dark:text-purple-400">Enterprise Payroll</span>
+                <span class="text-[11px] text-slate-400 font-mono">Tahun 2023</span>
               </div>
             </div>
           </div>
