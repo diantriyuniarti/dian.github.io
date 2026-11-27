@@ -190,24 +190,12 @@
         <a href="#kontak" class="hover:text-white transition py-1">Hit Me Up</a>
       </nav>
 
-      <!-- Right: Theme Toggle & Actions -->
+      <!-- Right: Action CTA -->
       <div class="flex items-center gap-3">
-        <!-- Theme Toggle Button -->
-        <button id="themeToggleBtn" aria-label="Ganti Tema" class="p-2 rounded-full border border-rose-950/80 bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 transition">
-          <i data-lucide="sun" id="sunIcon" class="w-4 h-4 hidden dark:block text-amber-400"></i>
-          <i data-lucide="moon" id="moonIcon" class="w-4 h-4 block dark:hidden text-white"></i>
-        </button>
-
         <!-- Let's Talk CTA Pill -->
-        <a href="#kontak" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-950 hover:bg-slate-100 transition shadow-md">
+        <a href="#kontak" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-950 hover:bg-slate-100 transition shadow-md">
           <span>Let's Talk</span>
           <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
-        </a>
-
-        <!-- Unduh CV Button: Solid Red Rounded with Download Icon -->
-        <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" download="CV_Dian_Tri_Yuniarti.pdf" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-semibold bg-gradient-to-r from-red-600 to-rose-700 hover:from-red-500 hover:to-rose-600 text-white transition shadow-sm">
-          <i data-lucide="download" class="w-3.5 h-3.5"></i>
-          <span>Download CV</span>
         </a>
 
         <!-- Mobile Menu Toggle Button -->
@@ -1698,36 +1686,12 @@
       }
     });
 
-    const heroThemeBtn = document.getElementById('heroThemeToggleBtn');
-    if (heroThemeBtn) {
-      heroThemeBtn.addEventListener('click', toggleTheme);
-    }
 
 
-    // Theme Toggle
-    const themeToggleBtn = document.getElementById('themeToggleBtn');
-    const html = document.documentElement;
 
-    function applyTheme(isDark) {
-      if (isDark) {
-        html.classList.add('dark');
-        localStorage.setItem('theme', 'dark');
-      } else {
-        html.classList.remove('dark');
-        localStorage.setItem('theme', 'light');
-      }
-    }
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-      applyTheme(false);
-    } else {
-      applyTheme(true);
-    }
-
-    themeToggleBtn.addEventListener('click', () => {
-      applyTheme(!html.classList.contains('dark'));
-    });
+    // Ensure Dark Theme is Always Active
+    document.documentElement.classList.add('dark');
+    try { localStorage.setItem('theme', 'dark'); } catch(e) {}
 
     // Mobile Menu
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
