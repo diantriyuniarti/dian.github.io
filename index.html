@@ -137,45 +137,77 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #3f3f46;
     }
+
+    /* Infinite Marquee */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 28s linear infinite;
+    }
+    .animate-marquee:hover {
+      animation-play-state: paused;
+    }
+
+    /* Giant text glowing shadow */
+    .glow-giant-text {
+      text-shadow: 0 0 45px rgba(255, 255, 255, 0.45), 0 0 90px rgba(225, 29, 72, 0.25);
+    }
+
   </style>
 </head>
 
 <body class="bg-slate-50 text-slate-800 dark:bg-[#080c14] dark:text-slate-100 min-h-screen transition-colors duration-300 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
-  <!-- ==================== EXACT NAVBAR REQUESTED BY USER ==================== -->
-  <header class="sticky top-0 z-50 bg-white/90 dark:bg-[#080c14]/90 border-b border-slate-200 dark:border-slate-800/80 backdrop-blur-md transition-colors duration-300">
+  <!-- ==================== STICKY SLIM NAVBAR ==================== -->
+  <header id="mainNavbar" class="fixed top-0 inset-x-0 z-50 bg-slate-900/95 dark:bg-[#070b12]/95 border-b border-rose-950/50 backdrop-blur-md -translate-y-full opacity-0 pointer-events-none transition-all duration-300 shadow-xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       
-      <!-- Brand: Clean Monospace Text "DIAN TRI YUNIARTI" -->
-      <a href="#hero" class="text-sm sm:text-base font-bold tracking-wider text-slate-900 dark:text-white uppercase font-mono hover:text-brand-600 dark:hover:text-cyan-400 transition-colors">
-        DIAN TRI YUNIARTI
+      <!-- Brand: Avatar + Dian Tri Yuniarti -->
+      <a href="#hero" class="flex items-center gap-2.5 group">
+        <div class="w-8 h-8 rounded-full overflow-hidden border border-rose-500/40 bg-black/40">
+          <img src="assets/images/dian_hero_cutout.png" alt="Dian Tri Yuniarti" class="w-full h-full object-cover object-top" />
+        </div>
+        <span class="text-sm sm:text-base font-bold tracking-wider text-white uppercase font-mono group-hover:text-rose-400 transition-colors">
+          DIAN TRI YUNIARTI
+        </span>
       </a>
 
-      <!-- Middle: Clean Nav Links with Underline Animation -->
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600 dark:text-slate-300">
-        <a href="#proyek" class="nav-link py-1 hover:text-slate-900 dark:hover:text-white transition">Proyek</a>
-        <a href="#publikasi" class="nav-link py-1 hover:text-slate-900 dark:hover:text-white transition">Publikasi Ilmiah</a>
-        <a href="#keahlian" class="nav-link py-1 hover:text-slate-900 dark:hover:text-white transition">Keahlian</a>
-        <a href="#tentang" class="nav-link py-1 hover:text-slate-900 dark:hover:text-white transition">Pendidikan</a>
-        <a href="#kontak" class="nav-link py-1 hover:text-slate-900 dark:hover:text-white transition">Kontak</a>
+      <!-- Middle: Clean Nav Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#hero" class="nav-link py-1 hover:text-white transition">Home</a>
+        <a href="#tentang" class="nav-link py-1 hover:text-white transition">About Me</a>
+        <a href="#proyek" class="nav-link py-1 hover:text-white transition">Projects</a>
+        <a href="#publikasi" class="nav-link py-1 hover:text-white transition">Publications</a>
+        <a href="#keahlian" class="nav-link py-1 hover:text-white transition">Skills</a>
+        <a href="#kontak" class="nav-link py-1 hover:text-white transition">Hit Me Up</a>
       </nav>
 
-      <!-- Right: Theme Toggle & Unduh CV Button (Exact layout as shown in user's image) -->
+      <!-- Right: Theme Toggle & Actions -->
       <div class="flex items-center gap-3">
         <!-- Theme Toggle Button -->
-        <button id="themeToggleBtn" aria-label="Ganti Tema" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition transform hover:scale-105 active:scale-95">
+        <button id="themeToggleBtn" aria-label="Ganti Tema" class="p-2 rounded-lg border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition transform hover:scale-105 active:scale-95">
           <i data-lucide="sun" id="sunIcon" class="w-4 h-4 hidden dark:block text-amber-400"></i>
-          <i data-lucide="moon" id="moonIcon" class="w-4 h-4 block dark:hidden"></i>
+          <i data-lucide="moon" id="moonIcon" class="w-4 h-4 block dark:hidden text-white"></i>
         </button>
 
-        <!-- Unduh CV Button: Solid Dark Rounded with Download Icon -->
-        <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" download="CV_Dian_Tri_Yuniarti.pdf" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold bg-slate-900 text-white dark:bg-white dark:text-slate-950 hover:bg-slate-800 dark:hover:bg-slate-100 transition transform hover:-translate-y-0.5 active:translate-y-0">
+        <!-- Let's Talk CTA Pill -->
+        <a href="#kontak" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-xs font-bold bg-white text-slate-950 hover:bg-slate-100 transition shadow-md">
+          <span>Let's Talk</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+
+        <!-- Unduh CV Button: Solid Red Rounded with Download Icon -->
+        <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" download="CV_Dian_Tri_Yuniarti.pdf" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-semibold bg-rose-600 hover:bg-rose-500 text-white transition shadow-sm">
           <i data-lucide="download" class="w-3.5 h-3.5"></i>
-          <span>Unduh CV</span>
+          <span>CV</span>
         </a>
 
         <!-- Mobile Menu Toggle Button -->
-        <button id="mobileMenuBtn" aria-label="Buka Menu" class="md:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300">
+        <button id="mobileMenuBtn" aria-label="Buka Menu" class="md:hidden p-2 rounded-lg border border-slate-700 text-slate-300">
           <i data-lucide="menu" class="w-4 h-4"></i>
         </button>
       </div>
@@ -183,167 +215,244 @@
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0c121e] px-4 py-3 space-y-2 text-sm font-medium">
-      <a href="#proyek" class="block py-2 text-slate-700 dark:text-slate-200 hover:text-brand-600">Proyek</a>
-      <a href="#publikasi" class="block py-2 text-slate-700 dark:text-slate-200 hover:text-brand-600">Publikasi Ilmiah</a>
-      <a href="#keahlian" class="block py-2 text-slate-700 dark:text-slate-200 hover:text-brand-600">Keahlian & Tools</a>
-      <a href="#tentang" class="block py-2 text-slate-700 dark:text-slate-200 hover:text-brand-600">Pendidikan & Riwayat</a>
-      <a href="#kontak" class="block py-2 text-slate-700 dark:text-slate-200 hover:text-brand-600">Kontak</a>
-      <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" class="block text-center mt-2 px-4 py-2 rounded-lg text-xs font-semibold bg-slate-900 text-white dark:bg-white dark:text-slate-950">Unduh CV Resmi (PDF)</a>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-800 bg-[#0c121e] px-4 py-3 space-y-2 text-sm font-medium">
+      <a href="#hero" class="block py-2 text-slate-200 hover:text-rose-400">Home</a>
+      <a href="#tentang" class="block py-2 text-slate-200 hover:text-rose-400">About Me</a>
+      <a href="#proyek" class="block py-2 text-slate-200 hover:text-rose-400">Projects</a>
+      <a href="#publikasi" class="block py-2 text-slate-200 hover:text-rose-400">Publications</a>
+      <a href="#keahlian" class="block py-2 text-slate-200 hover:text-rose-400">Skills</a>
+      <a href="#kontak" class="block py-2 text-slate-200 hover:text-rose-400">Hit Me Up</a>
+      <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" class="block text-center mt-2 px-4 py-2 rounded-full text-xs font-semibold bg-rose-600 text-white">Unduh CV Resmi (PDF)</a>
     </div>
   </header>
 
-  <!-- ==================== HERO SECTION WITH ANIMATIONS ==================== -->
-  <section id="hero" class="relative pt-20 pb-16 sm:pt-28 sm:pb-24 overflow-hidden">
-    <!-- Animated Ambient Lighting Orbs -->
-    <div class="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[350px] bg-brand-600/20 blur-[130px] rounded-full animate-blob pointer-events-none -z-10"></div>
-    <div class="absolute top-1/3 right-1/4 w-[450px] h-[300px] bg-cyan-500/15 blur-[120px] rounded-full animate-blob [animation-delay:3s] pointer-events-none -z-10"></div>
+  <!-- ==================== HERO SECTION: EXACT DESIGN AS REQUESTED ==================== -->
+  <section id="hero" class="pt-4 sm:pt-6 pb-6 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    
+    <!-- Floating Dark Maroon Hero Card -->
+    <div class="relative rounded-3xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl border border-rose-950/60 transition-all duration-300"
+         style="background: radial-gradient(circle at 50% 32%, #321117 0%, #1f0a0d 50%, #0d0305 100%);">
+      
+      <!-- Ambient Glow Behind Elements -->
+      <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-[650px] h-[350px] bg-rose-600/15 blur-[120px] rounded-full pointer-events-none"></div>
+      <div class="absolute bottom-0 right-0 w-[450px] h-[320px] bg-red-800/10 blur-[100px] rounded-full pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Left: Headline with Typing Animation & Intro -->
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left reveal">
-          
-          <!-- Animated Status Pill -->
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-medium border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-400">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-            <span>Terbuka untuk Peluang Kerja & Kolaborasi</span>
+      <!-- Top Inner Bar inside Hero Card -->
+      <div class="relative z-30 px-6 sm:px-10 pt-6 pb-4 flex items-center justify-between border-b border-white/5 backdrop-blur-sm">
+        <!-- Brand with Avatar -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="w-9 h-9 rounded-full overflow-hidden border border-rose-400/40 shadow-sm bg-black/40">
+            <img src="assets/images/dian_hero_cutout.png" alt="Dian Tri Yuniarti" class="w-full h-full object-cover object-top" />
           </div>
+          <span class="font-bold text-white text-sm sm:text-base tracking-wide group-hover:text-rose-300 transition">
+            Dian Tri Yuniarti
+          </span>
+        </a>
 
-          <!-- Headline with Live Typewriter Effect -->
-          <h1 class="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15]">
-            Membangun Solusi Digital Berbasis <br class="hidden sm:inline" />
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 via-indigo-500 to-cyan-500" id="typewriterText">Web, Data, & AI</span><span class="typing-cursor"></span>
-          </h1>
-
-          <!-- Subtitle / Bio -->
-          <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-            Halo! Saya <strong>Dian Tri Yuniarti</strong>, Fresh Graduate of S1 Teknik Informatika Universitas Pamulang (<span class="text-brand-600 dark:text-cyan-400 font-semibold font-mono">IPK 3,65</span>). Berpengalaman sebagai Full-Stack & Android Developer, implementasi Machine Learning (SVM), desain antarmuka UI/UX di Figma, serta penulis 4 publikasi ilmiah terindeks.
-          </p>
-
-          <!-- Action Buttons with Hover Effects -->
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="#proyek" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 shadow-lg shadow-brand-500/25 transition transform hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-500/35">
-              <i data-lucide="layers" class="w-4 h-4"></i>
-              <span>Jelajahi Semua Proyek</span>
-            </a>
-            <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800/90 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700/80 transition transform hover:-translate-y-1">
-              <i data-lucide="file-text" class="w-4 h-4 text-brand-600 dark:text-cyan-400"></i>
-              <span>Lihat CV Lengkap</span>
-            </a>
-            <a href="#kontak" class="inline-flex items-center gap-2 px-4 py-3.5 rounded-xl text-sm font-semibold text-slate-600 dark:text-slate-400 hover:text-brand-600 dark:hover:text-white transition transform hover:translate-x-1">
-              <i data-lucide="mail" class="w-4 h-4"></i>
-              <span>Hubungi Saya →</span>
-            </a>
-          </div>
-
-          <!-- Social Links -->
-          <div class="flex items-center justify-center lg:justify-start gap-3 pt-2 text-slate-500 dark:text-slate-400">
-            <a href="https://www.linkedin.com/in/dian-tri-yuniarti-367890447/" target="_blank" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:text-brand-600 dark:hover:text-cyan-400 hover:border-brand-500/40 transition transform hover:scale-110" title="LinkedIn">
-              <i data-lucide="linkedin" class="w-4 h-4"></i>
-            </a>
-            <a href="mailto:diantriyuniarti025@gmail.com" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:text-brand-600 dark:hover:text-cyan-400 hover:border-brand-500/40 transition transform hover:scale-110" title="Email">
-              <i data-lucide="mail" class="w-4 h-4"></i>
-            </a>
-            <a href="https://github.com/diantriyuniarti" target="_blank" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 hover:text-brand-600 dark:hover:text-cyan-400 hover:border-brand-500/40 transition transform hover:scale-110" title="GitHub">
-              <i data-lucide="github" class="w-4 h-4"></i>
-            </a>
-            <span class="text-xs font-mono ml-2 text-slate-400">Tangerang Selatan, Banten</span>
-          </div>
+        <!-- Middle Nav Links -->
+        <div class="hidden md:flex items-center gap-7 text-xs sm:text-sm font-medium text-slate-300">
+          <a href="#hero" class="hover:text-white transition py-1">Home</a>
+          <a href="#tentang" class="hover:text-white transition py-1">Who's This</a>
+          <a href="#proyek" class="hover:text-white transition py-1">Projects</a>
+          <a href="#publikasi" class="hover:text-white transition py-1">Publications</a>
+          <a href="#keahlian" class="hover:text-white transition py-1">Experience</a>
+          <a href="#kontak" class="hover:text-white transition py-1">Hit Me Up</a>
         </div>
 
-        <!-- Right: Profile Visual with Rotating Glow Card -->
-        <div class="lg:col-span-5 flex flex-col items-center reveal">
-          <div class="relative group">
-            <!-- Animated gradient border aura -->
-            <div class="absolute -inset-2 bg-gradient-to-r from-brand-500 via-indigo-500 to-cyan-500 rounded-3xl blur-xl opacity-60 group-hover:opacity-100 transition duration-500 group-hover:scale-105"></div>
-            
-            <!-- Card Container -->
-            <div class="relative bg-white dark:bg-[#0f172a] p-3 sm:p-4 rounded-3xl border border-slate-200 dark:border-slate-800/80 shadow-2xl transition duration-500 group-hover:border-brand-500/40">
-              <div class="relative w-64 sm:w-72 h-80 sm:h-92 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800">
-                <img src="assets/images/dian_photo.jpg" alt="Dian Tri Yuniarti" class="w-full h-full object-cover object-top group-hover:scale-105 transition duration-500" />
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-transparent"></div>
-                <div class="absolute bottom-3 left-4 right-4 text-white">
-                  <p class="font-bold text-base leading-tight">Dian Tri Yuniarti, S.Kom.</p>
-                  <p class="text-xs text-cyan-300 font-mono">Informatics Engineering • UNPAM</p>
-                </div>
-              </div>
-
-              <!-- Quick Badges -->
-              <div class="mt-3 grid grid-cols-2 gap-2 text-center">
-                <div class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
-                  <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">IPK Kumulatif</span>
-                  <span class="text-base font-bold text-brand-600 dark:text-cyan-400">3,65 / 4.00</span>
-                </div>
-                <div class="p-2 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
-                  <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">Publikasi Riset</span>
-                  <span class="text-base font-bold text-indigo-600 dark:text-indigo-400">4 Artikel Ilmiah</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- Right: Theme Toggle & Let's Talk CTA Pill -->
+        <div class="flex items-center gap-3">
+          <button id="heroThemeToggleBtn" aria-label="Ganti Tema" class="p-2 rounded-full bg-white/10 text-slate-300 hover:text-white hover:bg-white/15 transition border border-white/10">
+            <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-amber-300"></i>
+            <i data-lucide="moon" class="w-4 h-4 block dark:hidden text-white"></i>
+          </button>
+          <a href="#kontak" class="inline-flex items-center gap-1.5 px-5 py-2 rounded-full text-xs font-bold bg-white text-slate-950 hover:bg-slate-100 transition shadow-md transform hover:scale-105 active:scale-95">
+            <span>Let's Talk</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </a>
         </div>
-
       </div>
 
-      <!-- Animated Metrics Strip (Counters animate on scroll) -->
-      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
-        <div class="p-5 rounded-2xl bg-white dark:bg-[#0f172a]/70 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-cyan-500/40 transition transform hover:-translate-y-1">
-          <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400">
-              <i data-lucide="cpu" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <div class="text-2xl font-extrabold text-slate-900 dark:text-white font-mono">
-                <span class="counter" data-target="99.19" data-decimal="2">0</span>%
-              </div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">F1-Score Model SVM</div>
-            </div>
+      <!-- Center Stage: Giant Typographic & Cutout Overlay -->
+      <div class="relative min-h-[460px] sm:min-h-[540px] md:min-h-[600px] lg:min-h-[640px] flex flex-col justify-between overflow-hidden px-6 sm:px-10 pt-2 pb-6 sm:pb-8">
+        
+        <!-- Faint Matrix / Binary Background Watermarks (matching mock) -->
+        <div class="absolute inset-0 z-0 flex items-center justify-between px-6 sm:px-16 pointer-events-none select-none opacity-20 font-mono text-[10px] sm:text-xs text-rose-300/40">
+          <div class="hidden sm:block space-y-1">
+            <div>10100101</div>
+            <div>1.0.0.1.0</div>
+            <div>0.0.1.0</div>
+            <div>0.1.0</div>
+            <div>1.0</div>
+          </div>
+          <div class="hidden sm:block space-y-1 text-right">
+            <div>10100101</div>
+            <div>1.0.0.1.0</div>
+            <div>0.0.1.0</div>
+            <div>0.1.0</div>
+            <div>1.0</div>
           </div>
         </div>
 
-        <div class="p-5 rounded-2xl bg-white dark:bg-[#0f172a]/70 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-brand-500/40 transition transform hover:-translate-y-1">
-          <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400">
-              <i data-lucide="book-open" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <div class="text-2xl font-extrabold text-slate-900 dark:text-white font-mono">
-                <span class="counter" data-target="4">0</span> Artikel
-              </div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Terindeks Scholar & SINTA</div>
-            </div>
+        <!-- Giant Typography in Background -->
+        <div class="absolute inset-x-0 top-8 sm:top-12 md:top-14 text-center select-none pointer-events-none z-0">
+          <div class="text-[12vw] sm:text-[9.5vw] lg:text-[7.6rem] font-black tracking-widest text-white/95 uppercase leading-none font-sans glow-giant-text">
+            SOFTWARE
+          </div>
+          <div class="text-[14vw] sm:text-[11.5vw] lg:text-[9.3rem] font-black tracking-widest text-white/95 uppercase leading-none font-sans glow-giant-text -mt-2 sm:-mt-5 lg:-mt-8">
+            ENGINEER
           </div>
         </div>
 
-        <div class="p-5 rounded-2xl bg-white dark:bg-[#0f172a]/70 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-amber-500/40 transition transform hover:-translate-y-1">
-          <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400">
-              <i data-lucide="award" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <div class="text-2xl font-extrabold text-slate-900 dark:text-white">Harapan 1</div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Poster Nasional FSPI UNY</div>
-            </div>
-          </div>
+        <!-- Foreground Cutout: Dian holding flowers with transparent background -->
+        <div class="absolute inset-x-0 bottom-0 z-10 flex justify-center pointer-events-none">
+          <img 
+            src="assets/images/dian_hero_cutout.png" 
+            alt="Dian Tri Yuniarti, S.Kom." 
+            class="max-h-[440px] sm:max-h-[540px] md:max-h-[620px] lg:max-h-[680px] object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.95)] filter contrast-[1.04] translate-y-1 sm:translate-y-2"
+          />
         </div>
 
-        <div class="p-5 rounded-2xl bg-white dark:bg-[#0f172a]/70 border border-slate-200 dark:border-slate-800/80 shadow-sm hover:border-emerald-500/40 transition transform hover:-translate-y-1">
-          <div class="flex items-center gap-3">
-            <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400">
-              <i data-lucide="git-merge" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <div class="text-2xl font-extrabold text-slate-900 dark:text-white font-mono">PMM Batch 4</div>
-              <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Univ. Sam Ratulangi Manado</div>
-            </div>
+        <!-- Spacer -->
+        <div class="relative z-20"></div>
+
+        <!-- Bottom Controls & Intro: 2 Columns Overlay -->
+        <div class="relative z-20 grid grid-cols-1 md:grid-cols-12 gap-6 items-end mt-auto pt-60 sm:pt-72 md:pt-80">
+          
+          <!-- Left: Welcome to My Portfolio -->
+          <div class="md:col-span-7 text-left space-y-2">
+            <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">
+              Welcome to My Portfolio
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-300 max-w-md leading-relaxed">
+              Explore my work, skills, and experience as a software engineer dedicated to building reliable digital solutions.
+            </p>
           </div>
+
+          <!-- Right: Action Buttons (Red Download CV & Dark Glass GitHub Profile) -->
+          <div class="md:col-span-5 flex flex-col sm:flex-row md:flex-col items-start md:items-end gap-2.5">
+            <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" download="CV_Dian_Tri_Yuniarti.pdf" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs sm:text-sm font-bold bg-gradient-to-r from-red-600 via-rose-600 to-red-700 text-white shadow-xl shadow-red-700/40 hover:from-red-500 hover:to-rose-600 transition transform hover:-translate-y-0.5 active:translate-y-0">
+              <span>Download CV</span>
+              <i data-lucide="arrow-down" class="w-4 h-4"></i>
+            </a>
+            <a href="https://github.com/diantriyuniarti" target="_blank" 
+               class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs sm:text-sm font-bold bg-black/60 backdrop-blur-md text-white border border-white/20 hover:bg-black/80 hover:border-white/40 transition transform hover:-translate-y-0.5 active:translate-y-0">
+              <span>GitHub Profile</span>
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+          </div>
+
         </div>
+
       </div>
 
     </div>
   </section>
+
+  <!-- ==================== ABOUT ME SECTION (EXACT DESIGN FROM MOCKUP) ==================== -->
+  <section id="tentang" class="py-16 sm:py-20 bg-white dark:bg-[#080c14] border-b border-slate-200/80 dark:border-slate-800/70 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+        
+        <!-- Left: Heading with horizontal line label -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-3">
+            <span class="w-8 h-[2px] bg-slate-900 dark:bg-white"></span>
+            <span class="text-xs font-bold tracking-widest text-slate-900 dark:text-white uppercase font-mono">ABOUT ME</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+            Discover the Story, Passion, and Purpose <span class="text-slate-400 dark:text-slate-500 font-normal">Behind the Person You See Here</span>
+          </h2>
+          
+          <!-- Key Achievements Pill Grid -->
+          <div class="pt-4 grid grid-cols-2 gap-3">
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800">
+              <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">Status Akademik</span>
+              <span class="text-sm font-bold text-slate-900 dark:text-white">Lulus S1 TI UNPAM</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800">
+              <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">IPK Kelulusan</span>
+              <span class="text-sm font-bold text-red-600 dark:text-rose-400 font-mono">3,60 / 4,00</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800">
+              <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">Sertifikasi</span>
+              <span class="text-sm font-bold text-slate-900 dark:text-white">BNSP Programmer</span>
+            </div>
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800">
+              <span class="text-xs text-slate-500 dark:text-slate-400 block font-mono">Mobilitas Kampus</span>
+              <span class="text-sm font-bold text-slate-900 dark:text-white">PMM 4 UNSRAT</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: The exact Indonesian text requested by user -->
+        <div class="lg:col-span-7 space-y-5 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed pt-2">
+          <p>
+            Saya merupakan lulusan baru (<em>Fresh Graduate</em>) S1 Teknik Informatika dari Universitas Pamulang dengan minat yang kuat dan pengalaman praktis dalam pengembangan perangkat lunak, khususnya <strong>Full-Stack Web Development</strong>, <strong>Android Development</strong>, dan <strong>Machine Learning</strong>.
+          </p>
+          <p>
+            Saya memiliki pengalaman mengembangkan sistem informasi berbasis web dan aplikasi Android, serta mengimplementasikan algoritma machine learning untuk klasifikasi data. Saya terbiasa membangun aplikasi yang fungsional, ramah pengguna, dan efisien, sembari terus meningkatkan kemampuan teknis saya.
+          </p>
+          <p>
+            Saya juga memegang <strong>Sertifikasi Kompetensi Programmer dari LSP Informatika / BNSP</strong> dan memiliki pengalaman mempublikasikan artikel ilmiah di jurnal nasional terakreditasi (SINTA).
+          </p>
+
+          <!-- Social Quick Links -->
+          <div class="pt-4 flex items-center gap-3">
+            <a href="https://linkedin.com/in/dian-tri-yuniarti-367890447" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+              <i data-lucide="linkedin" class="w-3.5 h-3.5"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/diantriyuniarti" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="mailto:diantriyuniarti025@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+              <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+              <span>Email</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== MARQUEE TICKER (FROM MOCKUP) ==================== -->
+  <div class="py-4 sm:py-5 bg-slate-900 text-white overflow-hidden border-b border-slate-800 select-none">
+    <div class="flex items-center gap-8 whitespace-nowrap animate-marquee font-mono text-xs sm:text-sm font-semibold tracking-widest uppercase">
+      <span>CLEAN CODE</span>
+      <span class="text-rose-500">✦</span>
+      <span>MACHINE LEARNING</span>
+      <span class="text-rose-500">✦</span>
+      <span>FULL-STACK WEB DEV</span>
+      <span class="text-rose-500">✦</span>
+      <span>ANDROID NATIVE</span>
+      <span class="text-rose-500">✦</span>
+      <span>INNOVATIVE SOLUTIONS</span>
+      <span class="text-rose-500">✦</span>
+      <span>BNSP CERTIFIED</span>
+      <span class="text-rose-500">✦</span>
+      <span>SINTA 5 ACCREDITED</span>
+      <span class="text-rose-500">✦</span>
+      <span>CLEAN CODE</span>
+      <span class="text-rose-500">✦</span>
+      <span>MACHINE LEARNING</span>
+      <span class="text-rose-500">✦</span>
+      <span>FULL-STACK WEB DEV</span>
+      <span class="text-rose-500">✦</span>
+      <span>ANDROID NATIVE</span>
+      <span class="text-rose-500">✦</span>
+      <span>INNOVATIVE SOLUTIONS</span>
+      <span class="text-rose-500">✦</span>
+      <span>BNSP CERTIFIED</span>
+      <span class="text-rose-500">✦</span>
+      <span>SINTA 5 ACCREDITED</span>
+      <span class="text-rose-500">✦</span>
+    </div>
+  </div>
 
   <!-- ==================== PROJECTS SHOWCASE SECTION ==================== -->
   <section id="proyek" class="py-20 bg-slate-100/60 dark:bg-[#060a12] border-t border-b border-slate-200/80 dark:border-slate-800/70">
@@ -950,23 +1059,23 @@
     </div>
   </section>
 
-  <!-- ==================== ABOUT & EDUCATION SECTION ==================== -->
-  <section id="tentang" class="py-20 bg-white dark:bg-[#080c14] border-b border-slate-200/80 dark:border-slate-800/70">
+  <!-- ==================== EDUCATION & TIMELINE SECTION ==================== -->
+  <section id="pendidikan" class="py-20 bg-white dark:bg-[#080c14] border-b border-slate-200/80 dark:border-slate-800/70">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
         <div class="lg:col-span-6 space-y-6 reveal">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-lg text-xs font-semibold uppercase tracking-wider text-brand-600 dark:text-cyan-400 bg-brand-500/10">
-            <i data-lucide="user" class="w-3.5 h-3.5"></i>
-            Tentang Dian
+            <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+            Pendidikan & Pengalaman
           </div>
           <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Dedikasi Menghadirkan Perangkat Lunak yang Efektif & Teruji
           </h2>
           <div class="text-sm sm:text-base text-slate-600 dark:text-slate-300 space-y-4 leading-relaxed">
             <p>
-              Saya adalah <strong>Fresh Graduate of S1 Teknik Informatika Universitas Pamulang</strong> dengan pencapaian akademik sangat memuaskan (IPK 3,65). Memiliki keahlian sebagai Full-Stack & Android Developer, minat mendalam di bidang <em>software engineering</em>, arsitektur aplikasi berbasis web, kecerdasan buatan, dan riset ilmiah komputasi.
+              Saya adalah <strong>Fresh Graduate of S1 Teknik Informatika Universitas Pamulang</strong> dengan pencapaian akademik sangat memuaskan (IPK 3,60). Memiliki keahlian sebagai Full-Stack & Android Developer, minat mendalam di bidang <em>software engineering</em>, arsitektur aplikasi berbasis web, kecerdasan buatan, dan riset ilmiah komputasi.
             </p>
             <p>
               Selama masa studi, saya tidak hanya fokus pada teori akademik di kelas, tetapi juga aktif terlibat dalam proyek dunia nyata: mulai dari membangun sistem inventaris gudang saat magang di Kopiluvium, meneliti klasifikasi kecemasan Gen Z menggunakan Machine Learning (SVM) dengan akurasi 100%, hingga memperluas wawasan lintas disiplin melalui program <strong>Pertukaran Mahasiswa Merdeka (PMM Batch 4) di Universitas Sam Ratulangi, Manado</strong>.
@@ -989,7 +1098,7 @@
               <span class="absolute -left-[23px] sm:-left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-brand-600 ring-4 ring-white dark:ring-[#080c14]"></span>
               <div class="text-xs font-mono text-brand-600 dark:text-cyan-400">2022 – Agustus 2026</div>
               <h4 class="text-base font-bold text-slate-900 dark:text-white">Universitas Pamulang</h4>
-              <p class="text-xs text-slate-500 dark:text-slate-400">Fresh Graduate of S1 Teknik Informatika • IPK 3,65 / 4.00</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Fresh Graduate of S1 Teknik Informatika • IPK 3,60 / 4.00</p>
               <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
                 Tugas Akhir: <em>Implementasi Algoritma Support Vector Machine untuk Klasifikasi Deteksi Dini Tingkat Gangguan Kecemasan (Anxiety Disorder) pada Generasi Z Berbasis Web.</em>
               </p>
@@ -1375,6 +1484,26 @@
   <!-- ==================== SCRIPTS & ANIMATIONS LOGIC ==================== -->
   <script>
     lucide.createIcons();
+
+    // Scroll reveal for sticky main navbar
+    const mainNav = document.getElementById('mainNavbar');
+    window.addEventListener('scroll', () => {
+      if (mainNav) {
+        if (window.scrollY > 280) {
+          mainNav.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+          mainNav.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+        } else {
+          mainNav.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+          mainNav.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+        }
+      }
+    });
+
+    const heroThemeBtn = document.getElementById('heroThemeToggleBtn');
+    if (heroThemeBtn) {
+      heroThemeBtn.addEventListener('click', toggleTheme);
+    }
+
 
     // Theme Toggle
     const themeToggleBtn = document.getElementById('themeToggleBtn');
