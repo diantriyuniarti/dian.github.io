@@ -242,8 +242,8 @@
         <a href="#tentang" class="hover:text-white transition py-1">About Me</a>
         <a href="#keahlian" class="hover:text-white transition py-1">Skills</a>
         <a href="#proyek" class="hover:text-white transition py-1">Projects</a>
-        <a href="#publikasi" class="hover:text-white transition py-1">Publications</a>
         <a href="#pendidikan" class="hover:text-white transition py-1">Education</a>
+        <a href="#publikasi" class="hover:text-white transition py-1">Publications</a>
         <a href="#kontak" class="hover:text-white transition py-1">Hit Me Up</a>
       </nav>
 
@@ -269,8 +269,8 @@
       <a href="#tentang" class="block py-2 text-slate-200 hover:text-rose-400">About Me</a>
       <a href="#keahlian" class="block py-2 text-slate-200 hover:text-rose-400">Skills</a>
       <a href="#proyek" class="block py-2 text-slate-200 hover:text-rose-400">Projects</a>
-      <a href="#publikasi" class="block py-2 text-slate-200 hover:text-rose-400">Publications</a>
       <a href="#pendidikan" class="block py-2 text-slate-200 hover:text-rose-400">Education</a>
+      <a href="#publikasi" class="block py-2 text-slate-200 hover:text-rose-400">Publications</a>
       <a href="#kontak" class="block py-2 text-slate-200 hover:text-rose-400">Hit Me Up</a>
       <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" class="block text-center mt-2 px-4 py-2 rounded-full text-xs font-semibold bg-rose-600 text-white">Download Official CV (PDF)</a>
     </div>
@@ -1327,206 +1327,6 @@
     </div>
   </section>
 
-  <!-- ==================== ACADEMIC PUBLICATIONS SECTION ==================== -->
-    <!-- ==================== ACADEMIC PUBLICATIONS (INTERACTIVE BOOK READER) ==================== -->
-    <!-- ==================== ACADEMIC PUBLICATIONS (INTERACTIVE CLOSED COVER & SPREAD BOOK) ==================== -->
-    <section id="publikasi" class="py-20 sm:py-28 bg-[#0a0306] border-b border-rose-950/60">
-    <div class="max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
-      
-      <!-- Section Header (Arya Ziddan Editorial Style) -->
-      <div class="mb-8 sm:mb-12 reveal">
-        <div class="text-xs sm:text-sm font-mono font-bold tracking-widest text-rose-500 uppercase mb-3 sm:mb-4">
-          // 03 · RESEARCH & PUBLICATIONS
-        </div>
-        <h2 class="text-2xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight font-sans leading-none">
-          <span class="block text-white">PEER-REVIEWED</span>
-          <span class="block text-slate-500">PUBLICATIONS.</span>
-        </h2>
-        <p class="text-xs sm:text-sm text-slate-400 mt-3 max-w-2xl font-mono">
-          Natural interactive bound book · Drag or click right edge to peel and turn pages.
-        </p>
-      </div>
-
-      <!-- NATURAL PORTRAIT BOOK (Dimension ~460px x 630px matching user reference) -->
-      <div class="relative w-full max-w-[460px] h-[570px] sm:h-[630px] mx-auto book-stage select-none my-2 reveal" id="bookWrapper">
-
-        <!-- BASE SHADOW UNDER BOOK -->
-        <div class="absolute -bottom-4 inset-x-4 h-8 bg-black/80 blur-xl rounded-full pointer-events-none"></div>
-
-        <!-- UNDERNEATH LAYER: The Page being revealed (Next Page) -->
-        <div id="underPage" class="absolute inset-0 rounded-r-xl rounded-l-sm bg-[#fbf8f2] text-stone-900 overflow-hidden stacked-pages-peek spine-crease border-y border-stone-300">
-          <!-- Injected dynamically -->
-        </div>
-
-        <!-- DYNAMIC TURNING SHEET (Follows Cursor on Drag) -->
-        <div id="turningSheet" class="book-sheet rounded-r-xl rounded-l-sm overflow-hidden z-20 cursor-grab active:cursor-grabbing">
-          
-          <!-- FRONT OF SHEET (Current Page / Cover) -->
-          <div id="turningFront" class="absolute inset-0 bg-[#fbf8f2] text-stone-900 overflow-hidden spine-crease border-y border-stone-300">
-            <!-- Injected dynamically -->
-          </div>
-
-          <!-- BACK OF SHEET (Reverse side when flipped past 90 deg) -->
-          <div id="turningBack" class="absolute inset-0 bg-[#f4eee1] text-stone-700 overflow-hidden spine-crease [transform:rotateY(180deg)] [backface-visibility:hidden]">
-            <div class="p-5 sm:p-7 h-full flex flex-col justify-between opacity-80 bg-gradient-to-r from-stone-200/50 via-[#f0e8d8] to-transparent">
-              <div class="flex items-center justify-between text-[9px] sm:text-[10px] font-mono text-stone-400 uppercase tracking-widest border-b border-stone-300/60 pb-2">
-                <span>DIAN TRI YUNIARTI // FOLIO REVERSE</span>
-                <span>VERSO</span>
-              </div>
-              <div class="text-center py-8">
-                <div class="w-8 h-8 mx-auto rounded-full border border-stone-300 text-stone-400 flex items-center justify-center text-xs mb-2 font-serif-academic italic">
-                  d
-                </div>
-                <div class="text-[11px] font-mono text-stone-500 italic">Academic Monograph · Universitas Pamulang</div>
-              </div>
-              <div class="flex items-center justify-between text-[9px] sm:text-[10px] font-mono text-stone-400 pt-2 border-t border-stone-300/60">
-                <span>RESEARCH REPOSITORY</span>
-                <span>INFORMATICS</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- DYNAMIC SHADOW OVERLAY AS PAGE LIFTS -->
-          <div id="sheetShadow" class="turn-shadow opacity-0 bg-gradient-to-l from-black/30 via-black/15 to-transparent"></div>
-
-        </div>
-
-      </div>
-
-      <!-- MINIMAL NATURAL CONTROLS BELOW BOOK -->
-      <div class="mt-5 flex items-center justify-between gap-4 w-full max-w-[460px] mx-auto text-xs font-mono text-slate-400 px-1 reveal">
-        <button onclick="flipPrev()" id="btnPrev" class="hover:text-white transition flex items-center gap-1.5 disabled:opacity-25 disabled:cursor-not-allowed">
-          <span class="text-sm">←</span> <span>Prev</span>
-        </button>
-
-        <div class="flex items-center gap-2">
-          <span id="pageDots" class="flex gap-1.5 items-center">
-            <!-- Dots injected -->
-          </span>
-          <span id="pageLabel" class="text-slate-300 font-bold ml-1.5 text-[11px]">COVER</span>
-        </div>
-
-        <button onclick="flipNext()" id="btnNext" class="hover:text-white transition flex items-center gap-1.5 disabled:opacity-25 disabled:cursor-not-allowed">
-          <span>Next</span> <span class="text-sm">→</span>
-        </button>
-      </div>
-
-      <!-- ==================== POPULAR SCIENTIFIC & MASS MEDIA ARTICLES ==================== -->
-      <div id="artikel-media" class="mt-20 pt-16 border-t border-neutral-800 reveal">
-        
-        <!-- Header -->
-        <div class="mb-8">
-          <div class="text-xs sm:text-sm font-mono font-bold tracking-widest text-rose-500 uppercase mb-3">
-            // ARTICLES & OP-EDS
-          </div>
-          <h3 class="text-2xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight font-sans text-white leading-tight">
-            <span class="block sm:inline text-white">PUBLISHED ARTICLES &</span> <span class="block sm:inline text-neutral-500">TECH OP-EDS.</span>
-          </h3>
-          <p class="text-xs sm:text-sm text-neutral-400 font-sans mt-3 max-w-2xl leading-relaxed">
-            Technology essays, network infrastructure analyses, and cybersecurity perspectives published across digital mass media outlets.
-          </p>
-        </div>
-
-        <!-- Clean Editorial Article List (No Numbers, No Artificial Boxes, Unified Typography) -->
-        <div class="divide-y divide-neutral-800/80 border-y border-neutral-800/80 text-sm font-sans">
-          
-          <!-- Article: Cryptocurrency -->
-          <a href="https://portalbersama.com/2025/01/02/solusi-menghadapi-uang-palsu-dengan-cryptocurrency/" target="_blank" rel="noopener noreferrer" class="group py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6 hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition">
-            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
-              <span class="font-semibold text-white group-hover:text-rose-400 transition text-sm sm:text-base">
-                Solusi Menghadapi Uang Palsu dengan Cryptocurrency<svg class="w-3.5 h-3.5 text-neutral-500 group-hover:text-rose-400 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition inline-block align-middle ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-              </span>
-              <span class="text-xs text-neutral-500 font-sans">
-                Portal Bersama · 2025
-              </span>
-            </div>
-            <span class="text-xs sm:text-sm text-neutral-400 text-left md:text-right flex-shrink-0">
-              Analisis peredaran uang palsu dan peran verifikasi blockchain
-            </span>
-          </a>
-
-          <!-- Article: Big Data & Data Science -->
-          <a href="https://portalbersama.com/2025/07/09/big-data-dan-data-science-apa-bedanya-dan-kenapa-penting/" target="_blank" rel="noopener noreferrer" class="group py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6 hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition">
-            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
-              <span class="font-semibold text-white group-hover:text-rose-400 transition text-sm sm:text-base">
-                Big Data dan Data Science: Apa Bedanya dan Kenapa Penting?<svg class="w-3.5 h-3.5 text-neutral-500 group-hover:text-rose-400 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition inline-block align-middle ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-              </span>
-              <span class="text-xs text-neutral-500 font-sans">
-                Portal Bersama · 2025
-              </span>
-            </div>
-            <span class="text-xs sm:text-sm text-neutral-400 text-left md:text-right flex-shrink-0">
-              Komparasi arsitektur data 3V dengan metodologi analitik data science
-            </span>
-          </a>
-
-          <!-- Article: MikroTik Wireless -->
-          <a href="https://portalbersama.com/2024/07/10/mikrotik-wireless-inovasi-terbaru-untuk-koneksi-stabil/" target="_blank" rel="noopener noreferrer" class="group py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6 hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition">
-            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
-              <span class="font-semibold text-white group-hover:text-rose-400 transition text-sm sm:text-base">
-                MikroTik Wireless Inovasi Terbaru untuk Koneksi Stabil<svg class="w-3.5 h-3.5 text-neutral-500 group-hover:text-rose-400 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition inline-block align-middle ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-              </span>
-              <span class="text-xs text-neutral-500 font-sans">
-                Portal Bersama · 2024
-              </span>
-            </div>
-            <span class="text-xs sm:text-sm text-neutral-400 text-left md:text-right flex-shrink-0">
-              Tinjauan RouterOS, WinBox, dan stabilitas throughput nirkabel
-            </span>
-          </a>
-
-          <!-- Article: Kerja Praktek di Kopiluvium -->
-          <a href="https://journal.mediapublikasi.id/index.php/oktal/article/view/5346" target="_blank" rel="noopener noreferrer" class="group py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6 hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition">
-            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
-              <span class="font-semibold text-white group-hover:text-rose-400 transition text-sm sm:text-base">
-                Kegiatan Kerja Praktek Mahasiswa di Kopiluvium: Perancangan Web Stok Opname Gudang<svg class="w-3.5 h-3.5 text-neutral-500 group-hover:text-rose-400 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition inline-block align-middle ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-              </span>
-              <span class="text-xs text-neutral-500 font-sans">
-                Media Nasional / Jurnal OKTAL · 2025
-              </span>
-            </div>
-            <span class="text-xs sm:text-sm text-neutral-400 text-left md:text-right flex-shrink-0">
-              Sistem pencatatan inventaris gudang berbasis web metode Waterfall
-            </span>
-          </a>
-
-          <!-- Article: Keamanan Jaringan -->
-          <a href="https://nusantarasatu.com/2026/01/09/keamanan-jaringan-musuh-terbesar-kita-bukan-hacker-tapi-diri-sendiri/" target="_blank" rel="noopener noreferrer" class="group py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6 hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition">
-            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
-              <span class="font-semibold text-white group-hover:text-rose-400 transition text-sm sm:text-base">
-                Keamanan Jaringan: Musuh Terbesar Kita Bukan Hacker, Tapi Diri Sendiri<svg class="w-3.5 h-3.5 text-neutral-500 group-hover:text-rose-400 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition inline-block align-middle ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-              </span>
-              <span class="text-xs text-neutral-500 font-sans">
-                Nusantara Satu · 2026
-              </span>
-            </div>
-            <span class="text-xs sm:text-sm text-neutral-400 text-left md:text-right flex-shrink-0">
-              Kajian human error dan kesadaran keamanan digital di lingkungan kampus
-            </span>
-          </a>
-
-          <!-- Article: Teknologi Persuasif & Gamifikasi -->
-          <a href="https://portalbersama.com" target="_blank" rel="noopener noreferrer" class="group py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6 hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition">
-            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
-              <span class="font-semibold text-white group-hover:text-rose-400 transition text-sm sm:text-base">
-                Mengoptimalkan Perubahan Positif: Peran Teknologi Persuasif dan Gamifikasi<svg class="w-3.5 h-3.5 text-neutral-500 group-hover:text-rose-400 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition inline-block align-middle ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-              </span>
-              <span class="text-xs text-neutral-500 font-sans">
-                Portal Bersama · 2023
-              </span>
-            </div>
-            <span class="text-xs sm:text-sm text-neutral-400 text-left md:text-right flex-shrink-0">
-              Penerapan psikologi perilaku dan gamifikasi pada antarmuka perangkat lunak
-            </span>
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
   <!-- ==================== EDUCATION & TIMELINE SECTION ==================== -->
     <!-- ==================== JOURNEY & MILESTONES SECTION (ARYA ZIDDAN TYPOGRAPHY) ==================== -->
   <section id="pendidikan" class="py-20 sm:py-28 bg-[#090306] border-b border-stone-800/80 text-white relative">
@@ -1536,7 +1336,7 @@
       <div class="mb-12 sm:mb-16 reveal">
         <!-- Tag -->
         <div class="text-xs sm:text-sm font-mono font-bold tracking-widest text-rose-500 uppercase mb-3 sm:mb-4">
-          // 04 · MILESTONES
+          // 03 · MILESTONES
         </div>
 
         <!-- Heading: Two-Tone Arya Ziddan Typography -->
@@ -1770,6 +1570,206 @@
           </div>
 
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ACADEMIC PUBLICATIONS SECTION ==================== -->
+    <!-- ==================== ACADEMIC PUBLICATIONS (INTERACTIVE BOOK READER) ==================== -->
+    <!-- ==================== ACADEMIC PUBLICATIONS (INTERACTIVE CLOSED COVER & SPREAD BOOK) ==================== -->
+    <section id="publikasi" class="py-20 sm:py-28 bg-[#0a0306] border-b border-rose-950/60">
+    <div class="max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
+      
+      <!-- Section Header (Arya Ziddan Editorial Style) -->
+      <div class="mb-8 sm:mb-12 reveal">
+        <div class="text-xs sm:text-sm font-mono font-bold tracking-widest text-rose-500 uppercase mb-3 sm:mb-4">
+          // 04 · RESEARCH & PUBLICATIONS
+        </div>
+        <h2 class="text-2xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight font-sans leading-none">
+          <span class="block text-white">PEER-REVIEWED</span>
+          <span class="block text-slate-500">PUBLICATIONS.</span>
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-400 mt-3 max-w-2xl font-mono">
+          Natural interactive bound book · Drag or click right edge to peel and turn pages.
+        </p>
+      </div>
+
+      <!-- NATURAL PORTRAIT BOOK (Dimension ~460px x 630px matching user reference) -->
+      <div class="relative w-full max-w-[460px] h-[570px] sm:h-[630px] mx-auto book-stage select-none my-2 reveal" id="bookWrapper">
+
+        <!-- BASE SHADOW UNDER BOOK -->
+        <div class="absolute -bottom-4 inset-x-4 h-8 bg-black/80 blur-xl rounded-full pointer-events-none"></div>
+
+        <!-- UNDERNEATH LAYER: The Page being revealed (Next Page) -->
+        <div id="underPage" class="absolute inset-0 rounded-r-xl rounded-l-sm bg-[#fbf8f2] text-stone-900 overflow-hidden stacked-pages-peek spine-crease border-y border-stone-300">
+          <!-- Injected dynamically -->
+        </div>
+
+        <!-- DYNAMIC TURNING SHEET (Follows Cursor on Drag) -->
+        <div id="turningSheet" class="book-sheet rounded-r-xl rounded-l-sm overflow-hidden z-20 cursor-grab active:cursor-grabbing">
+          
+          <!-- FRONT OF SHEET (Current Page / Cover) -->
+          <div id="turningFront" class="absolute inset-0 bg-[#fbf8f2] text-stone-900 overflow-hidden spine-crease border-y border-stone-300">
+            <!-- Injected dynamically -->
+          </div>
+
+          <!-- BACK OF SHEET (Reverse side when flipped past 90 deg) -->
+          <div id="turningBack" class="absolute inset-0 bg-[#f4eee1] text-stone-700 overflow-hidden spine-crease [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <div class="p-5 sm:p-7 h-full flex flex-col justify-between opacity-80 bg-gradient-to-r from-stone-200/50 via-[#f0e8d8] to-transparent">
+              <div class="flex items-center justify-between text-[9px] sm:text-[10px] font-mono text-stone-400 uppercase tracking-widest border-b border-stone-300/60 pb-2">
+                <span>DIAN TRI YUNIARTI // FOLIO REVERSE</span>
+                <span>VERSO</span>
+              </div>
+              <div class="text-center py-8">
+                <div class="w-8 h-8 mx-auto rounded-full border border-stone-300 text-stone-400 flex items-center justify-center text-xs mb-2 font-serif-academic italic">
+                  d
+                </div>
+                <div class="text-[11px] font-mono text-stone-500 italic">Academic Monograph · Universitas Pamulang</div>
+              </div>
+              <div class="flex items-center justify-between text-[9px] sm:text-[10px] font-mono text-stone-400 pt-2 border-t border-stone-300/60">
+                <span>RESEARCH REPOSITORY</span>
+                <span>INFORMATICS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DYNAMIC SHADOW OVERLAY AS PAGE LIFTS -->
+          <div id="sheetShadow" class="turn-shadow opacity-0 bg-gradient-to-l from-black/30 via-black/15 to-transparent"></div>
+
+        </div>
+
+      </div>
+
+      <!-- MINIMAL NATURAL CONTROLS BELOW BOOK -->
+      <div class="mt-5 flex items-center justify-between gap-4 w-full max-w-[460px] mx-auto text-xs font-mono text-slate-400 px-1 reveal">
+        <button onclick="flipPrev()" id="btnPrev" class="hover:text-white transition flex items-center gap-1.5 disabled:opacity-25 disabled:cursor-not-allowed">
+          <span class="text-sm">←</span> <span>Prev</span>
+        </button>
+
+        <div class="flex items-center gap-2">
+          <span id="pageDots" class="flex gap-1.5 items-center">
+            <!-- Dots injected -->
+          </span>
+          <span id="pageLabel" class="text-slate-300 font-bold ml-1.5 text-[11px]">COVER</span>
+        </div>
+
+        <button onclick="flipNext()" id="btnNext" class="hover:text-white transition flex items-center gap-1.5 disabled:opacity-25 disabled:cursor-not-allowed">
+          <span>Next</span> <span class="text-sm">→</span>
+        </button>
+      </div>
+
+      <!-- ==================== POPULAR SCIENTIFIC & MASS MEDIA ARTICLES ==================== -->
+      <div id="artikel-media" class="mt-20 pt-16 border-t border-neutral-800 reveal">
+        
+        <!-- Header -->
+        <div class="mb-8">
+          <div class="text-xs sm:text-sm font-mono font-bold tracking-widest text-rose-500 uppercase mb-3">
+            // ARTICLES & OP-EDS
+          </div>
+          <h3 class="text-2xl sm:text-4xl lg:text-5xl font-black uppercase tracking-tight font-sans text-white leading-tight">
+            <span class="block sm:inline text-white">PUBLISHED ARTICLES &</span> <span class="block sm:inline text-neutral-500">TECH OP-EDS.</span>
+          </h3>
+          <p class="text-xs sm:text-sm text-neutral-400 font-sans mt-3 max-w-2xl leading-relaxed">
+            Technology essays, network infrastructure analyses, and cybersecurity perspectives published across digital mass media outlets.
+          </p>
+        </div>
+
+        <!-- Clean Editorial Article List (No Numbers, No Artificial Boxes, Unified Typography) -->
+        <div class="divide-y divide-neutral-800/80 border-y border-neutral-800/80 text-sm font-sans">
+          
+          <!-- Article: Cryptocurrency -->
+          <a href="https://portalbersama.com/2025/01/02/solusi-menghadapi-uang-palsu-dengan-cryptocurrency/" target="_blank" rel="noopener noreferrer" class="group py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6 hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition">
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+              <span class="font-semibold text-white group-hover:text-rose-400 transition text-sm sm:text-base">
+                Solusi Menghadapi Uang Palsu dengan Cryptocurrency<svg class="w-3.5 h-3.5 text-neutral-500 group-hover:text-rose-400 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition inline-block align-middle ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </span>
+              <span class="text-xs text-neutral-500 font-sans">
+                Portal Bersama · 2025
+              </span>
+            </div>
+            <span class="text-xs sm:text-sm text-neutral-400 text-left md:text-right flex-shrink-0">
+              Analisis peredaran uang palsu dan peran verifikasi blockchain
+            </span>
+          </a>
+
+          <!-- Article: Big Data & Data Science -->
+          <a href="https://portalbersama.com/2025/07/09/big-data-dan-data-science-apa-bedanya-dan-kenapa-penting/" target="_blank" rel="noopener noreferrer" class="group py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6 hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition">
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+              <span class="font-semibold text-white group-hover:text-rose-400 transition text-sm sm:text-base">
+                Big Data dan Data Science: Apa Bedanya dan Kenapa Penting?<svg class="w-3.5 h-3.5 text-neutral-500 group-hover:text-rose-400 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition inline-block align-middle ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </span>
+              <span class="text-xs text-neutral-500 font-sans">
+                Portal Bersama · 2025
+              </span>
+            </div>
+            <span class="text-xs sm:text-sm text-neutral-400 text-left md:text-right flex-shrink-0">
+              Komparasi arsitektur data 3V dengan metodologi analitik data science
+            </span>
+          </a>
+
+          <!-- Article: MikroTik Wireless -->
+          <a href="https://portalbersama.com/2024/07/10/mikrotik-wireless-inovasi-terbaru-untuk-koneksi-stabil/" target="_blank" rel="noopener noreferrer" class="group py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6 hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition">
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+              <span class="font-semibold text-white group-hover:text-rose-400 transition text-sm sm:text-base">
+                MikroTik Wireless Inovasi Terbaru untuk Koneksi Stabil<svg class="w-3.5 h-3.5 text-neutral-500 group-hover:text-rose-400 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition inline-block align-middle ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </span>
+              <span class="text-xs text-neutral-500 font-sans">
+                Portal Bersama · 2024
+              </span>
+            </div>
+            <span class="text-xs sm:text-sm text-neutral-400 text-left md:text-right flex-shrink-0">
+              Tinjauan RouterOS, WinBox, dan stabilitas throughput nirkabel
+            </span>
+          </a>
+
+          <!-- Article: Kerja Praktek di Kopiluvium -->
+          <a href="https://journal.mediapublikasi.id/index.php/oktal/article/view/5346" target="_blank" rel="noopener noreferrer" class="group py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6 hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition">
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+              <span class="font-semibold text-white group-hover:text-rose-400 transition text-sm sm:text-base">
+                Kegiatan Kerja Praktek Mahasiswa di Kopiluvium: Perancangan Web Stok Opname Gudang<svg class="w-3.5 h-3.5 text-neutral-500 group-hover:text-rose-400 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition inline-block align-middle ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </span>
+              <span class="text-xs text-neutral-500 font-sans">
+                Media Nasional / Jurnal OKTAL · 2025
+              </span>
+            </div>
+            <span class="text-xs sm:text-sm text-neutral-400 text-left md:text-right flex-shrink-0">
+              Sistem pencatatan inventaris gudang berbasis web metode Waterfall
+            </span>
+          </a>
+
+          <!-- Article: Keamanan Jaringan -->
+          <a href="https://nusantarasatu.com/2026/01/09/keamanan-jaringan-musuh-terbesar-kita-bukan-hacker-tapi-diri-sendiri/" target="_blank" rel="noopener noreferrer" class="group py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6 hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition">
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+              <span class="font-semibold text-white group-hover:text-rose-400 transition text-sm sm:text-base">
+                Keamanan Jaringan: Musuh Terbesar Kita Bukan Hacker, Tapi Diri Sendiri<svg class="w-3.5 h-3.5 text-neutral-500 group-hover:text-rose-400 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition inline-block align-middle ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </span>
+              <span class="text-xs text-neutral-500 font-sans">
+                Nusantara Satu · 2026
+              </span>
+            </div>
+            <span class="text-xs sm:text-sm text-neutral-400 text-left md:text-right flex-shrink-0">
+              Kajian human error dan kesadaran keamanan digital di lingkungan kampus
+            </span>
+          </a>
+
+          <!-- Article: Teknologi Persuasif & Gamifikasi -->
+          <a href="https://portalbersama.com" target="_blank" rel="noopener noreferrer" class="group py-4 flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-6 hover:bg-white/[0.02] px-3 -mx-3 rounded-lg transition">
+            <div class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+              <span class="font-semibold text-white group-hover:text-rose-400 transition text-sm sm:text-base">
+                Mengoptimalkan Perubahan Positif: Peran Teknologi Persuasif dan Gamifikasi<svg class="w-3.5 h-3.5 text-neutral-500 group-hover:text-rose-400 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition inline-block align-middle ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+              </span>
+              <span class="text-xs text-neutral-500 font-sans">
+                Portal Bersama · 2023
+              </span>
+            </div>
+            <span class="text-xs sm:text-sm text-neutral-400 text-left md:text-right flex-shrink-0">
+              Penerapan psikologi perilaku dan gamifikasi pada antarmuka perangkat lunak
+            </span>
+          </a>
+
+        </div>
+
       </div>
 
     </div>
