@@ -1479,7 +1479,7 @@
         </div>
 
         <!-- CARD 02: Academic Programme -->
-        <div onclick="openModal('modal-apotek')"
+        <div onclick="openModal('modal-pmm')"
              class="group rounded-xl bg-[#120a0d] border border-stone-800 p-6 sm:p-7 flex flex-col justify-between hover:border-rose-900/60 transition cursor-pointer">
           <div>
             <!-- Top Row: Index & Circular Icon Badge -->
@@ -1510,7 +1510,7 @@
 
           <!-- Bottom Footer -->
           <div class="border-t border-dashed border-stone-800/80 pt-3.5 mt-5 flex items-center justify-between text-[11px] font-mono text-slate-500 group-hover:text-slate-300 transition">
-            <span>// DOCUMENTATION</span>
+            <span>// DOCUMENTATION (4 PHOTOS)</span>
             <span class="text-slate-500 group-hover:text-slate-300 transition">↗</span>
           </div>
         </div>
@@ -1627,6 +1627,10 @@
             <p class="text-xs sm:text-sm text-slate-400 mt-1.5 leading-relaxed font-sans">
               Cross-disciplinary computing coursework, automata theory projects, and collaborative user experience research.
             </p>
+            <button onclick="openModal('modal-pmm')" class="mt-2.5 inline-flex items-center gap-1.5 text-xs font-mono text-neutral-400 hover:text-white transition cursor-pointer">
+              <span>// VIEW EVENT & PROGRAMME PHOTOS (4 PHOTOS)</span>
+              <span class="text-sm">↗</span>
+            </button>
           </div>
 
           <!-- Kopiluvium -->
@@ -1638,6 +1642,10 @@
             <p class="text-xs sm:text-sm text-slate-400 mt-1.5 leading-relaxed font-sans">
               Designed system architecture, Figma UI mockups, MySQL database schema, and native PHP application for physical warehouse inventory audits. Resulted in published SINTA journal paper.
             </p>
+            <button onclick="openModal('modal-kopiluvium')" class="mt-2.5 inline-flex items-center gap-1.5 text-xs font-mono text-neutral-400 hover:text-white transition cursor-pointer">
+              <span>// VIEW SYSTEM DEMO & PRESENTATION PHOTO</span>
+              <span class="text-sm">↗</span>
+            </button>
           </div>
 
           <!-- SMA Negeri 1 Astanajapura -->
@@ -2015,7 +2023,16 @@
         </button>
       </div>
       <div class="p-6 overflow-y-auto space-y-5 text-xs sm:text-sm">
-        <img src="assets/images/ss_kopiluvium.png" alt="Kopiluvium Warehouse Stock-Taking System" class="w-full h-64 sm:h-72 object-cover object-top rounded-xl border border-rose-950/80" />
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <div class="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mb-1.5">// SYSTEM DASHBOARD</div>
+            <img src="assets/images/ss_kopiluvium.png" alt="Kopiluvium Warehouse Stock-Taking System" class="w-full h-56 object-cover object-top rounded-xl border border-neutral-800" />
+          </div>
+          <div>
+            <div class="text-[11px] font-mono text-neutral-400 uppercase tracking-wider mb-1.5">// HANDOVER & MENTOR PRESENTATION</div>
+            <img src="assets/images/kopiluvium_presentation.jpg" alt="Kopiluvium System Handover Presentation" class="w-full h-56 object-cover object-center rounded-xl border border-neutral-800" />
+          </div>
+        </div>
         <div>
           <h4 class="font-bold text-white mb-2">Project Overview</h4>
           <p class="text-slate-300 leading-relaxed">
@@ -2137,6 +2154,111 @@
           Close
         </button>
       </div>
+    </div>
+  </div>
+
+    <!-- ==================== MODAL: PMM BATCH 4 UNSRAT DOCUMENTATION ==================== -->
+  <div id="modal-pmm" class="modal-backdrop fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4 overflow-y-auto">
+    <div class="relative bg-[#111111] max-w-4xl w-full rounded-2xl border border-neutral-800 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col text-white">
+      
+      <!-- Modal Header -->
+      <div class="p-6 border-b border-neutral-800 flex items-center justify-between bg-[#161616]">
+        <div>
+          <span class="text-xs font-mono text-emerald-400 uppercase tracking-widest font-bold">// ACADEMIC PROGRAMME & FIELDWORK</span>
+          <h3 class="text-xl sm:text-2xl font-black text-white font-sans uppercase tracking-tight mt-0.5">
+            Merdeka Student Exchange (PMM Batch 4) · UNSRAT Manado
+          </h3>
+          <p class="text-xs text-neutral-400 font-sans mt-0.5">
+            Universitas Sam Ratulangi, Manado · Kemendikbudristek · Jan – Jun 2024
+          </p>
+        </div>
+        <button onclick="closeModal('modal-pmm')" class="p-2 rounded-xl text-neutral-400 hover:text-white hover:bg-neutral-800 transition cursor-pointer">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Modal Body (Scrollable Photo Gallery & Context) -->
+      <div class="p-6 overflow-y-auto space-y-6 text-xs sm:text-sm">
+        
+        <!-- Photo Gallery Grid (4 Real Photos from Event) -->
+        <div>
+          <div class="text-xs font-mono font-bold tracking-wider text-neutral-400 uppercase mb-3">// PHOTO DOCUMENTATION & FIELDWORK</div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <!-- Photo 1: Studio Delegation Portrait with Varsity Jacket -->
+            <div class="group rounded-xl overflow-hidden border border-neutral-800 bg-[#0a0a0a]">
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="assets/images/pmm_unsrat_studio.jpg" alt="PMM Batch 4 Academic Cohort at UNSRAT" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300" />
+              </div>
+              <div class="p-3 bg-[#141414] border-t border-neutral-800">
+                <div class="text-xs font-bold text-white font-sans">PMM Batch 4 Cohort & Delegation</div>
+                <div class="text-[11px] text-neutral-400 font-sans mt-0.5">Official PMM 4 varsity jacket photoshoot with exchange delegates from across Indonesia.</div>
+              </div>
+            </div>
+
+            <!-- Photo 2: PEKSIMIDA 2024 Delegation -->
+            <div class="group rounded-xl overflow-hidden border border-neutral-800 bg-[#0a0a0a]">
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="assets/images/peksimida_unsrat.jpg" alt="PEKSIMIDA 2024 Universitas Sam Ratulangi" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300" />
+              </div>
+              <div class="p-3 bg-[#141414] border-t border-neutral-800">
+                <div class="text-xs font-bold text-white font-sans">PEKSIMIDA 2024 Delegation</div>
+                <div class="text-[11px] text-neutral-400 font-sans mt-0.5">Representing academic cohort at the Pekan Seni Mahasiswa Daerah Sulawesi Utara (21–22 Mei 2024).</div>
+              </div>
+            </div>
+
+            <!-- Photo 3: Modul Nusantara Community Education Workshop -->
+            <div class="group rounded-xl overflow-hidden border border-neutral-800 bg-[#0a0a0a]">
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="assets/images/pmm_unsrat_hall.jpg" alt="Modul Nusantara Workshop with Community Children" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300" />
+              </div>
+              <div class="p-3 bg-[#141414] border-t border-neutral-800">
+                <div class="text-xs font-bold text-white font-sans">Modul Nusantara Community Workshop</div>
+                <div class="text-[11px] text-neutral-400 font-sans mt-0.5">Educational outreach and creative drawing workshop conducted with community children in Manado.</div>
+              </div>
+            </div>
+
+            <!-- Photo 4: Social Immersion & Dining Activity -->
+            <div class="group rounded-xl overflow-hidden border border-neutral-800 bg-[#0a0a0a]">
+              <div class="aspect-[4/3] overflow-hidden">
+                <img src="assets/images/pmm_unsrat_dining.jpg" alt="Cultural Immersion and Cohort Dining" class="w-full h-full object-cover object-center group-hover:scale-105 transition duration-300" />
+              </div>
+              <div class="p-3 bg-[#141414] border-t border-neutral-800">
+                <div class="text-xs font-bold text-white font-sans">Cultural Immersion & Dining</div>
+                <div class="text-[11px] text-neutral-400 font-sans mt-0.5">Collaborative social bonding and community dining with children and fellow exchange students.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Academic & Program Overview -->
+        <div class="space-y-3 pt-2">
+          <h4 class="font-bold text-white uppercase tracking-tight text-sm font-sans">Program Highlights & Academic Scope</h4>
+          <p class="text-neutral-300 leading-relaxed font-sans">
+            Participated in the selective nationwide <em>Pertukaran Mahasiswa Merdeka (PMM) Batch 4</em> program organized by Kemendikbudristek. Stationed at Universitas Sam Ratulangi (UNSRAT) in Manado for one full academic semester, taking advanced computing courses and active cultural immersion modules.
+          </p>
+          <div class="p-4 rounded-xl bg-[#161616] border border-neutral-800 space-y-2">
+            <h5 class="font-bold text-white font-sans text-xs uppercase tracking-wider">Key Experiences & Accomplishments:</h5>
+            <ul class="list-disc pl-5 space-y-1.5 text-neutral-300 font-sans text-xs">
+              <li><strong>Advanced Computing:</strong> Completed coursework in Automata Theory, Discrete Mathematics, and Human-Computer Interaction.</li>
+              <li><strong>Cultural Heritage & Modul Nusantara:</strong> Engaged in 16 modules covering Kebhinekaan, Inspirasi, Refleksi, and Kontribusi Sosial across historical and cultural landmarks in North Sulawesi.</li>
+              <li><strong>Arts & Competitions:</strong> Selected to participate in PEKSIMIDA (Pekan Seni Mahasiswa Daerah Sulawesi Utara 2024) at Universitas Sam Ratulangi.</li>
+              <li><strong>Community Empowerment:</strong> Conducted educational and mentorship workshops for local children in Manado.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-5 border-t border-neutral-800 bg-[#161616] flex items-center justify-between">
+        <span class="text-xs font-mono text-neutral-400">// Verified Documentation · PMM Batch 4 UNSRAT</span>
+        <button onclick="closeModal('modal-pmm')" class="px-5 py-2.5 rounded-xl text-xs font-bold font-mono uppercase bg-white text-neutral-950 hover:bg-neutral-200 transition cursor-pointer">
+          Close
+        </button>
+      </div>
+
     </div>
   </div>
 
