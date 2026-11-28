@@ -1403,93 +1403,256 @@
   </section>
 
   <!-- ==================== EDUCATION & TIMELINE SECTION ==================== -->
-  <section id="pendidikan" class="py-20 sm:py-24 bg-[#0a0407] border-b border-rose-950/60">
+    <!-- ==================== JOURNEY & MILESTONES SECTION ==================== -->
+  <section id="pendidikan" class="py-20 sm:py-28 bg-[#090306] border-b border-stone-800/80 text-white relative">
     <div class="max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
       
-      <!-- Section Header -->
-      <div class="mb-12">
-        <div class="flex items-center gap-3 mb-2">
-          <span class="w-6 h-[2px] bg-rose-500"></span>
-          <span class="text-xs font-mono font-bold tracking-widest text-rose-400 uppercase">// 04 · JOURNEY & MILESTONES</span>
+      <!-- Section Header (Centered Editorial Style matching reference) -->
+      <div class="text-center max-w-3xl mx-auto mb-14 sm:mb-16 reveal">
+        <!-- Tag / Badge -->
+        <div class="inline-flex items-center gap-2 text-xs font-mono font-medium tracking-widest text-stone-400 uppercase mb-3">
+          <span class="text-stone-400">୨୧</span>
+          <span>MILESTONES ALONG THE WAY</span>
         </div>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-          Academic Foundation & Practical Milestones
+
+        <!-- Heading in Playfair Display Serif -->
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-normal tracking-tight text-white font-serif leading-[1.15] mb-4" style="font-family: 'Playfair Display', Georgia, serif;">
+          Small steps, meaningful wins.
         </h2>
-        <p class="text-sm sm:text-base text-slate-400 mt-2 max-w-2xl">
-          Formal academic training combined with an intensive student exchange program and industry software engineering internship.
+
+        <!-- Subtitle -->
+        <p class="text-stone-400 text-sm sm:text-base leading-relaxed font-sans max-w-xl mx-auto">
+          Recognition, learning opportunities, and research that have shaped my journey so far.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <!-- 4 Milestone Cards Grid (Polos, Flat, Solid Matte) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 reveal">
         
-        <!-- Left: Summary Narrative -->
-        <div class="lg:col-span-5 space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed reveal">
-          <p>
-            My academic journey at <strong>Universitas Pamulang</strong> provided rigorous training in core computer science, software engineering methodology, and applied machine learning.
-          </p>
-          <p>
-            Through the national <strong>Merdeka Student Exchange (PMM Batch 4)</strong> at Universitas Sam Ratulangi in Manado, I completed advanced coursework in automata theory, software architecture, and cross-cultural collaborative research.
-          </p>
-          <p>
-            During my internship at <strong>Kopiluvium</strong>, I put these principles into practice by designing and developing a warehouse stock-taking system under the Waterfall model, culminating in a published research paper in the OKTAL Journal.
-          </p>
-        </div>
-
-        <!-- Right: Minimalist Timeline -->
-        <div class="lg:col-span-7 space-y-6 reveal">
-          <div class="space-y-6 border-l-2 border-rose-950/80 pl-6 ml-2">
-            
-            <!-- Milestone 1 -->
-            <div class="relative group">
-              <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-rose-600 ring-4 ring-[#0a0407]"></span>
-              <div class="text-xs font-mono text-rose-400 font-bold">2022 – August 2026</div>
-              <h4 class="text-base font-bold text-white mt-0.5">Universitas Pamulang</h4>
-              <p class="text-xs text-rose-300 font-mono">B.S. in Informatics Engineering · GPA 3.65 / 4.00</p>
-              <p class="text-xs sm:text-sm text-slate-400 mt-1.5 leading-relaxed">
-                Undergraduate Thesis: <em>Implementation of Support Vector Machine Algorithm for Early Anxiety Disorder Classification in Generation Z (Web-Based)</em>. Validated on 554 clinical samples using SVM classification.
-              </p>
+        <!-- CARD 01: Competition Recognition -->
+        <div onclick="openModal('modal-poster')" 
+             class="group rounded-2xl bg-[#120a0d] border border-stone-800 p-6 flex flex-col justify-between hover:border-stone-700 transition cursor-pointer">
+          <div>
+            <!-- Top Row: Index & Circular Icon Badge -->
+            <div class="flex items-center justify-between mb-5">
+              <span class="font-mono text-xs text-stone-500">01</span>
+              <div class="w-8 h-8 rounded-full bg-[#1c1015] border border-stone-800 flex items-center justify-center text-stone-400 group-hover:text-stone-200 transition">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+                </svg>
+              </div>
             </div>
 
-            <!-- Milestone 2 -->
-            <div class="relative group">
-              <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-amber-500 ring-4 ring-[#0a0407]"></span>
-              <div class="text-xs font-mono text-amber-300 font-bold">January 2024 – June 2024</div>
-              <h4 class="text-base font-bold text-white mt-0.5">Universitas Sam Ratulangi (UNSRAT), Manado</h4>
-              <p class="text-xs text-slate-400 font-mono">Independent Student Exchange Program (PMM Batch 4)</p>
-              <p class="text-xs sm:text-sm text-slate-400 mt-1.5 leading-relaxed">
-                Cross-disciplinary computing coursework, automata theory projects, and collaborative user experience research.
-              </p>
+            <!-- Category -->
+            <div class="text-[10px] font-mono tracking-widest text-[#9e5467] uppercase font-bold mb-2">
+              COMPETITION RECOGNITION
             </div>
 
-            <!-- Milestone 3 -->
-            <div class="relative group">
-              <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-emerald-500 ring-4 ring-[#0a0407]"></span>
-              <div class="text-xs font-mono text-emerald-400 font-bold">May 2025 – June 2025</div>
-              <h4 class="text-base font-bold text-white mt-0.5">Web Developer Intern · Kopiluvium</h4>
-              <p class="text-xs text-slate-400 font-mono">Software Engineering Internship · Warehouse Inventory System</p>
-              <p class="text-xs sm:text-sm text-slate-400 mt-1.5 leading-relaxed">
-                Designed system architecture, Figma UI mockups, MySQL database schema, and native PHP application for physical warehouse inventory audits. Resulted in published SINTA journal paper.
-              </p>
-            </div>
+            <!-- Title -->
+            <h3 class="text-lg sm:text-xl font-normal text-white font-serif leading-snug group-hover:text-rose-100 transition" style="font-family: 'Playfair Display', Georgia, serif;">
+              1st Honourable Mention
+            </h3>
 
-            <!-- Milestone 4 -->
-            <div class="relative group">
-              <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-slate-600 ring-4 ring-[#0a0407]"></span>
-              <div class="text-xs font-mono text-slate-500">2019 – 2022</div>
-              <h4 class="text-base font-bold text-white mt-0.5">SMA Negeri 1 Astanajapura, Cirebon</h4>
-              <p class="text-xs text-slate-400 font-mono">High School Diploma · Mathematics & Natural Sciences (MIPA)</p>
-            </div>
+            <!-- Description -->
+            <p class="text-xs text-stone-400 font-sans mt-2 leading-relaxed">
+              National Poster Competition (Festival Seni dan Pendidikan Ilmiah FSPI UNY).
+            </p>
+          </div>
 
+          <!-- Bottom Footer -->
+          <div class="border-t border-dashed border-stone-800/80 pt-3.5 mt-5 flex items-center justify-between text-[11px] font-mono text-stone-500 group-hover:text-stone-300 transition">
+            <div class="flex items-center gap-1.5">
+              <span>୨୧</span>
+              <span>Certificate / documentation</span>
+            </div>
+            <span class="text-stone-600 group-hover:text-stone-300 transition">↗</span>
           </div>
         </div>
 
+        <!-- CARD 02: Academic Programme -->
+        <div onclick="openModal('modal-apotek')"
+             class="group rounded-2xl bg-[#120a0d] border border-stone-800 p-6 flex flex-col justify-between hover:border-stone-700 transition cursor-pointer">
+          <div>
+            <!-- Top Row: Index & Circular Icon Badge -->
+            <div class="flex items-center justify-between mb-5">
+              <span class="font-mono text-xs text-stone-500">02</span>
+              <div class="w-8 h-8 rounded-full bg-[#1c1015] border border-stone-800 flex items-center justify-center text-stone-400 group-hover:text-stone-200 transition">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><line x1="2" x2="22" y1="12" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Category -->
+            <div class="text-[10px] font-mono tracking-widest text-[#9e5467] uppercase font-bold mb-2">
+              ACADEMIC PROGRAMME
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-lg sm:text-xl font-normal text-white font-serif leading-snug group-hover:text-rose-100 transition" style="font-family: 'Playfair Display', Georgia, serif;">
+              Merdeka Student Exchange
+            </h3>
+
+            <!-- Description -->
+            <p class="text-xs text-stone-400 font-sans mt-2 leading-relaxed">
+              PMM Batch 4 participant at Universitas Sam Ratulangi (UNSRAT), Manado.
+            </p>
+          </div>
+
+          <!-- Bottom Footer -->
+          <div class="border-t border-dashed border-stone-800/80 pt-3.5 mt-5 flex items-center justify-between text-[11px] font-mono text-stone-500 group-hover:text-stone-300 transition">
+            <div class="flex items-center gap-1.5">
+              <span>୨୧</span>
+              <span>Certificate / documentation</span>
+            </div>
+            <span class="text-stone-600 group-hover:text-stone-300 transition">↗</span>
+          </div>
+        </div>
+
+        <!-- CARD 03: Professional Certification -->
+        <div onclick="openModal('modal-sales')"
+             class="group rounded-2xl bg-[#120a0d] border border-stone-800 p-6 flex flex-col justify-between hover:border-stone-700 transition cursor-pointer">
+          <div>
+            <!-- Top Row: Index & Circular Icon Badge -->
+            <div class="flex items-center justify-between mb-5">
+              <span class="font-mono text-xs text-stone-500">03</span>
+              <div class="w-8 h-8 rounded-full bg-[#1c1015] border border-stone-800 flex items-center justify-center text-stone-400 group-hover:text-stone-200 transition">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Category -->
+            <div class="text-[10px] font-mono tracking-widest text-[#9e5467] uppercase font-bold mb-2">
+              PROFESSIONAL CERTIFICATION
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-lg sm:text-xl font-normal text-white font-serif leading-snug group-hover:text-rose-100 transition" style="font-family: 'Playfair Display', Georgia, serif;">
+              Programmer Competency Certification
+            </h3>
+
+            <!-- Description -->
+            <p class="text-xs text-stone-400 font-sans mt-2 leading-relaxed">
+              LSP Informatika / Badan Nasional Sertifikasi Profesi (BNSP).
+            </p>
+          </div>
+
+          <!-- Bottom Footer -->
+          <div class="border-t border-dashed border-stone-800/80 pt-3.5 mt-5 flex items-center justify-between text-[11px] font-mono text-stone-500 group-hover:text-stone-300 transition">
+            <div class="flex items-center gap-1.5">
+              <span>୨୧</span>
+              <span>Certificate / documentation</span>
+            </div>
+            <span class="text-stone-600 group-hover:text-stone-300 transition">↗</span>
+          </div>
+        </div>
+
+        <!-- CARD 04: Research & Publication -->
+        <a href="#publikasi"
+           class="group rounded-2xl bg-[#120a0d] border border-stone-800 p-6 flex flex-col justify-between hover:border-stone-700 transition">
+          <div>
+            <!-- Top Row: Index & Circular Icon Badge -->
+            <div class="flex items-center justify-between mb-5">
+              <span class="font-mono text-xs text-stone-500">04</span>
+              <div class="w-8 h-8 rounded-full bg-[#1c1015] border border-stone-800 flex items-center justify-center text-stone-400 group-hover:text-stone-200 transition">
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Category -->
+            <div class="text-[10px] font-mono tracking-widest text-[#9e5467] uppercase font-bold mb-2">
+              RESEARCH & PUBLICATION
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-lg sm:text-xl font-normal text-white font-serif leading-snug group-hover:text-rose-100 transition" style="font-family: 'Playfair Display', Georgia, serif;">
+              National Journal Publication
+            </h3>
+
+            <!-- Description -->
+            <p class="text-xs text-stone-400 font-sans mt-2 leading-relaxed">
+              Published scientific article in an accredited national journal (SINTA indexed).
+            </p>
+          </div>
+
+          <!-- Bottom Footer -->
+          <div class="border-t border-dashed border-stone-800/80 pt-3.5 mt-5 flex items-center justify-between text-[11px] font-mono text-stone-500 group-hover:text-stone-300 transition">
+            <div class="flex items-center gap-1.5">
+              <span>୨୧</span>
+              <span>Certificate / documentation</span>
+            </div>
+            <span class="text-stone-600 group-hover:text-stone-300 transition">↗</span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Footnote matching reference -->
+      <div class="text-center text-xs text-stone-500 font-sans mt-8 reveal">
+        Original certificates, event photos, and publication links can be added as they become available.
+      </div>
+
+      <!-- Formal Education & Experience Timeline (Clean Collapsible or Preserved Details) -->
+      <div class="mt-16 sm:mt-20 pt-12 sm:pt-16 border-t border-stone-800/80 reveal">
+        <div class="text-center mb-10">
+          <div class="text-xs font-mono font-medium tracking-widest text-stone-500 uppercase">// FORMAL EDUCATION & TIMELINE</div>
+          <h3 class="text-2xl sm:text-3xl font-bold text-white mt-1">Academic Background & Industry Experience</h3>
+        </div>
+
+        <div class="max-w-4xl mx-auto space-y-6 border-l-2 border-stone-800 pl-6 ml-4 sm:ml-auto">
+          
+          <!-- Universitas Pamulang -->
+          <div class="relative group">
+            <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#8c4052] ring-4 ring-[#090306]"></span>
+            <div class="text-xs font-mono text-stone-400 font-bold">2022 – August 2026</div>
+            <h4 class="text-base font-bold text-white mt-0.5">Universitas Pamulang</h4>
+            <p class="text-xs text-rose-300/90 font-mono">B.S. in Informatics Engineering · GPA 3.65 / 4.00</p>
+            <p class="text-xs sm:text-sm text-stone-400 mt-1.5 leading-relaxed">
+              Undergraduate Thesis: <em>Implementation of Support Vector Machine Algorithm for Early Anxiety Disorder Classification in Generation Z (Web-Based)</em>. Validated on 554 clinical samples using SVM classification.
+            </p>
+          </div>
+
+          <!-- UNSRAT Manado -->
+          <div class="relative group">
+            <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-stone-600 ring-4 ring-[#090306]"></span>
+            <div class="text-xs font-mono text-stone-400 font-bold">January 2024 – June 2024</div>
+            <h4 class="text-base font-bold text-white mt-0.5">Universitas Sam Ratulangi (UNSRAT), Manado</h4>
+            <p class="text-xs text-stone-400 font-mono">Independent Student Exchange Program (PMM Batch 4)</p>
+            <p class="text-xs sm:text-sm text-stone-400 mt-1.5 leading-relaxed">
+              Cross-disciplinary computing coursework, automata theory projects, and collaborative user experience research.
+            </p>
+          </div>
+
+          <!-- Kopiluvium -->
+          <div class="relative group">
+            <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-stone-600 ring-4 ring-[#090306]"></span>
+            <div class="text-xs font-mono text-stone-400 font-bold">May 2025 – June 2025</div>
+            <h4 class="text-base font-bold text-white mt-0.5">Web Developer Intern · Kopiluvium</h4>
+            <p class="text-xs text-stone-400 font-mono">Software Engineering Internship · Warehouse Inventory System</p>
+            <p class="text-xs sm:text-sm text-stone-400 mt-1.5 leading-relaxed">
+              Designed system architecture, Figma UI mockups, MySQL database schema, and native PHP application for physical warehouse inventory audits. Resulted in published SINTA journal paper.
+            </p>
+          </div>
+
+          <!-- SMA Negeri 1 Astanajapura -->
+          <div class="relative group">
+            <span class="absolute -left-[31px] top-1.5 w-3.5 h-3.5 rounded-full bg-stone-700 ring-4 ring-[#090306]"></span>
+            <div class="text-xs font-mono text-stone-500">2019 – 2022</div>
+            <h4 class="text-base font-bold text-white mt-0.5">SMA Negeri 1 Astanajapura, Cirebon</h4>
+            <p class="text-xs text-stone-400 font-mono">High School Diploma · Mathematics & Natural Sciences (MIPA)</p>
+          </div>
+
+        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- ==================== CONTACT & FOOTER SECTION ==================== -->
-      <!-- ==================== CONTACT SECTION (POLOS, SOLID, MATTE & MINIMAL) ==================== -->
+  <!-- ==================== CONTACT SECTION (POLOS, SOLID, MATTE & MINIMAL) ==================== -->
   <section id="kontak" class="py-20 sm:py-28 bg-[#090306] text-white relative border-b border-stone-800/80">
     <div class="max-w-[1536px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 relative z-10">
       
