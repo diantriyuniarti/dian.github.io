@@ -1668,27 +1668,35 @@
             Have a project in mind, an engineering opportunity, or simply want to connect? I would love to hear from you.
           </p>
 
-          <!-- Action Buttons with clean neutral styling -->
-          <div class="flex flex-wrap items-center gap-3 pt-2">
-            <!-- WhatsApp Button (Polos / Clean Neutral) -->
-            <a href="https://wa.me/6289660164156" target="_blank"
-               class="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-xs font-mono font-bold uppercase tracking-wider bg-white hover:bg-neutral-200 text-neutral-950 transition shadow-sm">
-              <span>Message on WhatsApp</span>
-              <span class="text-sm font-mono leading-none">→</span>
-            </a>
+          <!-- Action Buttons + Handwritten Annotation (Mobile-Optimized & Polos) -->
+          <div class="pt-2 space-y-2.5">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-3">
+              <!-- WhatsApp Button -->
+              <a href="https://wa.me/6289660164156" target="_blank"
+                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-xs font-mono font-bold uppercase tracking-wider bg-white hover:bg-neutral-200 text-neutral-950 transition shadow-sm">
+                <span>Message on WhatsApp</span>
+                <span class="text-sm font-mono leading-none">→</span>
+              </a>
 
-            <!-- Download CV Button (Polos / Outlined Dark) -->
-            <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" download="CV_Dian_Tri_Yuniarti.pdf"
-               class="inline-flex items-center gap-2 px-5 py-3 rounded-lg text-xs font-mono font-bold uppercase tracking-wider bg-[#141414] hover:bg-[#1f1f1f] text-neutral-300 hover:text-white transition border border-neutral-800">
-              <svg class="w-3.5 h-3.5 text-neutral-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>
-              </svg>
-              <span>Download CV (PDF)</span>
-            </a>
+              <!-- Download CV Button -->
+              <a href="assets/docs/CV_Dian_Tri_Yuniarti.pdf" target="_blank" download="CV_Dian_Tri_Yuniarti.pdf"
+                 class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg text-xs font-mono font-bold uppercase tracking-wider bg-[#141414] hover:bg-[#1f1f1f] text-neutral-300 hover:text-white transition border border-neutral-800">
+                <svg class="w-3.5 h-3.5 text-neutral-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>
+                </svg>
+                <span>Download CV (PDF)</span>
+              </a>
 
-            <!-- Handwritten Annotation -->
-            <div class="inline-flex items-center text-[#d4d24a] font-hand text-base sm:text-lg pl-1 select-none">
-              ← async-first, but I do reply
+              <!-- Desktop Handwritten Annotation (pointing left to buttons) -->
+              <div class="hidden sm:inline-flex items-center text-[#d4d24a] font-hand text-base sm:text-lg pl-2 select-none">
+                ← async-first, but I do reply
+              </div>
+            </div>
+
+            <!-- Mobile Handwritten Annotation (neatly positioned below buttons pointing UP) -->
+            <div class="sm:hidden flex items-center gap-1.5 text-[#d4d24a] font-hand text-sm select-none pl-1 pt-0.5">
+              <span class="text-xs">↑</span>
+              <span>async-first, but I do reply</span>
             </div>
           </div>
 
